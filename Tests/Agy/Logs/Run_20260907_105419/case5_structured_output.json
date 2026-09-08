@@ -1,0 +1,7 @@
+﻿agy : Error: invalid --json-schema: schema is not valid JSON: invalid character 't' looking for beginning of object key string
+At C:\Users\ADMIN\Documents\workspace\Steves\Tests\Agy\Scripts\Test-AgyContextEngine.ps1:244 char:9
++ $Out5 = agy -p $Prompt5 --output-format json --json-schema $Schema $M ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Error: invalid ...ject key string:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

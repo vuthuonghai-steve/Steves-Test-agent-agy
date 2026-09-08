@@ -1,0 +1,39 @@
+{
+    "conversation_id": "ca893a02-1f2c-497d-aef6-576d05015530",
+    "status": "SUCCESS",
+    "response": "",
+    "duration_seconds": 4.165647,
+    "num_turns": 1,
+    "json_schema": {
+        "type": "object",
+        "properties": {
+            "test_name": {
+                "type": "string"
+            },
+            "exit_code": {
+                "type": "integer"
+            },
+            "is_operational": {
+                "type": "boolean"
+            }
+        },
+        "required": [
+            "test_name",
+            "exit_code",
+            "is_operational"
+        ]
+    },
+    "usage": {
+        "input_tokens": 12597,
+        "output_tokens": 683,
+        "thinking_tokens": 615,
+        "cache_read_tokens": 8141,
+        "total_tokens": 13280
+    },
+    "denied_actions": [
+        {
+            "action": "command",
+            "display_name": "RunCommand"
+        }
+    ]
+}

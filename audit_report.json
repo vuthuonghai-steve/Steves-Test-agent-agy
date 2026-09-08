@@ -1,0 +1,1357 @@
+{
+  "audit_timestamp": "2026-09-08T08:04:49.787325",
+  "workspace_root": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves",
+  "anchor_found": true,
+  "anchor_path": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents",
+  "scan_mode": "check",
+  "summary": {
+    "files_scanned": 94,
+    "files_with_violations": 13,
+    "total_violations": 149,
+    "violations_fixed": 0,
+    "status": "VIOLATIONS_FOUND"
+  },
+  "violations": [
+    {
+      "file_path": "AGENTS.md",
+      "line_number": 70,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/ba-requirements-analyzer/SKILL.md",
+      "proposed_relative_path": ".agents/skills/ba-requirements-analyzer/SKILL.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": "AGENTS.md",
+      "line_number": 71,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/technical-tradeoff-analyzer/SKILL.md",
+      "proposed_relative_path": ".agents/skills/technical-tradeoff-analyzer/SKILL.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 12,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\AGENTS.md",
+      "proposed_relative_path": "AGENTS.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 21,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\AGENTS.md",
+      "proposed_relative_path": "AGENTS.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 30,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\AGENTS.md",
+      "proposed_relative_path": "AGENTS.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 39,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\AGENTS.md",
+      "proposed_relative_path": "AGENTS.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 48,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\AGENTS.md",
+      "proposed_relative_path": "AGENTS.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 57,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\AGENTS.md",
+      "proposed_relative_path": "AGENTS.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 66,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\AGENTS.md",
+      "proposed_relative_path": "AGENTS.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 75,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\AGENTS.md",
+      "proposed_relative_path": "AGENTS.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 84,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\AGENTS.md",
+      "proposed_relative_path": "AGENTS.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 93,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\AGENTS.md",
+      "proposed_relative_path": "AGENTS.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 102,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\AGENTS.md",
+      "proposed_relative_path": "AGENTS.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 111,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\AGENTS.md",
+      "proposed_relative_path": "AGENTS.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 120,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\AGENTS.md",
+      "proposed_relative_path": "AGENTS.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 129,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\AGENTS.md",
+      "proposed_relative_path": "AGENTS.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 138,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\AGENTS.md",
+      "proposed_relative_path": "AGENTS.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 147,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\AGENTS.md",
+      "proposed_relative_path": "AGENTS.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 156,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\AGENTS.md",
+      "proposed_relative_path": "AGENTS.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 165,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\AGENTS.md",
+      "proposed_relative_path": "AGENTS.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 174,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\AGENTS.md",
+      "proposed_relative_path": "AGENTS.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 183,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\AGENTS.md",
+      "proposed_relative_path": "AGENTS.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 192,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\AGENTS.md",
+      "proposed_relative_path": "AGENTS.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 201,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\AGENTS.md",
+      "proposed_relative_path": "AGENTS.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 210,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\ba-requirements-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/ba-requirements-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 219,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\ba-requirements-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/ba-requirements-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 228,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\ba-requirements-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/ba-requirements-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 237,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\ba-requirements-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/ba-requirements-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 246,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\ba-requirements-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/ba-requirements-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 255,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\ba-requirements-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/ba-requirements-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 264,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\ba-requirements-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/ba-requirements-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 273,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\ba-requirements-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/ba-requirements-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 282,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\ba-requirements-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/ba-requirements-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 291,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\ba-requirements-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/ba-requirements-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 300,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\ba-requirements-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/ba-requirements-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 309,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 318,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 327,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 336,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 345,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 354,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 363,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 372,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 381,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 390,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 399,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 408,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 417,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 426,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 435,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 444,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 453,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 462,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 471,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 480,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 489,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 498,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 507,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 516,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 525,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 534,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 543,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 552,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 561,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 570,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 579,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 588,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\pedagogical-knowledge-explainer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 597,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\rule-governance-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/rule-governance-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 606,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\rule-governance-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/rule-governance-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 615,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\rule-governance-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/rule-governance-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 624,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\rule-governance-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/rule-governance-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 633,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\rule-governance-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/rule-governance-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 642,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\rule-governance-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/rule-governance-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 651,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\rule-governance-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/rule-governance-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 660,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\rule-governance-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/rule-governance-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 669,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\rule-governance-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/rule-governance-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 678,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\skill-creator\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/skill-creator/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 687,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\skill-creator\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/skill-creator/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 696,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\skill-creator\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/skill-creator/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 705,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\skill-creator\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/skill-creator/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 714,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\skill-creator\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/skill-creator/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 723,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\skill-creator\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/skill-creator/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 732,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\skill-creator\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/skill-creator/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 741,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\skill-creator\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/skill-creator/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 750,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\skill-creator\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/skill-creator/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 759,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\skill-creator\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/skill-creator/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 768,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\skill-creator\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/skill-creator/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 777,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\skill-creator\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/skill-creator/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 786,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\skill-creator\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/skill-creator/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 795,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\skill-creator\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/skill-creator/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 804,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\skill-creator\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/skill-creator/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 813,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\skill-creator\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/skill-creator/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 822,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\skill-creator\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/skill-creator/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 831,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\skill-creator\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/skill-creator/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 840,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\skill-creator\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/skill-creator/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 849,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\skill-creator\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/skill-creator/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 858,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\skill-creator\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/skill-creator/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 867,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\technical-tradeoff-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/technical-tradeoff-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 876,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\technical-tradeoff-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/technical-tradeoff-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 885,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\technical-tradeoff-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/technical-tradeoff-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 894,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\technical-tradeoff-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/technical-tradeoff-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 903,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\technical-tradeoff-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/technical-tradeoff-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 912,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\technical-tradeoff-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/technical-tradeoff-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 921,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\technical-tradeoff-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/technical-tradeoff-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "rule-conflicts.audit.json",
+      "line_number": 930,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\\\Users\\\\ADMIN\\\\Documents\\\\workspace\\\\Steves\\\\.agents\\\\skills\\\\technical-tradeoff-analyzer\\\\SKILL.md",
+      "proposed_relative_path": ".agents/skills/technical-tradeoff-analyzer/SKILL.md",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\ba-requirements-analyzer\\SKILL.md",
+      "line_number": 83,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/ba-requirements-analyzer/templates/requirements-classification.template.md",
+      "proposed_relative_path": "templates/requirements-classification.template.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\ba-requirements-analyzer\\SKILL.md",
+      "line_number": 83,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/ba-requirements-analyzer/knowledge/babok-requirements-taxonomy.md",
+      "proposed_relative_path": "knowledge/babok-requirements-taxonomy.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\ba-requirements-analyzer\\SKILL.md",
+      "line_number": 84,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/ba-requirements-analyzer/knowledge/nfr-quantification-guide.md",
+      "proposed_relative_path": "knowledge/nfr-quantification-guide.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\ba-requirements-analyzer\\SKILL.md",
+      "line_number": 85,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/ba-requirements-analyzer/knowledge/transition-requirements-radar.md",
+      "proposed_relative_path": "knowledge/transition-requirements-radar.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\ba-requirements-analyzer\\SKILL.md",
+      "line_number": 86,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/ba-requirements-analyzer/templates/rtm-traceability-matrix.template.md",
+      "proposed_relative_path": "templates/rtm-traceability-matrix.template.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\ba-requirements-analyzer\\SKILL.md",
+      "line_number": 86,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/ba-requirements-analyzer/knowledge/traceability-and-anti-patterns.md",
+      "proposed_relative_path": "knowledge/traceability-and-anti-patterns.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\ba-requirements-analyzer\\SKILL.md",
+      "line_number": 87,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/ba-requirements-analyzer/templates/user-story-ac.template.md",
+      "proposed_relative_path": "templates/user-story-ac.template.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\ba-requirements-analyzer\\SKILL.md",
+      "line_number": 88,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/ba-requirements-analyzer/schemas/ba-audit-schema.json",
+      "proposed_relative_path": "schemas/ba-audit-schema.json",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\ba-requirements-analyzer\\SKILL.md",
+      "line_number": 88,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/ba-requirements-analyzer/loop/ba-requirements-checklist.md",
+      "proposed_relative_path": "loop/ba-requirements-checklist.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "line_number": 81,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/pedagogical-knowledge-explainer/knowledge/first-principles-anchoring.md",
+      "proposed_relative_path": "knowledge/first-principles-anchoring.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "line_number": 82,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/pedagogical-knowledge-explainer/knowledge/trade-off-and-failure-radar.md",
+      "proposed_relative_path": "knowledge/trade-off-and-failure-radar.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "line_number": 83,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/pedagogical-knowledge-explainer/knowledge/socratic-questioning-patterns.md",
+      "proposed_relative_path": "knowledge/socratic-questioning-patterns.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "line_number": 84,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/pedagogical-knowledge-explainer/templates/deep-lesson-plan.template.md",
+      "proposed_relative_path": "templates/deep-lesson-plan.template.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "line_number": 85,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/pedagogical-knowledge-explainer/loop/headless-gate-audit.md",
+      "proposed_relative_path": "loop/headless-gate-audit.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "line_number": 184,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/Docs/Knowleads/<topic-slug",
+      "proposed_relative_path": "Docs/Knowleads/<topic-slug",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\rule-governance-analyzer\\SKILL.md",
+      "line_number": 73,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/rule-governance-analyzer/knowledge/rule-precedence-hierarchy.md",
+      "proposed_relative_path": "knowledge/rule-precedence-hierarchy.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\rule-governance-analyzer\\SKILL.md",
+      "line_number": 74,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/rule-governance-analyzer/scripts/audit-rules.ps1",
+      "proposed_relative_path": "scripts/audit-rules.ps1",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\rule-governance-analyzer\\SKILL.md",
+      "line_number": 74,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/rule-governance-analyzer/knowledge/conflict-detection-patterns.md",
+      "proposed_relative_path": "knowledge/conflict-detection-patterns.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\rule-governance-analyzer\\SKILL.md",
+      "line_number": 75,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/rule-governance-analyzer/knowledge/anti-phantom-audit-guide.md",
+      "proposed_relative_path": "knowledge/anti-phantom-audit-guide.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\rule-governance-analyzer\\SKILL.md",
+      "line_number": 76,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/rule-governance-analyzer/templates/rule-refactoring-plan.template.md",
+      "proposed_relative_path": "templates/rule-refactoring-plan.template.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\rule-governance-analyzer\\SKILL.md",
+      "line_number": 77,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/rule-governance-analyzer/schemas/rule-audit-schema.json",
+      "proposed_relative_path": "schemas/rule-audit-schema.json",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\rule-governance-analyzer\\SKILL.md",
+      "line_number": 77,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/rule-governance-analyzer/templates/rule-audit-report.template.md",
+      "proposed_relative_path": "templates/rule-audit-report.template.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\rule-governance-analyzer\\scripts\\audit_rules.py",
+      "line_number": 257,
+      "scope": "SKILL_LOCAL",
+      "original_path": "c:\\Users\\ADMIN\\Documents\\workspace\\Steves",
+      "proposed_relative_path": ".",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
+      "line_number": 86,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/technical-tradeoff-analyzer/knowledge/reverse-probing-guide.md",
+      "proposed_relative_path": "knowledge/reverse-probing-guide.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
+      "line_number": 86,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/technical-tradeoff-analyzer/templates/problem-framing.template.md",
+      "proposed_relative_path": "templates/problem-framing.template.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
+      "line_number": 87,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/technical-tradeoff-analyzer/knowledge/trade-off-dimensions.md",
+      "proposed_relative_path": "knowledge/trade-off-dimensions.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
+      "line_number": 87,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/technical-tradeoff-analyzer/templates/option-matrix.template.md",
+      "proposed_relative_path": "templates/option-matrix.template.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
+      "line_number": 88,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/technical-tradeoff-analyzer/knowledge/decision-reversibility.md",
+      "proposed_relative_path": "knowledge/decision-reversibility.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
+      "line_number": 88,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/technical-tradeoff-analyzer/templates/adr-trade-off.template.md",
+      "proposed_relative_path": "templates/adr-trade-off.template.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
+      "line_number": 89,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/technical-tradeoff-analyzer/knowledge/reverse-probing-guide.md",
+      "proposed_relative_path": "knowledge/reverse-probing-guide.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
+      "line_number": 90,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/technical-tradeoff-analyzer/playbook-native/sidepanel-vs-dialog.md",
+      "proposed_relative_path": "playbook-native/sidepanel-vs-dialog.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
+      "line_number": 91,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/technical-tradeoff-analyzer/playbook-native/sta-vs-async-thread.md",
+      "proposed_relative_path": "playbook-native/sta-vs-async-thread.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
+      "line_number": 92,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/technical-tradeoff-analyzer/playbook-native/unmanaged-vs-managed.md",
+      "proposed_relative_path": "playbook-native/unmanaged-vs-managed.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
+      "line_number": 93,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/technical-tradeoff-analyzer/playbook-native/monolithic-vs-modular.md",
+      "proposed_relative_path": "playbook-native/monolithic-vs-modular.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
+      "line_number": 132,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/technical-tradeoff-analyzer/loop/trade-off-checklist.md",
+      "proposed_relative_path": "loop/trade-off-checklist.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": ".agents\\skills\\technical-tradeoff-analyzer\\knowledge\\decision-reversibility.md",
+      "line_number": 29,
+      "scope": "SKILL_LOCAL",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/technical-tradeoff-analyzer/templates/adr-trade-off.template.md",
+      "proposed_relative_path": "templates/adr-trade-off.template.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": "Docs\\Knowleads\\README.md",
+      "line_number": 4,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "proposed_relative_path": ".agents/skills/pedagogical-knowledge-explainer/SKILL.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": "Docs\\Knowleads\\README.md",
+      "line_number": 14,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/Docs/Knowleads/agent-skills-and-headless-gate.md",
+      "proposed_relative_path": "Docs/Knowleads/agent-skills-and-headless-gate.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": "Docs\\Knowleads\\README.md",
+      "line_number": 15,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/Docs/Knowleads/antigravity-subagent-mechanics.md",
+      "proposed_relative_path": "Docs/Knowleads/antigravity-subagent-mechanics.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": "Docs\\Knowleads\\README.md",
+      "line_number": 16,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "file:///c:/Users/ADMIN/Documents/workspace/Steves/Docs/Knowleads/headless-vs-subagents-comparative-guide.md",
+      "proposed_relative_path": "Docs/Knowleads/headless-vs-subagents-comparative-guide.md",
+      "violation_type": "ABSOLUTE_URI",
+      "is_fixed": false
+    },
+    {
+      "file_path": "Tests\\Agy\\Scripts\\Test-AgyContextEngine.ps1",
+      "line_number": 9,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "c:\\Users\\ADMIN\\Documents\\workspace\\Steves\\Tests\\Agy\\Logs",
+      "proposed_relative_path": "Tests/Agy/Logs",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "Tests\\Agy\\Scripts\\test_agy_context_engine.py",
+      "line_number": 27,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "c:\\Users\\ADMIN\\Documents\\workspace\\Steves",
+      "proposed_relative_path": ".",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "Tests\\Agy\\Scripts\\test_path_resolution_experiment.py",
+      "line_number": 23,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "c:\\Users\\ADMIN\\Documents\\workspace\\Steves",
+      "proposed_relative_path": ".",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    },
+    {
+      "file_path": "Tests\\RuleGovernance\\test_rule_governance.py",
+      "line_number": 28,
+      "scope": "WORKSPACE_WIDE",
+      "original_path": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves",
+      "proposed_relative_path": ".",
+      "violation_type": "HARDCODED_DRIVE",
+      "is_fixed": false
+    }
+  ]
+}

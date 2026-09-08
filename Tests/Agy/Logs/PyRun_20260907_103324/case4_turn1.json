@@ -1,0 +1,14 @@
+{
+    "conversation_id": "1e0ce603-96d2-4b5e-a4fa-41963c13547d",
+    "status": "SUCCESS",
+    "response": "Tôi đã ghi nhớ mã bí mật của bạn: `STEVE_SECRET_9046`.\n",
+    "duration_seconds": 3.2064877,
+    "num_turns": 1,
+    "usage": {
+        "input_tokens": 12352,
+        "output_tokens": 349,
+        "thinking_tokens": 328,
+        "cache_read_tokens": 8142,
+        "total_tokens": 12701
+    }
+}

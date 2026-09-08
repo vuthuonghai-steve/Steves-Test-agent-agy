@@ -1,0 +1,14 @@
+{
+    "conversation_id": "ce539945-5ab5-4a20-a436-62a307f74b30",
+    "status": "SUCCESS",
+    "response": "PING SUCCESS TEST\n",
+    "duration_seconds": 5.061969,
+    "num_turns": 1,
+    "usage": {
+        "input_tokens": 12336,
+        "output_tokens": 541,
+        "thinking_tokens": 538,
+        "cache_read_tokens": 8142,
+        "total_tokens": 12877
+    }
+}

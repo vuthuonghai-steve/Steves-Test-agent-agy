@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-09-08T07:41:55.309749",
+  "workspace_root": "c:\\Users\\ADMIN\\Documents\\workspace\\Steves",
+  "test_cases": [
+    {
+      "case_id": "CASE_1_ROOT_CWD",
+      "launch_cwd": "c:\\Users\\ADMIN\\Documents\\workspace\\Steves",
+      "exit_code": 0,
+      "duration_seconds": 11.7,
+      "engine_reported_cwd": "c:\\Users\\ADMIN\\Documents\\workspace\\Steves",
+      "is_matching_workspace_root": true
+    },
+    {
+      "case_id": "CASE_2_SUBDIR_CWD",
+      "launch_cwd": "c:\\Users\\ADMIN\\Documents\\workspace\\Steves\\Tests\\Agy",
+      "exit_code": 0,
+      "duration_seconds": 8.71,
+      "engine_reported_cwd": "c:\\Users\\ADMIN\\Documents\\workspace\\Steves\\Tests\\Agy",
+      "is_cwd_isolated": true
+    },
+    {
+      "case_id": "CASE_3_RELATIVE_PATH_UNDERSTANDING",
+      "prompt": "Đọc file tại đường dẫn tương đối '.agents/skills/rule-governance-analyzer/SKILL.md' (tính từ workspace root). Cho biết trường 'name' trong YAML frontmatter là gì? Trả về duy nhất JSON dạng: {\"skill_name\": \"...\"}.",
+      "exit_code": 0,
+      "status": "CANCELED",
+      "duration_seconds": 10.05,
+      "structured_output": {},
+      "is_successful": false
+    }
+  ]
+}

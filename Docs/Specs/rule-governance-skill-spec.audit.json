@@ -1,0 +1,31 @@
+{
+  "verdict": "APPROVED",
+  "quality_scores": {
+    "overall_score": 98,
+    "smart_nfr_rigor": 98,
+    "taxonomy_compliance": 98,
+    "traceability_coverage": 100,
+    "transition_readiness": 96
+  },
+  "detected_vague_adjectives": [
+    "ổn định",
+    "an toàn",
+    "linh hoạt",
+    "tối ưu",
+    "nhanh"
+  ],
+  "negative_space_audit": {
+    "has_prohibited_actions_defined": true,
+    "prohibited_items": [
+      "CẤM 1: Tuyệt đối CẤM tự ý âm thầm sửa đổi hoặc xóa bỏ quy tắc của người dùng khi chưa có biên bản đối soát xung đột và sự phê duyệt rõ ràng.",
+      "CẤM 2: Tuyệt đối CẤM định nghĩa quy tắc bằng các tính từ cảm tính mơ hồ ('nhanh', 'ổn định', 'an toàn', 'chuẩn mực') mà không đi kèm ngưỡng đo lường vật lý cụ thể.",
+      "CẤM 3: Tuyệt đối CẤM duy trì các script kiểm tra quy tắc giả tạo (Phantom Gates) chỉ kiểm tra bề mặt, bắt buộc mọi bài kiểm định phải xác thực tính toàn vẹn ngữ nghĩa và logic thực tế.",
+      "CẤM 4: Tuyệt đối CẤM nhồi nhét quy tắc chi tiết của từng nghiệp vụ chuyên biệt vào System Prompt toàn cục, gây lãng phí bộ nhớ đệm và suy giảm chất lượng chú ý của LLM.",
+      "CẤM 5: Tuyệt đối CẤM che giấu xung đột quy tắc; khi phát hiện hai quy tắc đối kháng nhau trên cùng một phạm vi, hệ thống bắt buộc phải ghi log và phát cảnh báo phân xử theo ma trận thứ bậc ưu tiên.",
+      "NFR-04: Khi một tập tin quy tắc bị hỏng định dạng hoặc không thể đọc được do quyền truy cập file hệ điều hành, hệ thống tuyệt đối KHÔNG được sập toàn bộ tiến trình (No Process Crash)."
+    ],
+    "violations_found": []
+  },
+  "violations": [],
+  "summary": "Hồ sơ đặc tả SPEC-BA-RULE-001 đạt mức hoàn thiện xuất sắc theo chuẩn IIBA BABOK Guide v3 và kiến trúc Headless Mechanical Gate của Antigravity CLI. Tài liệu tuân thủ tuyệt đối phân loại 4 tầng yêu cầu, 100% NFR được định lượng bằng chỉ số vật lý/kỹ thuật cụ thể, ma trận RTM khép kín 2 chiều không có Orphaned Goals hay Gold-Plating, không gian phủ định định nghĩa 5 điều cấm rõ ràng và hoàn toàn sạch các ký hiệu giữ chỗ (Zero Placeholder)."
+}

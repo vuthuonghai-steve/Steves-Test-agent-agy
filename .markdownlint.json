@@ -1,0 +1,12 @@
+{
+  "default": true,
+  "MD013": false,
+  "MD033": {
+    "allowed_elements": [
+      "br",
+      "instructions",
+      "cognitive_activation_rules",
+      "guardrails"
+    ]
+  }
+}
