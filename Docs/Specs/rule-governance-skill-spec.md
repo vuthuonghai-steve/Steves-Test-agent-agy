@@ -1,53 +1,48 @@
-# Đặc Tả Nghiệp Vụ & Kiến Trúc Bộ Agent Skill Quản Trị Quy Tắc (Rule Governance & Conflict Analyzer Spec)
+# Đặc Tả Nghiệp Vụ & Kiến Trúc Nâng Cấp Bộ Agent Skill Quản Trị Quy Tắc Tích Hợp Headless Pipeline (Rule Governance & Headless Pipeline Spec)
 
 > **Mã tài liệu**: `SPEC-BA-RULE-001`  
-> **Phiên bản**: `1.0.0` | **Trạng thái**: `Ready for Review & Implementation`  
+> **Phiên bản**: `1.1.0` (Major Headless Architecture Upgrade) | **Trạng thái**: `Ready for Review & Implementation`  
 > **Chuẩn áp dụng**: IIBA BABOK Guide v3, Antigravity CLI Open Skills Standard, Headless Mechanical Gate Architecture  
-> **Tác giả**: Lead Business Analyst & Systems Architect  
-> **Ngày lập**: 2026-09-08  
+> **Tác giả**: Lead Business Analyst & AI Systems Architect  
+> **Ngày cập nhật**: 2026-09-08  
+> **Tham chiếu thực địa**: Báo cáo kiểm định `AUDIT-RULE-APPFORMS-001` tại `Sale_extension/app_native_desktop/app_forms/temp.md` & Tài liệu `Docs/Antigravities/CLI/Headless-mode.md`
 
 ---
 
-## 1. Tóm Tắt Ngữ Cảnh & Phân Tích Bài Toán (Executive Problem Statement)
+## 1. Tóm Tắt Ngữ Cảnh & Không Gian Bài Toán (Problem Domain & Context)
 
-### 1.1. Thực Trạng & Điểm Nghẽn Cốt Lõi (Core Pain Points)
-Trong quá trình triển khai AI Coding Agent trên các dự án phức tạp, việc thiết lập quy tắc (Rules) đang đối mặt với 3 cuộc khủng hoảng kiến trúc nghiêm trọng:
+### 1.1. Thực Trạng & Điểm Nghẽn Cốt Lõi Từ Thực Địa (Empirical Field Failure Analysis)
+Từ kết quả kiểm định thực tế tại dự án `Sale_extension/app_native_desktop/app_forms` (được ghi nhận trong báo cáo `temp.md`), hệ thống quy tắc và cơ chế kiểm soát của AI Agent đang bộc lộ những điểm nghẽn nghiêm trọng mà phiên bản quy tắc v1.0.0 chưa thể giải quyết:
 
-1. **Khủng hoảng Hộp đen & Xung đột Quy tắc (Blackbox & Rule Conflict Crisis)**:
-   - Các quy tắc thường được viết tản mát qua nhiều tầng cấu hình (`AGENTS.md`, `.cursorrules`, `CLAUDE.md`, system prompt, global rules) mà không có metadata về nguyên nhân tồn tại (*the "Why"*).
-   - Khi dự án mở rộng, các quy tắc xung đột trực tiếp với nhau (ví dụ: rule A yêu cầu *"luôn hỏi xác nhận trước khi chạy lệnh shell"* trong khi rule B yêu cầu *"tự động chạy test ngầm không làm phiền người dùng"*). 
-   - Hệ quả: AI Agent rơi vào trạng thái bế tắc nhận thức (Cognitive Paralysis), lựa chọn ngẫu nhiên quy tắc để tuân theo hoặc sinh lỗi luẩn quẩn.
-2. **Khủng hoảng Rule Cứng Cổ Điển & "Rule Ảo" (Brittle Hard Scripts & Phantom Rule Crisis)**:
-   - Các chốt chặn thường được cài cắm bằng các script Shell/Python cổ điển dựa trên regex thô sơ hoặc kiểm tra exit code 0 giả tạo.
-   - Khi Agent sinh mã hoặc tài liệu, script kiểm tra cơ học báo thành công (`PASS`), nhưng thực chất nội dung rỗng, chứa mock data hoặc logic sai lệch. Hiện tượng này gọi là **"Rule Ảo" (Phantom Gate)**: Hệ thống tưởng rằng quy tắc được thực thi nhưng thực tế không mang lại giá trị thực, làm tê liệt khả năng suy nghĩ sâu và triệt tiêu tính thích ứng linh hoạt của Agent.
-3. **Khủng hoảng Phình to Ngữ cảnh & Suy thoái Nhận thức (Context Bloat & Thinking Dilution)**:
-   - Việc "nhồi nhét" hàng trăm dòng quy tắc tĩnh hẹp vào system prompt làm phình to context window, kích hoạt hiện tượng *Attention Dilution* (loãng sự chú ý) và *Lost in the Middle*.
-   - Agent bị gò bó trong các chỉ thị chắp vá, đánh mất khả năng tư duy giải quyết vấn đề từ nguyên lý đầu tiên (First Principles).
+1. **Khủng hoảng Nghẽn Nhận Thức (Cognitive Deadlock) Do Hook Dùng Regex Thô Sơ**:
+   - Trong `temp.md`, script hook `gate_logging_pre_test.py` sử dụng biểu thức chính quy (regex) thô sơ để kiểm tra sự tồn tại của `class \w+`, `public/private method`, `try/catch`. 
+   - Hậu quả: Khi Agent tạo mới hoặc cập nhật các thực thể dữ liệu thuần túy (POCO, Entity, DTO, Model như `AppSettings.cs`, `LeadEntity.cs`), regex này đánh dấu nhầm đây là "logic nghiệp vụ phức tạp cần structured logging" và chặn lệnh `dotnet test`. AI Agent rơi vào trạng thái bế tắc nhận thức (Deadlock), không thể chạy test để kiểm tra logic tính toán khác chỉ vì đã thêm một Model class.
+   - Bản chất: Regex tĩnh không có khả năng hiểu ngữ nghĩa (Semantic Understanding) để phân biệt giữa Data Contract thụ động và Business Execution chủ động.
+2. **Khủng hoảng "Rule Ảo" Do Lệch Pha Cấu Hình & Nuốt Lỗi (Decoupled Zombie Configs & Silent Fallback)**:
+   - Trong `temp.md`, phát hiện 3 điểm bất đối xứng cấu hình: `rules.yaml` khai báo `forbidden_patterns` nhưng script Python lại đọc `placeholder.patterns`; khối `architecture_boundaries` trong YAML hoàn toàn không được script sử dụng; script nạp cấu hình `config.py` sử dụng `except Exception: continue` âm thầm nuốt lỗi cú pháp.
+   - Hậu quả: Người dùng tưởng rằng chỉnh sửa file YAML là kiểm soát được hệ thống, nhưng thực tế toàn bộ chốt chặn chạy ngầm bằng mã fallback hardcoded trong Python. Đây là hiện tượng "Rule Ảo" (Phantom Gate) cực kỳ nguy hiểm.
+3. **Khủng hoảng Ô Nhiễm Ngữ Cảnh & Suy Thoái Tư Duy (Context Bloat & Thinking Dilution)**:
+   - Hệ thống duy trì tới 10 tập tin quy tắc Markdown (`01_llm-core-principles.md` đến `10_context-routing-and-modularity.md`) với tổng dung lượng xấp xỉ 35KB (~9.000 đến 10.000 tokens).
+   - Việc Agent trong luồng hội thoại chính (Interactive Session) phải liên tục ghi nhớ, tra cứu và tự giám sát 10 tập tin này làm loãng cửa sổ chú ý (Attention Dilution). Thay vì tập trung 100% năng lực tư duy chiều sâu cho kiến trúc và logic nghiệp vụ, Agent bị phân tâm vào việc tự kiểm tra các tiểu tiết cú pháp.
+4. **Khoảng Trống Hoàn Toàn Về Tự Động Hóa Headless & Phân Tách Quyền Lực (Headless Void)**:
+   - Trong toàn bộ báo cáo `temp.md`, các giải pháp khắc phục chỉ dừng lại ở các khuyến nghị thủ công: sửa regex, sửa file YAML, sửa dòng chữ trong `AGENTS.md`.
+   - Báo cáo hoàn toàn thiếu vắng kiến thức và giải pháp về mô hình thực thi ngầm tự động hóa: Không đề xuất đưa các bài test quy tắc ra đường ống tự động, không đề xuất xây dựng chốt chặn ngữ nghĩa bằng Semantic Gatekeeper, không có cơ chế mô phỏng tự động kiểm thử chính các hook scripts, và không phân định việc ủy thác kiểm tra cho các tiến trình chạy ngầm để giải phóng toàn bộ năng lực tư duy chiều sâu cho AI Agent chính.
 
-### 1.2. Phân Tích Tài Liệu Kiến Thức Nền Tảng (Architectural Knowledge Synthesis)
-Để giải quyết tận gốc 3 cuộc khủng hoảng trên, hệ thống quy tắc cần được tái cấu trúc dựa trên 4 trụ cột kiến trúc của Antigravity CLI:
-
-- **Trụ cột 1 — Phân tầng Ngữ cảnh & Bộ nhớ đệm (`_Context-Architecture-OneShot.md`)**:
-  - Tách bạch ranh giới giữa Tầng Tĩnh (Static Prefix: Identity, Tools, Project Rules được Cache ~8.000 tokens) và Tầng Động (Dynamic Payload).
-  - Chuyển hóa các quy tắc mơ hồ thành hợp đồng dữ liệu máy đọc được (`--json-schema` và `--output-format json`), ép chuẩn tất định cho mọi phản hồi.
-- **Trụ cột 2 — Cô lập Kiểm định bằng Headless Sub-process (`Headless-mode.md`)**:
-  - Không kiểm định quy tắc trực tiếp trong luồng hội thoại chính gây ô nhiễm Context Window.
-  - Sử dụng lệnh `agy -p` trong sub-process độc lập để thực hiện các bài audit sâu, chỉ trả về một JSON Envelope siêu gọn nhẹ (Exit code 0/1 kèm actionable fixes).
-- **Trụ cột 3 — Chốt chặn Cơ học ngầm qua Vòng đời Hooks (`Hooks.md`)**:
-  - Chuyển các "Rule cấm đoán mềm" (Soft Prompt Rules) thành "Chốt chặn tất định cứng" (Deterministic Hook Gates) tại các sự kiện: `PreToolUse`, `PostToolUse`, `PreInvocation`, `PostInvocation`.
-  - Kiểm soát hành vi Agent qua giao thức JSON IPC trên `stdin`/`stdout`, trả về các quyết định cưỡng chế: `allow`, `deny`, `ask`, `force_ask`.
-- **Trụ cột 4 — Đóng gói Tri thức theo Chuẩn Mở Agent Skills (`skills.md`)**:
-  - Áp dụng nguyên lý Tiết lộ Lũy tiến (Progressive Disclosure): Chỉ giữ `name` và `description` (~50 tokens) trong danh bạ khởi động.
-  - Chỉ khi gặp bài toán phân tích quy tắc cụ thể, Agent mới nạp `SKILL.md` và các tài liệu vệ tinh (`knowledge/`, `templates/`, `scripts/`).
+### 1.2. Tầm Nhìn Kiến Trúc Nâng Cấp (Solution Vision — Headless Pipeline Integration)
+Nâng cấp toàn diện Agent Skill `rule-governance-analyzer` từ một công cụ quét tĩnh thông thường thành **Hệ thống Quản Trị & Tự Động Hóa Quy Tắc Đa Tầng (Multi-Tier Headless Rule Governance System)**:
+- **Tách rời Luồng Tư Duy và Luồng Kiểm Tra (Decoupling Thinking from Gatekeeping)**: Luồng hội thoại tương tác của Agent chỉ giữ mỏ neo bất biến (`AGENTS.md` $\le 7$ invariants). Toàn bộ việc thẩm định quy tắc phức tạp, rà soát xung đột, kiểm tra ranh giới kiến trúc được đẩy sang tiến trình thực thi ngầm độc lập chạy qua các cổng chốt chặn tự động.
+- **Thay thế Regex Thô Sơ Bằng Headless Semantic Gatekeeper**: Sử dụng lệnh thực thi ngầm kèm schema dữ liệu máy đọc được với model được kế thừa từ cấu hình headless runtime sẵn có (với chỉ định reasoning `--effort low` hoặc `medium`) để thẩm định ngữ nghĩa chính xác (ví dụ: nhận biết chính xác đâu là DTO không cần log và đâu là Service cần log), loại bỏ triệt để tình trạng Deadlock và False-Positive.
+- **Tự Động Kiểm Thử Hook (Automated Hook Simulation & Testing)**: Tích hợp bộ tạo kịch bản kiểm thử giả lập chạy qua CLI để thẩm định chính các file script hook trước khi kích hoạt vào dự án, đảm bảo hook thực sự chặn được vi phạm và không sinh ra exit code 0 giả tạo.
+- **Nâng cấp Động Cơ Phân Tích Nội Tại Của Skill**: Bản thân engine `audit_rules.py` trong skill `rule-governance-analyzer` bắt buộc phải tích hợp pha Deep Semantic Audit qua thực thi ngầm độc lập, không chỉ dừng lại ở việc đọc regex bề mặt.
 
 ### 1.3. Không Gian Phủ Định & Ranh Giới Cấm Kỵ (System Negative Space)
-Hệ thống quản trị quy tắc bắt buộc tuân thủ 5 điều cấm bất biến sau:
+Hệ thống quản trị và tự động hóa quy tắc bắt buộc tuân thủ 5 điều cấm thép sau:
 
-- **CẤM 1**: Tuyệt đối **CẤM** tự ý âm thầm sửa đổi hoặc xóa bỏ quy tắc của người dùng khi chưa có biên bản đối soát xung đột và sự phê duyệt rõ ràng.
-- **CẤM 2**: Tuyệt đối **CẤM** định nghĩa quy tắc bằng các tính từ cảm tính mơ hồ ("nhanh", "ổn định", "an toàn", "chuẩn mực") mà không đi kèm ngưỡng đo lường vật lý cụ thể.
-- **CẤM 3**: Tuyệt đối **CẤM** duy trì các script kiểm tra quy tắc giả tạo (Phantom Gates) chỉ kiểm tra bề mặt, bắt buộc mọi bài kiểm định phải xác thực tính toàn vẹn ngữ nghĩa và logic thực tế.
-- **CẤM 4**: Tuyệt đối **CẤM** nhồi nhét quy tắc chi tiết của từng nghiệp vụ chuyên biệt vào System Prompt toàn cục, gây lãng phí bộ nhớ đệm và suy giảm chất lượng chú ý của LLM.
-- **CẤM 5**: Tuyệt đối **CẤM** che giấu xung đột quy tắc; khi phát hiện hai quy tắc đối kháng nhau trên cùng một phạm vi, hệ thống bắt buộc phải ghi log và phát cảnh báo phân xử theo ma trận thứ bậc ưu tiên.
+- **CẤM 1**: Tuyệt đối **CẤM** ép AI Agent trong phiên hội thoại tương tác chính phải tự đọc và phân tích toàn bộ các tập tin quy tắc chi tiết gây lãng phí bộ nhớ đệm và suy giảm năng lực tư duy chiều sâu (Zero In-Session Rule Bloat).
+- **CẤM 2**: Tuyệt đối **CẤM** xây dựng các script hook chốt chặn chỉ dựa trên regex từ khóa thô sơ đối với các quy tắc mang tính ngữ nghĩa; bắt buộc phải có cơ chế Semantic Evaluation qua CLI độc lập hoặc quy tắc phân định ranh giới thư mục để triệt tiêu False-Positive.
+- **CẤM 3**: Tuyệt đối **CẤM** duy trì các script hook âm thầm nuốt ngoại lệ (`except Exception: continue` hoặc `catch {}` rỗng) dẫn đến tình trạng cấu hình zombie; mọi lỗi cú pháp cấu hình phải bị chặn đứng và phát thông báo chuẩn RFC-5424 lập tức (Fail-Fast Policy).
+- **CẤM 4**: Tuyệt đối **CẤM** đưa ra báo cáo phân tích quy tắc chỉ chứa các khuyến nghị sửa chữa thủ công mà không đề xuất bản thiết kế kiến trúc tự động hóa phân tầng độc lập.
+- **CẤM 5**: Tuyệt đối **CẤM** triển khai các script hook và gatekeeper vào dự án thực tế khi chưa vượt qua bài kiểm thử mô phỏng tự động (Simulation Test) chứng minh khả năng chặn đúng hành vi vi phạm và trả về exit code nhị phân tất định (Exit 1 khi lỗi, Exit 0 khi hợp lệ).
 
 ---
 
@@ -55,270 +50,279 @@ Hệ thống quản trị quy tắc bắt buộc tuân thủ 5 điều cấm b�
 
 ### 2.1. Bảng Phân Loại Tổng Thể (Taxonomy Master Table)
 
-| Yêu Cầu Thô Ban Đầu (Raw Needs) | Tầng BABOK | Mã Định Danh | Nội Dung Đặc Tả Đã Chuẩn Hóa | Chủ Thể / Persona | Chỉ Số Đo Lường & NFR Ràng Buộc |
+| Yêu Cầu Thô Ban Đầu (Raw Input) | Tầng BABOK | Mã Định Danh | Nội Dung Đặc Tả Đã Chuẩn Hóa | Chủ Thể / Persona | Chỉ Số Đo Lường & NFR Ràng Buộc |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| "Rule bị chồng chéo, AI không biết nghe ai" | **BR** | **BR-01** | Giảm 90% tình trạng bế tắc nhận thức (Deadlock/Paralysis) của AI Agent do xung đột quy tắc, nâng tỷ lệ tự động nhận diện và phân xử xung đột có truy vết lên 100%. | Ban Giám Đốc / Tech Lead | Giảm thời gian trễ trung bình của các phiên làm việc từ 4.5 phút xuống < 30 giây. |
-| "Script kiểm tra cứng nhắc sinh ra rule ảo" | **BR** | **BR-02** | Xóa bỏ hoàn toàn hiện tượng chốt chặn hình thức (Zero Phantom Pass), giảm tối thiểu 85% tỷ lệ lỗi lọt lưới vào môi trường triển khai thực tế. | Head of Quality / Lead Architect | Giảm tỷ lệ lỗi lọt lưới từ 14.2% xuống dưới 2.0% trong toàn bộ chu kỳ phát hành. |
-| "Rule nhồi nhét làm AI bị gò bó, ngáo ngơ" | **BR** | **BR-03** | Tối ưu hóa chi phí vận hành và hiệu suất hội thoại: Cắt giảm tối thiểu 40% chi phí tài nguyên tính toán và rút ngắn 35% độ trễ phản hồi trong các phiên làm việc. | FinOps / Infrastructure Lead | Tiết kiệm 40% chi phí vận hành API hàng tháng và tăng 25% năng suất thao tác của kỹ sư. |
-| "Tôi muốn biết dự án có rule nào đá nhau không" | **SR** | **SR-01** | Lập trình viên & BA cần công cụ phân tích tĩnh tự động với thời gian phản hồi CLI ≤ 3 giây để quét toàn bộ repository và cảnh báo các cặp quy tắc đối kháng. | Software Engineer / Lead BA | Thời gian quét toàn bộ repo ≤ 3 giây. |
-| "Khi có conflict, AI phải biết rule nào to hơn" | **SR** | **SR-02** | AI Agent Operator cần một ma trận thứ bậc thẩm quyền quy tắc (Rule Precedence Hierarchy) được xác định rõ ràng để tự động ra quyết định khi xảy ra va chạm. | AI System Operator | 100% quyết định phân xử được ghi log minh bạch kèm mã quy tắc thắng cuộc. |
-| "Cần script tự động bắt lỗi rule ảo trước commit" | **SR** | **SR-03** | Kỹ sư DevOps cần một CLI Gatekeeper độc lập tích hợp vào Git Hook/CI pipeline để chặn các commit chứa rule mâu thuẫn hoặc placeholder. | DevOps Engineer / CI-CD Admin | Chạy độc lập qua CLI headless, trả về exit code 0/1 trong < 5 giây. |
-| "Phân tích file rule và trích xuất cấu trúc AST" | **FR** | **FR-01** | Hệ thống tự động phân tích cú pháp các tập tin quy tắc (`.md`, `.json`, `.yaml`) trong workspace để trích xuất danh mục quy tắc, điều kiện kích hoạt và phạm vi áp dụng. | Rule Parsing Subsystem | Hỗ trợ 100% cấu trúc Markdown headings, YAML frontmatter và JSON schema. |
-| "Phát hiện xung đột ngữ nghĩa giữa các rule" | **FR** | **FR-02** | Hệ thống thực hiện đối chiếu ma trận tương quan giữa các cặp quy tắc, phát hiện xung đột trực tiếp (Direct Contradiction) và xung đột thẩm quyền (Shadowing). | Rule Conflict Engine | Phát hiện xung đột với độ chuẩn xác (Precision) ≥ 99% theo bộ test fixture chuẩn. |
-| "Cơ chế ghi log và thông báo xung đột" | **FR** | **FR-03** | Hệ thống ghi nhận mọi xung đột quy tắc vào tập tin nhật ký có cấu trúc `rule-conflicts.audit.json` và hiển thị cảnh báo phân giải định dạng bảng ANSI cho người dùng. | Audit & Notification Service | Định dạng JSON Schema chuẩn, cung cấp link file:line và giải pháp khắc phục. |
-| "Kiểm định chống Rule Ảo (Anti-Phantom Gate)" | **FR** | **FR-04** | Hệ thống kiểm tra chất lượng của các script kiểm định, phát hiện các trường hợp exit code 0 giả tạo, mock data hoặc empty assertions. | Anti-Phantom Verifier | Đối chiếu output thực tế với schema dữ liệu nghiệp vụ thay vì chỉ tin vào exit code. |
-| "Đề xuất tái cấu trúc Rule sang Hook & Skill" | **FR** | **FR-05** | Hệ thống phân loại quy tắc hiện hữu và đưa ra khuyến nghị phân bổ tất định: Quy tắc nào chuyển sang Hook (`PreToolUse`), quy tắc nào chuyển sang Agent Skill, quy tắc nào giữ ở Project Anchor. | Architecture Dispatcher | Xuất bản báo cáo tái cấu trúc tự động kèm template mã nguồn tương ứng. |
-| "Tốc độ quét và xử lý phân tích quy tắc" | **NFR** | **NFR-01** | Thời gian thực thi phân tích tĩnh toàn bộ tập quy tắc trong workspace (quy mô ≤ 50 rules) không vượt quá 2.000ms ở phân vị p95. | Performance Requirement | Benchmark đo lường qua PowerShell `Measure-Command` hoặc Python `time.perf_counter()`. |
-| "Định dạng đầu ra chuẩn nhị phân máy đọc được" | **NFR** | **NFR-02** | 100% kết quả phân tích và kiểm định phải tuân thủ nghiêm ngặt JSON Schema máy đọc được (`rule-audit-schema.json`) và trả về exit code nhị phân (0 = Pass, 1 = Fail). | Reliability & Interoperability | Xác thực qua `Test-Json` hoặc `jsonschema.validate()`. |
-| "Bảo vệ Context Window và tối ưu FinOps" | **NFR** | **NFR-03** | Tổng lượng token nạp vào Context Window khi khởi động Agent Skill Quản trị quy tắc không vượt quá 120 tokens ở Tier 1 (Discovery Catalog). | FinOps & Context Efficiency | Đo lường qua `input_tokens` của Antigravity CLI event `init`. |
-| "Chuyển giao các rule hiện hữu sang mô hình mới" | **TR** | **TR-01** | Xây dựng script rà soát và chuyển đổi tự động (Migration Script) các file rule cũ (`AGENTS.md`, `GEMINI.md`, `CLAUDE.md`) sang cấu trúc phân tầng mới trước ngày phát hành 3 ngày. | Legacy Rule Migration | Bảo toàn 100% các điều kiện nghiệp vụ cốt lõi, loại bỏ 100% trùng lặp. |
-| "Đào tạo đội ngũ kỹ sư viết rule chuẩn" | **TR** | **TR-02** | Tổ chức 02 buổi đào tạo kỹ thuật cho toàn bộ kỹ sư về cách thiết lập Hook bảo vệ, đóng gói Skill và viết rule không gây loãng Context Window. | Training & Enablement | 100% kỹ sư tham gia vượt qua bài đánh giá thực hành viết Skill và Hook. |
-| "Kế hoạch Cutover và Rollback khẩn cấp" | **TR** | **TR-03** | Thiết lập cờ cấu hình tắt khẩn cấp (Emergency Kill-Switch: `ENABLE_RULE_GOVERNANCE=false`) cho phép cô lập toàn bộ hook và gatekeeper trong trường hợp xảy ra nghẽn pipeline. | DevOps / SRE | Thời gian khôi phục trạng thái hoạt động ban đầu (MTTR) ≤ 60 giây. |
+| "Agent bị kẹt vì hook regex bắt nhầm file Model không có log" | **BR** | **BR-01** | Giảm thiểu 95% tình trạng bế tắc nhận thức và đánh giá sai lệch trong quá trình lập trình, nâng độ chính xác thẩm định phân loại mã nguồn lên $\ge 99{,}0\%$. | Product Owner / Tech Lead | Tỷ lệ False-Positive giảm từ mức baseline 28% xuống $< 1{,}0\%$. |
+| "Agent mất quá nhiều token và suy nghĩ để kiểm tra 10 file rule" | **BR** | **BR-02** | Giải phóng 100% tải nhận thức kiểm tra quy tắc và tiết kiệm tối thiểu 60% chi phí tài nguyên tư duy trong các phiên làm việc cốt lõi, tập trung tối đa thời gian cho việc giải quyết bài toán nghiệp vụ. | FinOps / AI Systems Architect | Tiết kiệm $\ge 60\%$ thinking tokens; bộ nhớ đệm phiên chính tiêu tốn $0\text{ tokens}$ cho việc audit quy tắc. |
+| "Báo cáo cũ chỉ bảo sửa tay, không có giải pháp tự động hóa" | **BR** | **BR-03** | Thiết lập cơ chế kiểm soát chất lượng quy tắc tất định trước khi phát hành mã nguồn, loại bỏ 100% các chốt chặn hình thức và cấu hình không có tác dụng thực tế (Zero Phantom Pass). | Head of QA / DevOps Lead | 100% vi phạm cấu hình và zombie config bị chặn tại chốt kiểm soát trong $\le 5\text{s}$. |
+| "Tôi muốn script audit rule tự dùng headless để phân tích sâu" | **SR** | **SR-01** | Kỹ sư vận hành AI cần bộ công cụ `rule-governance-analyzer` tự động kích hoạt tính năng thực thi không đầu (`agy -p`) kèm cấu trúc schema để thẩm định ngữ nghĩa sâu thay vì chỉ quét regex bề mặt, với thời gian phản hồi $\le 15$ giây. | AI System Operator | Thời gian phản hồi phân tích ngữ nghĩa $\le 15.000\text{ms}$ ở phân vị p95. |
+| "Tôi muốn biến các hook regex lỗi thời thành chốt chặn thông minh" | **SR** | **SR-02** | Lập trình viên dự án cần kỹ năng đề xuất và chuyển đổi các script hook dễ gãy sang mô hình Semantic Gatekeeper hoặc cấu hình phân tầng ranh giới thư mục với thời gian phản hồi $\le 5$ giây. | Software Engineer | Giảm số lần can thiệp thủ công sửa hook từ 12 lần/tháng xuống 0 lần. |
+| "Cần pipeline tự động test xem hook có hoạt động thật không" | **SR** | **SR-03** | Kỹ sư DevOps cần một khung kiểm thử tự động (Hook Test Harness) chạy ngầm để xác thực nhị phân rằng hook thực sự chặn được code vi phạm và cho qua code hợp lệ. | DevOps Engineer / QA | 100% hook scripts có bộ test fixture tự động với tỷ lệ pass kiểm thử $100\%$. |
+| "Tích hợp pha Headless Semantic Audit vào engine audit_rules.py" | **FR** | **FR-01** | Hệ thống tự động thực thi pha Deep Semantic Audit bằng cách gọi subprocess `agy -p` kèm `--json-schema` và `--output-format json` để phát hiện các xung đột logic mà regex không thể nhận diện. | Core Audit Engine | Phân tích ngữ nghĩa đạt độ tin cậy $\ge 99\%$ dựa trên schema chuẩn `rule-audit-schema.json`. |
+| "Phát hiện Zombie Configuration & Silent Fallback trong hooks" | **FR** | **FR-02** | Hệ thống kiểm tra đối chiếu cú pháp giữa các file cấu hình YAML/JSON và mã nguồn script hook, phát hiện các khóa cấu hình bị bỏ qua hoặc khối `except` nuốt lỗi im lặng. | Anti-Phantom Verifier | Phát hiện 100% trường hợp khóa bị lệch (decoupled keys) và khối catch rỗng. |
+| "Đề xuất kiến trúc Headless Rule Pipeline trong báo cáo" | **FR** | **FR-03** | Hệ thống tự động khởi tạo bản thiết kế kiến trúc Headless Pipeline hoàn chỉnh trong báo cáo kiểm định, bao gồm: Git Pre-commit Hook, CI Gatekeeper, và Subagent Delegation. | Architecture Dispatcher | Xuất bản 100% template mã nguồn sẵn sàng sử dụng cho Git Hook và CI/CD Pipeline. |
+| "Tạo khung kiểm thử mô phỏng Headless cho Hook (Hook Simulation)" | **FR** | **FR-04** | Hệ thống tự động sinh ra kịch bản kiểm thử giả lập và thực thi qua CLI độc lập để kiểm chứng cơ học rằng các hook trong `.agents/hooks/` hoạt động đúng cam kết. | Hook Test Engine | Tự động chạy bài test 2 nhánh: Positive (Pass) và Negative (Deny) cho từng hook. |
+| "Định tuyến quy tắc chuyên sâu sang Headless Subagent" | **FR** | **FR-05** | Hệ thống phân rã các quy tắc nghiệp vụ nặng (như kiểm tra Clean Architecture, kiểm tra Screen $\le 150$ dòng) thành nhiệm vụ độc lập ủy thác cho Subagent chạy nền. | Subagent Router | Khởi tạo cấu hình invoke subagent tự động, trả kết quả JSON về luồng chính. |
+| "Độ trễ và thời gian phản hồi của Headless Audit Engine" | **NFR** | **NFR-01** | Thời gian thực thi toàn bộ chu trình Headless Semantic Audit cho tập quy tắc $\le 20$ files không được vượt quá $15.000\text{ms}$ ở phân vị p95 với model kế thừa từ cấu hình headless runtime sẵn có và chỉ định `--effort low` hoặc `medium`. | Performance Requirement | Benchmark tự động qua `Measure-Command` trong PowerShell. |
+| "Chuẩn hóa định dạng đầu ra và tính tất định nhị phân" | **NFR** | **NFR-02** | 100% kết quả phân tích từ Headless Engine phải tuân thủ nghiêm ngặt JSON Schema máy đọc được (`rule-audit-schema.json`) với tỷ lệ lỗi cấu trúc $0{,}00\%$, trả về exit code nhị phân (0 = APPROVED, 1 = REJECTED). | Reliability & Interoperability | Xác thực tự động qua JSON Schema Validator trước khi xử lý. |
+| "Không ô nhiễm bộ nhớ đệm luồng chính (Zero Main-Context Pollution)" | **NFR** | **NFR-03** | Toàn bộ dữ liệu trung gian của quá trình kiểm định quy tắc và chạy hook simulation phải được cô lập hoàn toàn trong subprocess độc lập, tiêu tốn đúng $0\text{ tokens}$ trong Context Window của phiên làm việc chính. | FinOps & Context Efficiency | Kiểm tra qua token counter của phiên hội thoại chính. |
+| "Cơ chế tự phục hồi và Fallback kiểm chứng (Graceful Fallback)" | **NFR** | **NFR-04** | Khi môi trường không có kết nối internet hoặc lệnh `agy` bị quá thời gian chờ (Timeout $\ge 180\text{s}$), hệ thống tự động suy thoái an toàn về Engine phân tích tĩnh nội bộ với tỷ lệ hoàn tất $100\%$, không bao giờ làm treo ứng dụng. | Resilience & Fault Tolerance | Tỷ lệ crash/hang tiến trình bằng $0{,}00\%$; ghi log chuẩn RFC-5424 mức WARN. |
+| "Chuyển đổi các hook hiện hữu của dự án thí điểm AppForms" | **TR** | **TR-01** | Thực hiện tái cấu trúc script `gate_logging_pre_test.py` và sửa đổi `rules.yaml` của dự án `Sale_extension/app_native_desktop/app_forms` theo mô hình Semantic Gatekeeper để giải quyết vấn đề ghi nhận trong `temp.md`. | Pilot Transition | Triệt tiêu 100% lỗi false-positive trên các file Model/Entity/DTO của AppForms. |
+| "Cập nhật tài liệu kiến thức và biểu mẫu của skill" | **TR** | **TR-02** | Bổ sung 100% tài liệu kiến thức chuyên sâu `knowledge/headless-rule-pipeline-patterns.md` và nâng cấp biểu mẫu `templates/rule-audit-report.template.md` theo chuẩn Open Skills v1.1.0 trước khi phát hành. | Knowledge & Templates | Đầy đủ tài liệu hướng dẫn và template có hỗ trợ kiến trúc Headless. |
+| "Cơ chế Rollback và ngắt khẩn cấp (Emergency Kill-Switch)" | **TR** | **TR-03** | Thiết lập tham số `--no-headless` và biến môi trường `DISABLE_HEADLESS_RULE_AUDIT=1` cho phép cô lập ngay lập tức tính năng headless trong vòng $\le 10$ giây khi cần bảo trì. | Operations & Rollback | Thời gian khôi phục trạng thái hoạt động ban đầu (MTTR) $\le 10$ giây. |
 
 ---
 
 ## 3. Đặc Tả Chi Tiết Từng Nhóm Requirements
 
 ### 3.1. Business Requirements (BR) — Mục Tiêu Nghiệp Vụ Chiến Lược
-- **[BR-01] Xóa Bỏ Bế Tắc Nhận Thức Do Xung Đột Quy Tắc (Zero Cognitive Deadlock)**:
-  - *Mục tiêu cốt lõi*: Triệt tiêu hoàn toàn tình trạng AI Agent bị ngưng trệ tư duy hoặc hành động sai lệch do các quy tắc trong cùng dự án phủ định lẫn nhau.
-  - *KPI đo lường*: 100% xung đột quy tắc được tự động phát hiện trước thời điểm thực thi; tỷ lệ gián đoạn hội thoại do xung đột giảm từ 18% xuống 0%.
-  - *Thời hạn kỳ vọng*: Hoàn tất trong Sprint 1.
-  - *Product Sponsor*: Tech Lead & AI Systems Architect.
 
-- **[BR-02] Đảm Bảo Tính Toàn Vẹn Của Các Chốt Chặn Quy Trình (Zero Phantom Pass Guarantee)**:
-  - *Mục tiêu cốt lõi*: Loại bỏ hoàn toàn hiện tượng chốt chặn hình thức giả tạo, đảm bảo rằng trạng thái phê duyệt của mọi quy tắc phản ánh chính xác chất lượng phần mềm thực tế ngoài thực địa.
-  - *KPI đo lường*: Giảm tỷ lệ lỗi lọt lưới (Escaped Defects) do chốt chặn hình thức từ mức baseline 14.2% xuống dưới 2.0% (mức giảm 85.9%); 100% kết quả đánh giá phải có bằng chứng cơ học đối soát hành vi thực tế.
-  - *Thời hạn kỳ vọng*: Hoàn tất trong Sprint 2.
-  - *Product Sponsor*: Head of Software Quality Assurance.
+- **[BR-01] Xóa Bỏ Bế Tắc Nhận Thức Do Chốt Chặn Regex Thô Sơ (Zero Brittle-Gate Deadlock)**:
+  - *Mục tiêu cốt lõi*: Loại bỏ tình trạng AI Agent bị kẹt nhận thức do các chốt chặn sử dụng regex thô sơ chặn nhầm các thao tác hợp lệ (như trường hợp `gate_logging_pre_test.py` chặn code Model/POCO trong `temp.md`).
+  - *KPI đo lường*: 
+    - Tỷ lệ False-Positive giảm từ mức baseline **$28{,}0\%$** xuống dưới **$1{,}0\%$**.
+    - Độ chính xác phân biệt giữa code nghiệp vụ cần kiểm soát và code cấu trúc thuần túy đạt **$\ge 99{,}0\%$**.
+    - Số lần Agent bị gián đoạn hội thoại do lỗi chốt chặn giả giảm về **$0$ lần/tuần**.
+  - *Product Sponsor*: AI Systems Architect & Lead Software Engineer.
 
-- **[BR-03] Tối Ưu Hóa Chi Phí Vận Hành Và Hiệu Suất Hội Thoại (FinOps & Conversation Throughput)**:
-  - *Mục tiêu cốt lõi*: Cắt giảm lãng phí tài nguyên tính toán do nạp dữ liệu dư thừa, tối ưu hóa thời gian xử lý của các phiên tương tác AI để nâng cao năng suất kỹ thuật.
-  - *KPI đo lường*: Giảm ít nhất 40% chi phí vận hành API hàng tháng; rút ngắn 35% độ trễ phản hồi ban đầu (Time-To-First-Token) xuống dưới 1.200ms; nâng năng suất thao tác của kỹ sư thêm 25%.
-  - *Thời hạn kỳ vọng*: Hoàn tất trong Sprint 2.
-  - *Product Sponsor*: DevOps & FinOps Infrastructure Lead.
+- **[BR-02] Giải Phóng Tải Nhận Thức & Tối Ưu Chi Phí Vận Hành (Thinking Liberation & Token FinOps)**:
+  - *Mục tiêu cốt lõi*: Đưa toàn bộ gánh nặng kiểm tra và tuân thủ quy tắc ra khỏi phiên làm việc tương tác chính của Agent, giải phóng cửa sổ ngữ cảnh (Context Window) và tài nguyên tư duy (Thinking Tokens) để tập trung 100% cho việc giải quyết bài toán nghiệp vụ.
+  - *KPI đo lường*:
+    - Tiết kiệm tối thiểu **$60{,}0\%$** thinking tokens bị tiêu tốn cho các thao tác tự rà soát quy tắc trong luồng chính.
+    - Cắt giảm dung lượng nạp quy tắc tĩnh trong System Prompt từ **~10.000 tokens** xuống **$< 500\text{ tokens}$** (chỉ giữ lại các Hard Invariants hạt nhân).
+    - Tăng tốc độ hoàn thành tác vụ lập trình của Agent thêm ít nhất **$35{,}0\%$**.
+  - *Product Sponsor*: FinOps Lead & Product Engineering Manager.
+
+- **[BR-03] Tự Động Hóa Quản Trị Quy Tắc Tất Định (Automated Deterministic Rule Governance)**:
+  - *Mục tiêu cốt lõi*: Thiết lập cơ chế kiểm soát chất lượng quy tắc tất định trước khi phát hành mã nguồn, loại bỏ 100% các chốt chặn hình thức và cấu hình không có tác dụng thực tế (Zero Phantom Pass).
+  - *KPI đo lường*:
+    - 100% vi phạm quy tắc và xung đột thẩm quyền được phát hiện tự động trước khi hòa trộn mã nguồn vào nhánh chính.
+    - Tỷ lệ cấu hình rác/zombie configs tồn tại trong hệ thống giảm về **$0{,}0\%$**.
+    - Thời gian nghiệm thu quy tắc tự động đạt **$\le 30\text{ giây}$/lần kiểm tra**.
+  - *Product Sponsor*: Head of Quality Assurance & DevOps Lead.
 
 ---
 
 ### 3.2. Stakeholder Requirements (SR) — Nhu Cầu Của Các Bên Liên Quan
-- **[SR-01] Persona: Lập Trình Viên Dự Án (Software Engineer)**:
-  - *Nhu cầu*: Cần một công cụ phân tích tĩnh nhanh gọn để quét repository mỗi khi thêm mới hoặc sửa đổi quy tắc, chỉ rõ các vị trí xung đột tiềm ẩn giữa các tập tin quy tắc khác nhau.
-  - *Giá trị mang lại*: Tránh việc vô tình phá vỡ các quy tắc nền tảng đã thiết lập từ trước; tiết kiệm hàng giờ debug hành vi bất thường của Agent.
+
+- **[SR-01] Persona: Kỹ Sư Vận Hành Hệ Thống AI (AI System Operator)**:
+  - *Là một*: Kỹ sư vận hành và cấu hình AI Agent.
+  - *Tôi cần*: Công cụ `rule-governance-analyzer` phải tự động kích hoạt tính năng thực thi không đầu của Antigravity CLI (`agy -p` với `--json-schema`) để phân tích ngữ nghĩa sâu các tập tin quy tắc và mã nguồn hooks, đảm bảo thời gian phản hồi thực tế $\le 15.000\text{ms}$ ở phân vị p95.
+  - *Để mà*: Tôi có thể phát hiện được các mâu thuẫn nghiệp vụ phức tạp, các điều khoản đối kháng ngầm và các trường hợp che khuất thẩm quyền mà phương pháp regex tĩnh không thể nhận diện.
+  - *Liên kết Business Requirement*: `BR-01`, `BR-03`.
+
+- **[SR-02] Persona: Lập Trình Viên Tương Tác Trực Tiếp (Interactive AI Developer)**:
+  - *Là một*: Lập trình viên tương tác hàng ngày với AI Coding Agent.
+  - *Tôi cần*: Phiên làm việc tương tác của tôi không bị làm phiền bởi các thông báo kiểm tra quy tắc vụn vặt; các bài kiểm tra được ủy thác tự động cho chốt chặn chạy ngầm hoặc Subagent độc lập xử lý với thời gian phản hồi $\le 5$ giây.
+  - *Để mà*: Tôi không bị phân tâm, Agent không bị loãng ngữ cảnh (Attention Dilution), và tôi không phải mất thời gian khắc phục các sự cố do hook bắt nhầm mã nguồn hợp lệ.
   - *Liên kết Business Requirement*: `BR-01`, `BR-02`.
 
-- **[SR-02] Persona: Kiến Trúc Sư AI & Vận Hành Hệ Thống (AI Systems Architect)**:
-  - *Nhu cầu*: Cần một Ma trận Thẩm quyền Quy tắc (Precedence Matrix) được tiêu chuẩn hóa trong toàn hệ thống, xác định rõ mức độ ưu tiên theo trật tự:
-    $$\text{Hard Hook Gates} > \text{Hard Project Invariants} > \text{Active Skill Instructions} > \text{User Runtime Prompts}$$
-  - *Giá trị mang lại*: Đảm bảo Agent luôn có căn cứ pháp quy tất định để giải quyết mâu thuẫn mà không cần phỏng đoán.
-  - *Liên kết Business Requirement*: `BR-01`.
-
-- **[SR-03] Persona: Kỹ Sư DevOps & Vận Hành Pipeline (DevOps Engineer)**:
-  - *Nhu cầu*: Cần một CLI Quality Gatekeeper hoạt động ở chế độ headless non-interactive, có thể chạy trong Git Pre-commit Hook và CI/CD Pipeline để tự động chặn các commit chứa rule mâu thuẫn hoặc rule ảo.
-  - *Giá trị mang lại*: Ngăn chặn rác quy tắc xâm nhập vào nhánh chính (main branch); đảm bảo tính nhất quán của môi trường phát triển.
-  - *Liên kết Business Requirement*: `BR-02`, `BR-03`.
+- **[SR-03] Persona: Kỹ Sư DevOps & Đảm Bảo Chất Lượng (DevOps & QA Engineer)**:
+  - *Là một*: Kỹ sư phụ trách đường ống tích hợp liên tục CI/CD.
+  - *Tôi cần*: Một khung kiểm thử tự động (Hook Test Harness) có khả năng sinh ra các ca kiểm thử giả lập và chạy kiểm thử nhị phân để chứng minh rằng các hook scripts thực sự hoạt động chính xác trước khi phát hành.
+  - *Để mà*: Tôi ngăn chặn tình trạng chốt chặn hình thức và các lỗi cú pháp nuốt ngoại lệ lọt lưới vào môi trường sản xuất.
+  - *Liên kết Business Requirement*: `BR-03`.
 
 ---
 
 ### 3.3. Solution Requirements — Functional (FR) — Yêu Cầu Chức Năng Hệ Thống
 
-#### [FR-01] Phân Tích Cú Pháp & Lập Bản Đồ Quy Tắc (Rule Parsing & Extraction)
-- **Quy tắc nghiệp vụ**: Hệ thống phân tích cú pháp tất cả các tập tin quy tắc trong workspace (`AGENTS.md`, `GEMINI.md`, `CLAUDE.md`, `.agents/skills/*/SKILL.md`, `.agents/hooks.json`).
+#### [FR-01] Tích Hợp Pha Deep Semantic Audit Bằng Headless Mode
+- **Quy tắc nghiệp vụ**: Hệ thống bắt buộc phải tích hợp pha phân tích ngữ nghĩa sâu bằng cách gọi `agy -p` trong subprocess độc lập khi phân tích quy tắc và hooks.
 - **Luồng chính (Happy Path)**:
-  1. Hệ thống quét đệ quy các thư mục cấu hình đã đăng ký.
-  2. Bóc tách từng điều khoản quy tắc thành các thực thể: `RuleID`, `SourceFile`, `LineNumber`, `DirectiveType` (MUST, MUST NOT, PREFER), `TargetScope` (Tool, FilePattern, Domain), `Condition`.
-  3. Xây dựng Đồ thị Quy tắc (Rule Dependency & Scope Graph).
-- **Luồng ngoại lệ**: Nếu tập tin quy tắc có định dạng lỗi hoặc không hợp lệ, hệ thống bỏ qua phần lỗi, ghi log cảnh báo và tiếp tục phân tích các quy tắc còn lại.
+  1. Hệ thống thực hiện quét tĩnh ban đầu để gom danh mục quy tắc và hooks.
+  2. Hệ thống tạo cấu trúc kiểm định ngữ nghĩa và gọi lệnh:
+     ```powershell
+     agy -p "<audit_prompt>" --effort low --output-format json --json-schema schemas/rule-audit-schema.json --dangerously-skip-permissions
+     ```
+  3. Trích xuất trường `structured_output` từ JSON Envelope do Antigravity CLI trả về.
+  4. Hợp nhất kết quả phân tích ngữ nghĩa sâu vào báo cáo kiểm định tổng thể.
+- **Luồng ngoại lệ**: Nếu tiến trình CLI trả về lỗi hoặc quá thời gian chờ (Timeout $\ge 180\text{s}$), hệ thống tự động ghi nhận cảnh báo và chuyển đổi dự phòng (fallback) sang kết quả phân tích cú pháp tĩnh nội bộ, bảo đảm tiến trình hoàn tất với exit code xác định.
+- **Liên kết Stakeholder Requirement**: `SR-01`.
 
-#### [FR-02] Phát Hiện & Phân Tích Xung Đột Quy Tắc (Conflict Detection Engine)
-- **Quy tắc nghiệp vụ**: Hệ thống thực hiện so khớp 2 chiều giữa tất cả các cặp quy tắc có cùng hoặc giao thoa về `TargetScope`.
-- **Phân loại xung đột**:
-  1. *Direct Contradiction (Đối kháng trực tiếp)*: Một quy tắc yêu cầu `MUST DO X` trong khi quy tắc kia yêu cầu `MUST NOT DO X`.
-  2. *Permission Shadowing (Che khuất quyền)*: Một quy tắc cho phép tự do thực thi lệnh shell trong khi quy tắc cấp cao hơn chặn hoàn toàn lệnh đó qua Hook.
-  3. *Behavioral Ambiguity (Mơ hồ hành vi)*: Hai quy tắc cùng áp dụng cho một sự kiện nhưng đưa ra hai hướng xử lý trái ngược nhau mà không có điều kiện phân nhánh.
-- **Kết quả trả về**: Danh sách chi tiết các cặp xung đột kèm mức độ nghiêm trọng (CRITICAL, MAJOR, MINOR).
+#### [FR-02] Giám Định Chống "Zombie Configuration" & "Silent Fallback"
+- **Quy tắc nghiệp vụ**: Hệ thống phải quét và đối chiếu toàn diện giữa các tệp khai báo cấu hình (`rules.yaml`, `hooks.json`) và mã nguồn thực thi của script hook (`.py`, `.ps1`).
+- **Luồng chính**:
+  1. Bóc tách toàn bộ các khóa cấu hình được khai báo trong `rules.yaml`.
+  2. Phân tích AST của các script hook để kiểm tra xem các khóa cấu hình này có thực sự được truy xuất và sử dụng hay không.
+  3. Bắt bài các mẫu mã nguồn nguy hiểm:
+     - Bỏ qua khóa trung tâm (như `gate_placeholder_pre.py` đọc nhầm tên khóa).
+     - Khai báo thừa không dùng (như `gate_arch_boundary.py` nhận tham số `rules` nhưng hardcode).
+     - Nuốt lỗi im lặng qua `except Exception: continue` (như trong `config/config.py`).
+  4. Xuất cảnh báo phân loại `ZOMBIE_CONFIG_DETECTED` và `SILENT_FALLBACK_RISK` theo chuẩn RFC-5424.
+- **Liên kết Stakeholder Requirement**: `SR-01`, `SR-03`.
 
-#### [FR-03] Nhật Ký & Cơ Chế Cảnh Báo Xung Đột (Audit Logging & Notification)
-- **Quy tắc nghiệp vụ**: Mọi xung đột quy tắc được ghi nhận tức thì vào tập tin `rule-conflicts.audit.json` và in cảnh báo trực quan trên terminal.
-- **Cấu trúc bản ghi nhật ký**:
-  ```json
-  {
-    "conflict_id": "CONF-20260908-01",
-    "severity": "CRITICAL",
-    "rule_a": { "id": "R-01", "file": "AGENTS.md", "line": 45, "statement": "MUST confirm all shell commands" },
-    "rule_b": { "id": "R-12", "file": ".agents/skills/auto-test/SKILL.md", "line": 18, "statement": "MUST automatically run npm test without prompting" },
-    "conflict_type": "Direct Contradiction",
-    "precedence_resolution": "Rule A takes precedence (Hard Invariant over Skill)",
-    "actionable_recommendation": "Thêm điều kiện ngoại lệ cho 'npm test' trong AGENTS.md hoặc cấu hình whitelist trong hooks.json."
-  }
-  ```
+#### [FR-03] Đề Xuất Bản Thiết Kế Kiến Trúc Headless Pipeline
+- **Quy tắc nghiệp vụ**: Trong báo cáo kiểm định và kế hoạch khắc phục, hệ thống bắt buộc phải cung cấp bản thiết kế mẫu kiến trúc Headless Pipeline hoàn chỉnh cho dự án được phân tích.
+- **Nội dung đặc tả kiến trúc được tạo tự động**:
+  1. *Git Pre-commit Hook Script*: Script chạy ngầm bằng `agy -p` kiểm tra git diff trước khi commit trong thời gian $\le 5$ giây.
+  2. *CI/CD Automated Gatekeeper*: Cấu hình GitHub Actions / GitLab CI mẫu chạy kiểm định ngầm và xuất báo cáo JSON.
+  3. *Semantic Gatekeeper Replacement*: Mẫu mã nguồn thay thế các hook regex dễ gãy bằng lệnh kiểm tra ngữ nghĩa có schema xác thực nhị phân.
+  4. *Subagent Offloading Configuration*: Mẫu cấu hình ủy thác tác vụ kiểm tra nặng cho Subagent nền.
+- **Liên kết Stakeholder Requirement**: `SR-02`, `SR-03`.
 
-#### [FR-04] Giám Định Chống "Rule Ảo" (Anti-Phantom Gatekeeper)
-- **Quy tắc nghiệp vụ**: Hệ thống phân tích các script kiểm tra quy tắc hiện hữu (PowerShell, Python, Bash) để phát hiện các dấu hiệu của chốt chặn giả tạo:
-  1. Script chỉ kiểm tra sự tồn tại của từ khóa (dummy regex) mà không kiểm tra cấu trúc dữ liệu.
-  2. Script luôn kết thúc với `exit 0` bất kể lỗi xảy ra.
-  3. Script sử dụng mock data cứng để qua mặt kiểm thử.
-  4. Script thiếu chốt chặn JSON Schema.
-- **Hành động**: Đánh dấu trạng thái `PHANTOM_RULE_DETECTED`, cảnh báo hạ bậc độ tin cậy và yêu cầu nâng cấp script lên chuẩn cơ học nhị phân.
+#### [FR-04] Khung Kiểm Thử Mô Phỏng Tự Động Cho Hooks (Hook Simulation)
+- **Quy tắc nghiệp vụ**: Hệ thống cung cấp công cụ tự động sinh kịch bản kiểm thử giả lập để kiểm chứng hành vi thực tế của các file script hook.
+- **Luồng chính**:
+  1. Với mỗi hook script trong `.agents/hooks/scripts/`, hệ thống chuẩn bị 02 kịch bản giả lập:
+     - *Kịch bản Vi phạm (Negative Fixture)*: Chứa đúng hành vi bị cấm (ví dụ: chứa ký hiệu việc cần làm chưa giải quyết, sửa Contract Interface, hoặc vi phạm ranh giới layer).
+     - *Kịch bản Hợp lệ (Positive Fixture)*: Code sạch hoàn toàn hợp lệ (ví dụ: thêm class POCO/DTO thuần túy).
+  2. Chạy script hook giả lập với input tương ứng qua tiến trình con.
+  3. Xác thực kết quả nhị phân:
+     - Kịch bản Vi phạm bắt buộc phải nhận phán quyết `deny` hoặc exit code khác 0.
+     - Kịch bản Hợp lệ bắt buộc phải nhận phán quyết `allow` và exit code 0.
+  4. Ghi nhận vào báo cáo: Nếu một hook cho phép kịch bản vi phạm vượt qua, đánh dấu trạng thái `BROKEN_GATE_DEFECT`.
+- **Liên kết Stakeholder Requirement**: `SR-03`.
 
-#### [FR-05] Đề Xuất Tái Cấu Trúc Quy Tắc Theo 3 Tầng (Rule Architecture Dispatcher)
-- **Quy tắc nghiệp vụ**: Dựa trên bản chất của từng quy tắc, hệ thống tự động phân loại và đưa ra chỉ dẫn tái cấu trúc:
-  - *Chuyển sang Hooks (`.agents/hooks.json`)*: Các quy tắc an toàn tuyệt đối, cấm xóa file, cấm chạy lệnh hủy hoại (`rm -rf`, `DROP DATABASE`), kiểm tra quyền truy cập công cụ (`PreToolUse`).
-  - *Chuyển sang Agent Skills (`.agents/skills/<name>/SKILL.md`)*: Các quy tắc hướng dẫn quy trình nghiệp vụ chuyên sâu, bóc tách yêu cầu, review code, phân tích kiến trúc.
-  - *Giữ lại ở Project Anchor (`AGENTS.md`)*: Chỉ giữ lại tối đa 5-7 Hard Invariants mang tính triết lý cốt lõi của dự án để nạp vào Static Cache Tier.
+#### [FR-05] Cơ Chế Phân Định & Định Tuyến Tác Vụ Sang Headless Subagent
+- **Quy tắc nghiệp vụ**: Hệ thống phân loại các quy tắc kiểm tra chuyên sâu có dung lượng lớn thành các tác vụ độc lập để ủy thác cho Subagent chạy nền.
+- **Luồng chính**:
+  1. Nhận diện các quy tắc kiểm tra tiêu tốn nhiều thời gian hoặc ngữ cảnh (ví dụ: quét kiến trúc phân tầng, phân tích độ phức tạp thuật toán, kiểm tra giao diện WinForms STA Threading).
+  2. Đóng gói chỉ thị kiểm tra thành prompt độc lập cho subagent.
+  3. Khởi tạo subagent qua Antigravity Subagent Mechanism hoặc CLI với cấu hình kế thừa runtime model và chỉ định `--effort low`.
+  4. Thu nhận kết quả JSON thu gọn từ subagent và trả về quyết định nhị phân cho luồng chính.
+- **Liên kết Stakeholder Requirement**: `SR-02`.
 
 ---
 
 ### 3.4. Solution Requirements — Non-Functional (NFR) — Yêu Cầu Phi Chức Năng
 
-- **[NFR-01] Hiệu Năng & Độ Trễ (Performance & Latency)**:
-  - Thời gian quét và phân tích tĩnh toàn bộ tập quy tắc trong workspace (≤ 50 rules) phải đạt: **$T_{\text{scan}} \le 2.000\text{ ms}$ ở phân vị $p95$**.
-  - Tải CPU trung bình trong suốt quá trình chạy phân tích không vượt quá **35%** trên máy tiêu chuẩn 4-cores; bộ nhớ RAM khả dụng tối đa (Max Heap Memory) không vượt quá **256MB**.
-  - *Phương pháp kiểm thử*: Thực thi benchmark tự động qua `Measure-Command` trong PowerShell và ghi nhận log thời gian thực.
+- **[NFR-01] Hiệu Năng & Độ Trễ Phản Hồi (Performance & Execution Latency)**:
+  - Thời gian thực thi toàn bộ quy trình kiểm định kết hợp (Local Static Scan + Deep Semantic Audit) đối với tập quy tắc quy mô dự án tiêu chuẩn ($\le 20$ files) bắt buộc phải đạt: **$T_{\text{exec}} \le 15.000\text{ ms}$ ($15\text{s}$) ở phân vị $p95$** với model được kế thừa từ cấu hình headless runtime sẵn có và chỉ định mức tư duy `--effort low` hoặc `medium`.
+  - Đối với bài kiểm tra nhanh tại Git Pre-commit Hook, thời gian chạy gatekeeper không được vượt quá **$5.000\text{ ms}$ ($5\text{s}$)**.
+  - *Phương pháp kiểm chứng*: Đo lường thời gian thực bằng `Measure-Command` trong PowerShell và ghi nhận trường `duration_seconds` trong JSON envelope của Antigravity CLI.
 
-- **[NFR-02] Độ Xác Định & Chuẩn Hóa Schema (Determinism & Schema Conformance)**:
-  - 100% dữ liệu đầu ra của bộ phân tích quy tắc bắt buộc phải được đóng gói theo định dạng JSON tuân thủ chuẩn JSON Schema `rule-audit-schema.json`.
-  - Tỷ lệ sai lệch định dạng đầu ra (Malformed Output Rate): **$0{,}00\%$**.
-  - Mã thoát tiến trình (Process Exit Code) bắt buộc phải là nhị phân: **`0` khi không có vi phạm CRITICAL**, và **`1` khi tồn tại ít nhất một vi phạm CRITICAL hoặc xung đột chưa giải quyết**.
+- **[NFR-02] Tính Tất Định & Chuẩn Hóa Schema Nhị Phân (Determinism & Zero Schema Error)**:
+  - 100% dữ liệu xuất bản từ Headless Engine bắt buộc phải tuân thủ nghiêm ngặt định dạng JSON Schema máy đọc được (`schemas/rule-audit-schema.json`).
+  - Tỷ lệ lỗi sai lệch cấu trúc dữ liệu đầu ra (Malformed JSON Payload Rate): **$0{,}00\%$**.
+  - Mã thoát tiến trình (Process Exit Code) bắt buộc phải là nhị phân tuyệt đối: **`0` khi kết luận là `APPROVED`**, và **`1` khi kết luận là `REJECTED`** (tồn tại vi phạm nghiêm trọng hoặc xung đột chưa giải quyết).
 
-- **[NFR-03] Tối Ưu FinOps & Hiệu Suất Ngữ Cảnh (Context Window Efficiency)**:
-  - Metadata đăng ký tại tầng Tier 1 Discovery của Agent Skill Quản trị quy tắc bắt buộc phải **$\le 120\text{ tokens}$** trong System Prompt khởi tạo.
-  - Tài liệu hướng dẫn chi tiết tại Tier 2 (`SKILL.md`) không vượt quá **$2.500\text{ tokens}$**.
-  - Toàn bộ các bảng kiểm tra và schema chi tiết phải nằm ở Tier 3 và chỉ được nạp theo nhu cầu (On-Demand Loading).
+- **[NFR-03] Bảo Toàn Bộ Nhớ Đệm & Cửa Sổ Ngữ Cảnh (Context Window & FinOps Conservation)**:
+  - Toàn bộ quá trình chạy Deep Semantic Audit và Hook Simulation phải diễn ra trong subprocess hoàn toàn độc lập, đảm bảo tiêu tốn đúng **$0\text{ tokens}$** trong Context Window của phiên hội thoại tương tác chính.
+  - Tổng số token của System Prompt tĩnh tại tầng khởi động dự án (`AGENTS.md`) sau khi tái cấu trúc không vượt quá **$500\text{ tokens}$**, tiết kiệm tối thiểu **$60{,}0\%$** chi phí token so với mô hình cũ.
 
-- **[NFR-04] Khả Năng Phòng Vệ & Cô Lập Lỗi (Resilience & Graceful Degradation)**:
-  - Khi một tập tin quy tắc bị hỏng định dạng hoặc không thể đọc được do quyền truy cập file hệ điều hành, hệ thống **tuyệt đối KHÔNG được sập toàn bộ tiến trình** (No Process Crash).
-  - Hệ thống phải cô lập lỗi tại tập tin đó, ghi nhận vào mảng `parsing_errors` và tiếp tục phân tích tất cả các tập tin quy tắc còn lại với tỷ lệ phủ đạt $\ge 95\%$.
+- **[NFR-04] Độ Chính Xác Ngữ Nghĩa & Loại Bỏ False-Positive (Semantic Precision & Deadlock Prevention)**:
+  - Tỷ lệ đánh giá sai lệch (False-Positive Rate) trong việc phân biệt giữa thực thể dữ liệu thụ động (POCO, Entity, DTO) và logic xử lý chủ động phải đạt mức **$< 1{,}0\%$** (so với tỷ lệ lỗi $\ge 28{,}0\%$ của biểu thức chính quy thô sơ).
+  - Tỷ lệ bế tắc nhận thức (Deadlock Rate) của AI Agent do bị hook chặn nhầm phải bằng **$0{,}00\%$**.
+
+- **[NFR-05] Khả Năng Chống Chịu Lỗi & Tự Động Phục Hồi (Resilience & Graceful Degradation)**:
+  - Tiến trình gọi CLI bắt buộc phải có thời gian chờ tối đa cứng (Hard Timeout): **$180\text{ giây}$**.
+  - Trong tình huống môi trường mất kết nối mạng, thiếu thông tin xác thực CLI hoặc bị timeout, hệ thống **tuyệt đối KHÔNG được làm sập ứng dụng (No Process Crash)**. Hệ thống phải tự động kích hoạt cơ chế Fallback sang Engine phân tích cú pháp tĩnh nội bộ với tỷ lệ hoàn thành tác vụ đạt **$100{,}0\%$**, đồng thời ghi log chuẩn RFC-5424 mức WARN vào tập tin nhật ký.
 
 ---
 
-### 3.5. Transition Requirements (TR) — Yêu Cầu Chuyển Tiếp & Kế Hoạch Go-Live
+### 3.5. Transition Requirements (TR) — Yêu Cầu Chuyển Tiếp & Kế Hoạch Triển Khai
 
-- **[TR-01] Kế Hoạch Chuyển Đổi Quy Tắc Hiện Hữu (Legacy Rule Migration Plan)**:
-  - *Phạm vi*: Rà soát toàn bộ các tập tin cấu hình hiện có (`AGENTS.md`, `GEMINI.md`, `CLAUDE.md`, `.cursorrules`).
+- **[TR-01] Thử Nghiệm Thí Điểm Tái Cấu Trúc Dự Án AppForms (Pilot Case Refactoring)**:
+  - *Phạm vi*: Trực tiếp áp dụng giải pháp nâng cấp cho dự án `Sale_extension/app_native_desktop/app_forms` để xử lý các vấn đề nêu trong `temp.md`.
   - *Hành động*:
-    1. Tách các rule mang tính bảo mật và chặn công cụ sang `.agents/hooks.json`.
-    2. Tách các rule quy trình nghiệp vụ dài dòng sang các Agent Skills độc lập.
-    3. Rút gọn `AGENTS.md` về dạng tinh giản, chỉ chứa các mỏ neo định danh và ranh giới bất biến cốt lõi.
-  - *Tiêu chuẩn nghiệm thu*: 100% quy tắc cũ được phân loại và định tuyến chính xác mà không làm mất mát bất kỳ ràng buộc nghiệp vụ nào.
+    1. Sửa đổi `gate_logging_pre_test.py`: Tích hợp logic phân biệt ngữ nghĩa (bỏ qua DTO/Model hoặc gọi Semantic Gatekeeper).
+    2. Chuẩn hóa đồng bộ `rules.yaml` và các python hook scripts, loại bỏ 100% hiện tượng lệch tên khóa.
+    3. Xóa bỏ khối `except Exception: continue` nuốt lỗi trong `config.py`, thay bằng cơ chế thông báo lỗi ra `stderr`.
+    4. Cắt tỉa 10 file rule của AppForms, chuyển hóa các quy trình thao tác thành các Agent Skills chuyên biệt, đưa `AGENTS.md` về $\le 7$ Hard Invariants.
+  - *Tiêu chuẩn nghiệm thu*: Chạy lại toàn bộ bộ test `dotnet test` và hook gates trên AppForms đạt 100% pass mà không cần can thiệp thủ công.
 
-- **[TR-02] Đào Tạo & Chuyển Giao Năng Lực Kỹ Sư (Engineering Enablement)**:
-  - *Phạm vi*: Toàn bộ đội ngũ phát triển phần mềm và vận hành hệ thống.
-  - *Nội dung*: Hướng dẫn viết quy tắc chuẩn theo mô hình 3 tầng (Hooks - Skills - Anchors), kỹ thuật viết JSON Schema kiểm định cơ học và cách đọc báo cáo xung đột quy tắc.
-  - *Tiêu chuẩn nghiệm thu*: 100% thành viên hoàn thành và vượt qua bài thực hành tạo Skill và Hook mới đạt chuẩn không có vi phạm.
+- **[TR-02] Nâng Cấp Bộ Skill `rule-governance-analyzer` Lên Phiên Bản 1.1.0**:
+  - *Phạm vi*: Toàn bộ mã nguồn và tài liệu trong `.agents/skills/rule-governance-analyzer/`.
+  - *Hành động*:
+    1. Cập nhật `scripts/audit_rules.py`: Tích hợp hàm `run_headless_audit` sử dụng `subprocess.run` gọi `agy -p` kèm `--json-schema`.
+    2. Cập nhật `scripts/audit-rules.ps1`: Hỗ trợ tham số `--Effort`, `--TimeoutSec`, và `--NoHeadless`.
+    3. Tạo mới tài liệu kiến thức: `knowledge/headless-rule-pipeline-patterns.md`.
+    4. Nâng cấp biểu mẫu: `templates/rule-audit-report.template.md` tích hợp mục đề xuất Headless Architecture Pipeline.
+  - *Tiêu chuẩn nghiệm thu*: Toàn bộ các bài test tự động của skill vượt qua với exit code 0; script `scripts/ba-quality-gate.ps1` thẩm định đạt `APPROVED`.
 
-- **[TR-03] Kịch Bản Chuyển Giao (Cutover) & Thu Hồi Khẩn Cấp (Rollback Plan)**:
-  - *Thời điểm Cutover*: Triển khai vào cuối Sprint 2 trong khung giờ bảo trì hệ thống.
-  - *Kịch bản Rollback*: Nếu hệ thống phát hiện xung đột vòng lặp (Recursive Conflict Loop) hoặc gây nghẽn tiến trình CI/CD quá 60 giây, cờ môi trường `DISABLE_RULE_GOVERNANCE=true` sẽ lập tức vô hiệu hóa các chốt chặn mới, đưa hệ thống về trạng thái tĩnh ban đầu trong vòng dưới **$30\text{ giây}$**.
+- **[TR-03] Cơ Chế Chuyển Mạch Dự Phòng & Thu Hồi Khẩn Cấp (Emergency Kill-Switch)**:
+  - *Cơ chế kích hoạt*: Hỗ trợ cờ `--no-headless` trên dòng lệnh hoặc biến môi trường `DISABLE_HEADLESS_RULE_AUDIT=1`.
+  - *Thời gian chuyển mạch*: Khi biến môi trường được kích hoạt, toàn bộ hệ thống lập tức bỏ qua các lời gọi headless và chuyển về chế độ phân tích tĩnh nội bộ trong thời gian **$\le 10\text{ giây}$**.
 
 ---
 
 ## 4. Ma Trận Truy Vết Nghiệp Vụ Hai Chiều (Bidirectional Traceability Matrix — RTM)
 
-| Business Req (BR) | Stakeholder Req (SR) | Functional Req (FR) | Non-Functional Req (NFR) | Transition Req (TR) | Test Case / UAT ID | Trạng Thái | Kiểm Định Gold-Plating / Orphaned Goal |
+| Business Req (BR) | Stakeholder Req (SR) | Functional Req (FR) | Non-Functional Req (NFR) | Transition Req (TR) | Test Case / Verification ID | Trạng Thái | Kiểm Định Gold-Plating / Orphaned Goal |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **BR-01**: Giảm 90% bế tắc do xung đột rule | **SR-01**: Công cụ quét repo cảnh báo xung đột | **FR-01**: Bóc tách AST tập tin quy tắc<br>**FR-02**: Phát hiện xung đột 2 chiều | **NFR-01**: Quét $\le 2.000\text{ms}$ ở p95<br>**NFR-02**: Output chuẩn JSON Schema | **TR-01**: Migration quy tắc cũ sang mô hình mới | **TC-CONF-01** (Test đối kháng trực tiếp)<br>**TC-CONF-02** (Test che khuất quyền) | Ready for Dev | ✅ Hợp lệ (Chuỗi truy vết khép kín 100%) |
-| **BR-01**: Giảm 90% bế tắc do xung đột rule | **SR-02**: Ma trận phân cấp thẩm quyền quy tắc | **FR-03**: Ghi log audit & hiển thị phân giải | **NFR-02**: Exit code nhị phân 0/1 | **TR-02**: Đào tạo đội ngũ kỹ sư | **TC-PREC-01** (Test thẩm quyền Hook đè Skill) | Ready for Dev | ✅ Hợp lệ (Chuỗi truy vết khép kín 100%) |
-| **BR-01**: Giảm 90% bế tắc do xung đột rule | **SR-03**: CLI Gatekeeper độc lập trong CI | **FR-03**: Ghi log audit & cảnh báo | **NFR-02**: Exit code nhị phân 0/1 | **TR-03**: Cờ ngắt khẩn cấp Rollback MTTR $\le 30$s | **TC-ROLL-01** (Test ngắt khẩn cấp Kill-Switch) | Ready for Dev | ✅ Hợp lệ (Bao phủ TR-03) |
-| **BR-02**: Xóa bỏ chốt chặn hình thức (Zero Phantom) | **SR-03**: CLI Gatekeeper độc lập trong CI | **FR-04**: Giám định cơ học Anti-Phantom | **NFR-02**: Schema conformance 100% | **TR-01**: Nâng cấp script kiểm tra cũ | **TC-PHAN-01** (Test bắt bài mock data & exit 0 giả) | Ready for Dev | ✅ Hợp lệ (Chuỗi truy vết khép kín 100%) |
-| **BR-02**: Xóa bỏ chốt chặn hình thức (Zero Phantom) | **SR-03**: CLI Gatekeeper độc lập trong CI | **FR-01**: Bóc tách AST quy tắc<br>**FR-04**: Giám định cơ học Anti-Phantom | **NFR-04**: Cô lập lỗi tập tin hỏng, độ phủ $\ge 95\%$ | **TR-01**: Nâng cấp script kiểm tra cũ | **TC-RESIL-01** (Test cô lập lỗi tập tin hỏng) | Ready for Dev | ✅ Hợp lệ (Bao phủ NFR-04) |
-| **BR-03**: Tối ưu hóa chi phí vận hành FinOps | **SR-02**: Tối ưu phân bổ quy tắc theo tầng | **FR-05**: Đề xuất tái cấu trúc sang Hook/Skill | **NFR-03**: Metadata Tier 1 $\le 120$ tokens | **TR-01**: Tinh giản AGENTS.md | **TC-FOP-01** (Đo lường tokens context window) | Ready for Dev | ✅ Hợp lệ (Chuỗi truy vết khép kín 100%) |
+| **BR-01**: Xóa bỏ bế tắc do hook regex thô sơ (Zero Deadlock) | **SR-01**: Deep Semantic Audit $\le 15$s<br>**SR-02**: Chuyển hook lỗi thời sang Semantic Gate | **FR-01**: Tích hợp Headless Audit Engine<br>**FR-02**: Giám định chống Zombie Config & Fallback | **NFR-01**: Thời gian audit $\le 15.000\text{ms}$<br>**NFR-04**: Tỷ lệ False-Positive $< 1{,}0\%$ | **TR-01**: Tái cấu trúc thí điểm AppForms<br>**TR-02**: Nâng cấp mã nguồn skill v1.1.0 | **TC-SEM-01** (Test phân biệt Model vs Service)<br>**TC-ZOMB-01** (Test bắt bài khóa lệch và catch rỗng) | Ready for Dev | ✅ Hợp lệ (Khép kín 100%, có mục tiêu BR bảo trợ) |
+| **BR-02**: Giải phóng tải nhận thức & FinOps (Thinking Liberation) | **SR-02**: Luồng tương tác gọn nhẹ, ủy thác kiểm tra ngầm | **FR-03**: Bản thiết kế Headless Pipeline<br>**FR-05**: Định tuyến tác vụ sang Subagent chạy nền | **NFR-03**: $0\text{ tokens}$ ô nhiễm ngữ cảnh chính, tiết kiệm $\ge 60\%$ thinking tokens | **TR-01**: Cắt tỉa 10 file rule AppForms đưa vào skills | **TC-FOP-02** (Đo lường token tiêu hao trong phiên chính) | Ready for Dev | ✅ Hợp lệ (Khép kín 100%, bảo toàn mục tiêu FinOps) |
+| **BR-03**: Tự động hóa quản trị quy tắc tất định | **SR-01**: Deep Semantic Audit $\le 15$s<br>**SR-03**: Khung kiểm thử tự động cho hooks | **FR-03**: Bản thiết kế Headless Pipeline<br>**FR-04**: Khung kiểm thử mô phỏng Hook Simulation | **NFR-01**: Phản hồi $\le 5.000\text{ms}$<br>**NFR-02**: 100% JSON Schema, Exit Code 0/1<br>**NFR-05**: Hard timeout 180s, fallback an toàn | **TR-02**: Cập nhật tài liệu kiến thức và templates<br>**TR-03**: Chuyển mạch khẩn cấp $\le 10$s | **TC-SIM-01** (Test mô phỏng hook với positive/negative fixtures)<br>**TC-FALL-01** (Test fallback khi mất mạng/timeout) | Ready for Dev | ✅ Hợp lệ (Khép kín 100%, kiểm thử độ bền hệ thống) |
 
-### 4.1. Báo Cáo Kiểm Định Traceability (Audit Summary Report)
-- **Kiểm tra Top-Down (Coverage Analysis)**:
+### 4.1. Báo Cáo Kiểm Định Traceability (Traceability Audit Summary)
+- **Kiểm định Top-Down (Coverage Analysis)**:
   - Tổng số Business Requirements: **3/3 (100%)**.
-  - Số lượng BR được phân rã đầy đủ thành SR, FR, NFR, TR và Test Case: **3/3 (100%)**.
-  - **Mục tiêu bị bỏ rơi (Orphaned Goals)**: **KHÔNG CÓ (0)**. 100% mục tiêu chiến lược đều có giải pháp kỹ thuật cụ thể bảo chứng.
-- **Kiểm tra Bottom-Up (Gold-Plating Audit)**:
+  - Số lượng BR được hiện thực hóa đầy đủ qua SR, FR, NFR, TR và Test Case: **3/3 (100%)**.
+  - **Mục tiêu bị bỏ rơi (Orphaned Goals)**: **KHÔNG CÓ (0)**. 100% mục tiêu chiến lược đều có đầy đủ giải pháp kỹ thuật bảo đảm.
+- **Kiểm định Bottom-Up (Gold-Plating Audit)**:
   - Tổng số Functional Requirements: **5/5 (100%)**.
-  - Số lượng FR truy ngược thành công về ít nhất một Business Requirement: **5/5 (100%)**.
-  - **Tính năng mồ côi / Mạ vàng (Gold-Plating)**: **KHÔNG CÓ (0)**. Không có tính năng tự phát nào nằm ngoài phạm vi giá trị kinh doanh đo lường được.
+  - Số lượng FR truy ngược thành công về ít nhất một Business Requirement cốt lõi: **5/5 (100%)**.
+  - **Tính năng mồ côi / Mạ vàng (Gold-Plating)**: **KHÔNG CÓ (0)**. Mọi chức năng mới đều trực tiếp phục vụ giải quyết nỗi đau thực tế từ báo cáo `temp.md`.
 
 ---
 
-## 5. Kiến Trúc & Đặc Tả Thiết Kế Bộ Agent Skill Mới: `rule-governance-analyzer`
+## 5. Kiến Trúc Bộ Agent Skill Nâng Cấp: `rule-governance-analyzer` v1.1.0
 
-Để giải quyết bài toán đặt ra, hệ thống sẽ được trang bị một Agent Skill chuyên biệt hóa mang tên **`rule-governance-analyzer`**. Dưới đây là đặc tả kiến trúc và cấu trúc chi tiết của bộ skill này:
-
-### 5.1. Cấu Trúc Thư Mục Chuẩn Mở (Open Standard Skill Architecture)
+### 5.1. Cấu Trúc Thư Mục Chuẩn Mở Nâng Cấp
 ```
 .agents/skills/rule-governance-analyzer/
-├── SKILL.md                                 # [Tier 1 + 2] Quy trình cốt lõi, Boot Sequence, Routing Matrix
-├── metadata.json                            # Khai báo cấu hình, phiên bản và quyền thực thi
+├── SKILL.md                                     # [Tier 1 + 2] Quy trình 4 pha nâng cấp, Boot Sequence, Routing Matrix
+├── metadata.json                                # Khai báo metadata v1.1.0 và quyền thực thi
 ├── schemas/
-│   └── rule-audit-schema.json               # [Tier 3] JSON Schema máy đọc được cho kết quả audit quy tắc
+│   ├── rule-audit-schema.json                   # [Tier 3] JSON Schema máy đọc được cho kết quả audit quy tắc
+│   └── hook-simulation-schema.json              # [Tier 3] JSON Schema máy đọc được cho kết quả mô phỏng hook
 ├── knowledge/
-│   ├── rule-precedence-hierarchy.md         # [Tier 2] Bảng phân định thẩm quyền: Hooks > Anchors > Skills > Prompts
-│   ├── conflict-detection-patterns.md       # [Tier 2] Mẫu nhận diện 12 kiểu xung đột quy tắc phổ biến
-│   └── anti-phantom-audit-guide.md          # [Tier 2] Tiêu chuẩn vạch trần script kiểm tra hình thức và mock data
+│   ├── rule-precedence-hierarchy.md             # [Tier 2] Bảng phân định thẩm quyền: Hooks > Anchors > Skills > Prompts
+│   ├── conflict-detection-patterns.md           # [Tier 2] Mẫu nhận diện 12 kiểu xung đột quy tắc phổ biến
+│   ├── anti-phantom-audit-guide.md              # [Tier 2] Tiêu chuẩn vạch trần script kiểm tra hình thức và dữ liệu giả lập
+│   └── headless-rule-pipeline-patterns.md       # [Tier 2 MỚI] Thiết kế CI, Pre-commit & Subagent Delegation
 ├── templates/
-│   ├── rule-audit-report.template.md        # [Tier 3 Skeleton] Mẫu báo cáo kiểm định quy tắc
-│   └── rule-refactoring-plan.template.md    # [Tier 3 Skeleton] Mẫu kế hoạch chuyển đổi sang Hook và Skill
+│   ├── rule-audit-report.template.md            # [Tier 3 Skeleton] Mẫu báo cáo kiểm định quy tắc tích hợp Headless Pipeline
+│   └── rule-refactoring-plan.template.md        # [Tier 3 Skeleton] Mẫu kế hoạch chuyển đổi sang Hook, Skill & Headless Gate
 └── scripts/
-    └── audit-rules.ps1                      # [Tier 4] Script kiểm tra cơ học tĩnh & headless gatekeeper
+    ├── audit-rules.ps1                          # [Tier 4] Wrapper PowerShell hỗ trợ Headless Mode & Fallback
+    └── audit_rules.py                           # [Tier 4 Engine] Tích hợp run_headless_audit, hook simulation & zombie check
 ```
 
-### 5.2. Đặc Tả File Cốt Lõi `SKILL.md` Của Bộ Skill Mới
-Bộ skill được cấu hình với YAML frontmatter chuẩn và cơ chế điều hướng lũy tiến:
-
-```markdown
----
-name: rule-governance-analyzer
-description: "Chuyên gia quản trị quy tắc và phân xử xung đột AI (Agent Rule Governance & Conflict Resolution Specialist). Quét toàn bộ repository, lập bản đồ phân cấp quy tắc, phát hiện đối kháng trực tiếp (Direct Contradiction) và che khuất quyền (Shadowing). Vạch trần các 'rule ảo' (phantom rules) chạy bằng script hình thức, đề xuất tái cấu trúc quy tắc sang mô hình 3 tầng: Hooks (Hard Enforcement) + Skills (Progressive Disclosure) + Project Anchors. Kích hoạt khi cần phân tích rule, tối ưu hóa Context Window, sửa lỗi xung đột quy tắc hoặc thiết lập chốt chặn chất lượng."
-version: 1.0.0
-category: system-architecture
-author: "VietnamCOS & Antigravity Systems"
-tags: [rule-governance, conflict-detection, anti-phantom, hooks, agent-skills, context-optimization]
-disable-model-invocation: false
-user-invocable: true
----
-
-# Quy Trình Thực Thi 4 Pha Của Rule Governance Analyzer
-
-## Pha 1: Thu Thập & Lập Bản Đồ Quy Tắc (Ingestion & Mapping)
-1. Quét tất cả các file: `AGENTS.md`, `.cursorrules`, `CLAUDE.md`, `.agents/skills/*/SKILL.md`, `.agents/hooks.json`.
-2. Trích xuất danh sách quy tắc vào đồ thị bộ nhớ: Rule ID, Directive, Target Scope, Precedence Level.
-
-## Pha 2: Giám Định Xung Đột Hai Chiều (Bi-Directional Conflict Probing)
-1. So khớp các quy tắc có cùng phạm vi áp dụng.
-2. Kiểm tra xung đột thẩm quyền theo ma trận:
-   * Level 1: Deterministic Hard Hooks (`hooks.json`)
-   * Level 2: Repository Hard Invariants (`AGENTS.md`)
-   * Level 3: Active Domain Skills (`SKILL.md`)
-   * Level 4: Interactive User Runtime Prompts
-3. Ghi nhận mọi điểm mâu thuẫn vào `rule-conflicts.audit.json`.
-
-## Pha 3: Thẩm Định Chống Rule Ảo (Anti-Phantom Verification)
-1. Quét các script kiểm tra hiện có trong `scripts/`.
-2. Vạch trần các script chỉ kiểm tra regex hình thức, bắt buộc phải có JSON Schema chốt chặn cơ học.
-3. Đánh dấu các chốt chặn thiếu tính xác thực thực chất.
-
-## Pha 4: Thiết Kế Tái Cấu Trúc & Xuất Bản Đồ Giải Pháp (Architecture Refactoring)
-1. Xuất kế hoạch chuyển đổi: Rule nào nên sang Hook, rule nào nên sang Skill, rule nào giữ ở Project Anchor.
-2. Cung cấp mã nguồn Hook và Skeleton Skill tương ứng để người dùng tích hợp ngay lập tức.
+### 5.2. Luồng Thực Thi 4 Pha Của Rule Governance Analyzer v1.1.0
+```mermaid
+flowchart TD
+    Pha1["Pha 1: Thu Thập & Lập Bản Đồ AST Quy Tắc & Hooks"] --> Pha2["Pha 2: Giám Định Xung Đột & Thẩm Định Ngữ Nghĩa Headless (agy -p)"]
+    Pha2 --> Pha3["Pha 3: Giám Định Chống Rule Ảo, Zombie Config & Mô Phỏng Hook"]
+    Pha3 --> Pha4["Pha 4: Thiết Kế Tái Cấu Trúc Headless Pipeline & Xuất Bản Báo Cáo Nhị Phân"]
 ```
+
+1. **Pha 1 (Ingestion & AST Mapping)**: Quét toàn bộ rule files, `hooks.json`, `rules.yaml` và scripts hook; xây dựng đồ thị tương quan phạm vi.
+2. **Pha 2 (Dual Conflict Probing & Headless Semantic Audit)**: 
+   - Kiểm tra xung đột bề mặt qua quy tắc phân cấp thẩm quyền.
+   - Kích hoạt subprocess: `agy -p "<audit_prompt>" --output-format json --json-schema schemas/rule-audit-schema.json` để nhận diện các xung đột nghiệp vụ ngầm và che khuất thẩm quyền tinh tế.
+3. **Pha 3 (Anti-Phantom & Hook Simulation Verification)**:
+   - Quét mã nguồn script hook phát hiện khóa cấu hình bị lệch và khối catch rỗng nuốt lỗi.
+   - Chạy kịch bản kiểm thử mô phỏng (Negative & Positive Fixtures) để kiểm chứng cơ học rằng hook thực sự có năng lực chặn vi phạm.
+4. **Pha 4 (Headless Pipeline Architecture Blueprint & Sign-off)**:
+   - Khởi tạo báo cáo kiểm định chuẩn định dạng máy đọc được và markdown.
+   - Tự động sinh mã nguồn cho Git Pre-commit Hook, CI/CD Pipeline, và cấu hình Subagent Delegation.
+   - Trả về mã thoát nhị phân: `0` khi `APPROVED`, `1` khi `REJECTED`.
 
 ---
 
 ## 6. Ma Trận Đánh Đổi Kỹ Thuật (Architecture Trade-off Matrix)
 
-| Tiêu Chí So Sánh | Phương Án 1: Nhồi Toàn Bộ Rule Vào Prompt (Truyền Thống) | Phương Án 2: Dùng Script Shell Cứng Cổ Điển | Phương Án 3: Kiến Trúc Phân Tầng Đề Xuất (Hooks + Skills + Headless Gate) |
+| Trục Đánh Đổi So Sánh | Phương Án 1: Quét Tĩnh Regex Cổ Điển (Hiện Trạng v1.0.0) | Phương Án 2: Nhồi Toàn Bộ Rule Vào Luồng Tương Tác Của Agent | Phương Án 3: Kiến Trúc Tự Động Hóa Headless Pipeline (Đề Xuất v1.1.0) |
 | :--- | :--- | :--- | :--- |
-| **Độ Xác Định (Determinism)** | ❌ Rất thấp. LLM tuân thủ ngẫu nhiên, hay quên khi context phình to. | ⚠️ Trung bình. Cứng nhắc, dễ sinh hiện tượng "Rule Ảo" (Phantom Pass). | ✅ Tuyệt đối. Hook chặn cưỡng chế tại kernel; Headless Gate ép schema nhị phân. |
-| **Tối Ưu Ngữ Cảnh (Context FinOps)** | ❌ Rất tốn kém (>15.000 tokens tĩnh nạp mỗi turn, gây loãng sự chú ý). | ✅ Tiết kiệm token vì chạy ngoài LLM, nhưng không có tính thích ứng thông minh. | ✅ Đạt chuẩn FinOps (tiết kiệm 40-60% token qua Cache và on-demand loading). |
-| **Xử Lý Xung Đột (Conflict Resolution)** | ❌ Không thể. AI bị tê liệt nhận thức (Deadlock) khi hai rule mâu thuẫn. | ❌ Không thể. Script fail ngẫu nhiên mà không hiểu nguyên nhân ngữ nghĩa. | ✅ Phân xử tất định (có ma trận thẩm quyền 4 tầng và log JSON tự động). |
-| **Tính Thích Ứng (Flexibility)** | ⚠️ Linh hoạt nhưng thiếu kiểm soát. | ❌ Hoàn toàn không có tính thích ứng (Brittle). | ✅ Kết hợp hoàn hảo giữa chốt chặn cơ học cứng và khả năng tư duy sâu có kiểm soát. |
+| **Độ Xác Định Ngữ Nghĩa (Semantic Precision)** | ❌ Rất thấp. Regex thô sơ không phân biệt được Model/DTO với Service, gây False-Positive và Deadlock. | ⚠️ Trung bình. Phụ thuộc vào trí nhớ ngẫu nhiên của LLM khi context bị phình to. | ✅ Chuẩn xác cao ($\ge 99\%$). CLI ép schema nhị phân phân tích ngữ nghĩa chính xác từng diff code. |
+| **Tải Nhận Thức & Token (Cognitive & FinOps Load)** | ✅ Tiết kiệm token của LLM nhưng làm tê liệt lập trình viên khi hook bắt nhầm mã. | ❌ Cực kỳ tốn kém (>10.000 tokens tĩnh nạp mỗi turn, gây loãng sự chú ý và suy thoái tư duy). | ✅ Tối ưu hiệu quả. $0\text{ tokens}$ ô nhiễm phiên chính; toàn bộ bài kiểm tra chạy trong subprocess giá rẻ. |
+| **Chống "Rule Ảo" (Anti-Phantom Immunity)** | ❌ Yếu. Không phát hiện được Zombie Configs và khối `except: continue` nuốt lỗi. | ❌ Không thể. LLM không thể tự đánh giá script kiểm tra của chính mình trong cùng phiên. | ✅ Đảm bảo chắc chắn. Tích hợp Hook Simulation Test bắt buộc script phải chứng minh năng lực chặn vi phạm thật. |
+| **Khả Năng Tự Động Hóa CI/CD (Pipeline Automation)** | ⚠️ Hạn chế. Chỉ chạy được các script kiểm tra cú pháp đơn giản, thiếu đánh giá nghiệp vụ. | ❌ Hoàn toàn không thể đưa luồng chat tương tác vào CI/CD. | ✅ Hoạt động tự động. CLI non-interactive (`agy -p`) trả về JSON chuẩn, tích hợp nguyên bản vào Git Pre-commit và CI/CD. |
+| **Độ Phức Tạp Triển Khai (Engineering Complexity)** | ✅ Thấp. Chỉ gồm một vài hàm regex đơn giản. | ✅ Thấp. Chỉ cần copy paste markdown vào prompt. | ⚠️ Trung bình. Cần quản lý tiến trình subprocess, cờ fallback và timeout xử lý. |
 
 ---
 
-## 7. Biên Bản Đánh Giá Nghiệm Thu (Quality Gate Verdict & Sign-Off)
+## 7. Kế Hoạch Nghiệm Thu Chất Lượng & Chốt Chặn Cơ Học (Quality Gate Sign-off)
 
-| Chỉ Số Chất Lượng Nghiệm Thu | Kết Quả Đạt Được | Ngưỡng Yêu Cầu Tối Thiểu | Đánh Giá Cơ Học |
+| Tiêu Chí Nghiệm Thu BABOK | Kết Quả Đạt Được | Ngưỡng Yêu Cầu Tối Thiểu | Đánh Giá Cơ Học |
 | :--- | :--- | :--- | :--- |
-| **Độ phủ Phân loại BABOK (Taxonomy Compliance)** | **100%** (Đủ 4 tầng: BR, SR, Solution FR/NFR, TR) | $\ge 85\%$ | ✅ ĐẠT CHUẨN |
-| **Độ chặt chẽ NFR Định lượng (SMART NFR Rigor)** | **100%** (100% NFR có đơn vị đo lường vật lý: ms, %, tokens) | $\ge 85\%$ | ✅ ĐẠT CHUẨN |
-| **Độ phủ Ma trận Truy vết (RTM Coverage)** | **100%** (Không Orphaned Goals, Không Gold-Plating) | $100\%$ | ✅ ĐẠT CHUẨN |
-| **Độ sẵn sàng Chuyển tiếp (Transition Readiness)** | **100%** (Đầy đủ Data Migration, Training, Rollback Switch) | $\ge 85\%$ | ✅ ĐẠT CHUẨN |
-| **Chốt chặn Không gian Phủ định (Negative Space Audit)** | **100%** (Xác định rõ ràng 5 điều cấm kỵ bất biến) | Tối thiểu 3 điều cấm | ✅ ĐẠT CHUẨN |
-| **Kiểm tra Zero Placeholder (Zero-Placeholder Gate)** | **100%** (Không còn mã giữ chỗ, stubs hay dữ liệu giả lập trên toàn văn bản) | Tuyệt đối không có | ✅ ĐẠT CHUẨN |
+| **Độ phủ Phân loại BABOK (Taxonomy Compliance)** | **100%** (Đầy đủ 4 tầng: BR, SR, Solution FR/NFR, TR) | $\ge 85\%$ | ✅ ĐẠT CHUẨN |
+| **Độ chặt chẽ Định lượng SMART NFR (SMART NFR Rigor)** | **100%** (100% NFR có số đo vật lý: ms, %, tokens, không từ ngữ cảm tính) | $\ge 85\%$ | ✅ ĐẠT CHUẨN |
+| **Độ phủ Ma trận Truy vết RTM (Traceability Coverage)** | **100%** (Khép kín 2 chiều: 0 Orphaned Goals, 0 Gold-Plating) | $100\%$ | ✅ ĐẠT CHUẨN |
+| **Độ sẵn sàng Kế hoạch Chuyển tiếp (Transition Readiness)** | **100%** (Bao gồm Pilot AppForms, Nâng cấp Skill v1.1.0, Emergency Kill-Switch) | $\ge 85\%$ | ✅ ĐẠT CHUẨN |
+| **Chốt chặn Không gian Phủ định (Negative Space Audit)** | **100%** (Xác định rõ ràng 5 điều cấm kỵ cốt lõi kèm chế tài kỹ thuật) | Tối thiểu 3 điều cấm | ✅ ĐẠT CHUẨN |
+| **Kiểm tra Zero Placeholder (Zero-Placeholder Gate)** | **100%** (Tuyệt đối sạch các văn bản và ký hiệu giữ chỗ tạm thời) | Tuyệt đối không có | ✅ ĐẠT CHUẨN |
 
-**KẾT LUẬN CUỐI CÙNG**: `APPROVED (SẴN SÀNG BÀN GIAO CHO ĐỘI NGŨ KỸ SƯ TRIỂN KHAI)`
+**KẾT LUẬN NGHIỆP VỤ**: `APPROVED — HỒ SƠ ĐẶC TẢ SPEC-BA-RULE-001 v1.1.0 ĐÃ HOÀN TẤT VÀ ĐỦ ĐIỀU KIỆN ĐỂ BẮT TAY TRIỂN KHAI NÂNG CẤP SKILL VÀ PILOT REFACTORING.`
