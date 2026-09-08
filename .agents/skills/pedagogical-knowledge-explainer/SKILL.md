@@ -78,11 +78,11 @@ Khi tiếp nhận yêu cầu từ người dùng, Agent **chỉ mở file vệ t
 
 | Phân Đoạn Tác Vụ | Tài Liệu On-Demand Cần Nạp | Kết Quả Đầu Ra Mong Đợi |
 | :--- | :--- | :--- |
-| **Bóc tách nguồn gốc & định vị bản chất** | [`knowledge/first-principles-anchoring.md`](file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/pedagogical-knowledge-explainer/knowledge/first-principles-anchoring.md) | Đoạn phân tích bối cảnh lịch sử, nút thắt công nghệ trước đây và nguyên lý gốc |
-| **Phân tích đánh đổi & mổ xẻ lỗi sập** | [`knowledge/trade-off-and-failure-radar.md`](file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/pedagogical-knowledge-explainer/knowledge/trade-off-and-failure-radar.md) | Ma trận đánh đổi 6 trục + Tối thiểu 2 kịch bản catastrophic failure modes |
-| **Soạn câu hỏi phản biện & bài tập biên** | [`knowledge/socratic-questioning-patterns.md`](file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/pedagogical-knowledge-explainer/knowledge/socratic-questioning-patterns.md) | Bộ 1-2 câu hỏi Socratic thách đố tư duy phản xạ của người học |
-| **Trình bày tài liệu bài giảng hoàn chỉnh** | [`templates/deep-lesson-plan.template.md`](file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/pedagogical-knowledge-explainer/templates/deep-lesson-plan.template.md) | Bài giảng chuẩn cấu trúc 4 pha, trực quan, có Mermaid diagram và mã chạy thật |
-| **Kích hoạt chốt chặn kiểm duyệt ở điểm cuối** | [`loop/headless-gate-audit.md`](file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/pedagogical-knowledge-explainer/loop/headless-gate-audit.md) | Lệnh chạy headless sub-process, nhận danh sách JSON issues để tự sửa trước khi bàn giao |
+| **Bóc tách nguồn gốc & định vị bản chất** | [`knowledge/first-principles-anchoring.md`](knowledge/first-principles-anchoring.md) | Đoạn phân tích bối cảnh lịch sử, nút thắt công nghệ trước đây và nguyên lý gốc |
+| **Phân tích đánh đổi & mổ xẻ lỗi sập** | [`knowledge/trade-off-and-failure-radar.md`](knowledge/trade-off-and-failure-radar.md) | Ma trận đánh đổi 6 trục + Tối thiểu 2 kịch bản catastrophic failure modes |
+| **Soạn câu hỏi phản biện & bài tập biên** | [`knowledge/socratic-questioning-patterns.md`](knowledge/socratic-questioning-patterns.md) | Bộ 1-2 câu hỏi Socratic thách đố tư duy phản xạ của người học |
+| **Trình bày tài liệu bài giảng hoàn chỉnh** | [`templates/deep-lesson-plan.template.md`](templates/deep-lesson-plan.template.md) | Bài giảng chuẩn cấu trúc 4 pha, trực quan, có Mermaid diagram và mã chạy thật |
+| **Kích hoạt chốt chặn kiểm duyệt ở điểm cuối** | [`loop/headless-gate-audit.md`](loop/headless-gate-audit.md) | Lệnh chạy headless sub-process, nhận danh sách JSON issues để tự sửa trước khi bàn giao |
 
 ---
 
@@ -181,7 +181,7 @@ Script trả về kết quả JSON có cấu trúc sau qua `stdout`:
 
 3. **Cung Cấp Liên Kết Clickable Trong Câu Trả Lời**:
    - Trong phản hồi cuối cùng cho người học, Agent BẮT BUỘC phải đính kèm đường link Markdown có thể nhấp chuột trực tiếp:
-     `[Tên Bài Học](file:///c:/Users/ADMIN/Documents/workspace/Steves/Docs/Knowleads/<topic-slug>.md)`
+     `[Tên Bài Học](Docs/Knowleads/<topic-slug>.md)`
    - Giúp người học có thể mở lại xem bất cứ lúc nào trong IDE mà không sợ bị trôi tin nhắn chat.
 
 ---

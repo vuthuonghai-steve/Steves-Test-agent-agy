@@ -70,11 +70,11 @@ cognitive_principles:
 
 | Khi Gặp Tình Huống / Nhiệm Vụ | Tài Liệu Cần Đọc (On-Demand) | Sản Phẩm Đầu Ra Mong Đợi |
 | :--- | :--- | :--- |
-| **Phân xử khi 2 quy tắc đối kháng nhau** | [`knowledge/rule-precedence-hierarchy.md`](file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/rule-governance-analyzer/knowledge/rule-precedence-hierarchy.md) | Phán quyết phân xử tất định theo Level 1 > Level 2 > Level 3 > Level 4 |
-| **Rà soát repository tìm xung đột quy tắc** | [`knowledge/conflict-detection-patterns.md`](file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/rule-governance-analyzer/knowledge/conflict-detection-patterns.md) + [`scripts/audit-rules.ps1`](file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/rule-governance-analyzer/scripts/audit-rules.ps1) | Danh sách cặp xung đột kèm mã định danh, vị trí file:line và giải pháp |
-| **Giám định chất lượng của các script kiểm tra** | [`knowledge/anti-phantom-audit-guide.md`](file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/rule-governance-analyzer/knowledge/anti-phantom-audit-guide.md) | Báo cáo vạch trần các script Fake Exit 0, Dummy Regex, hoặc Mock Data Bypass |
-| **Lập kế hoạch tái cấu trúc quy tắc dự án** | [`templates/rule-refactoring-plan.template.md`](file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/rule-governance-analyzer/templates/rule-refactoring-plan.template.md) | Kế hoạch phân bổ 3 tầng: Hooks (An toàn) + Skills (Nghiệp vụ) + Anchors (Bất biến) |
-| **Xuất bản báo cáo nghiệm thu chất lượng quy tắc** | [`templates/rule-audit-report.template.md`](file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/rule-governance-analyzer/templates/rule-audit-report.template.md) + [`schemas/rule-audit-schema.json`](file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/rule-governance-analyzer/schemas/rule-audit-schema.json) | Báo cáo JSON và Markdown đạt chuẩn APPROVED (Exit code 0) |
+| **Phân xử khi 2 quy tắc đối kháng nhau** | [`knowledge/rule-precedence-hierarchy.md`](knowledge/rule-precedence-hierarchy.md) | Phán quyết phân xử tất định theo Level 1 > Level 2 > Level 3 > Level 4 |
+| **Rà soát repository tìm xung đột quy tắc** | [`knowledge/conflict-detection-patterns.md`](knowledge/conflict-detection-patterns.md) + [`scripts/audit-rules.ps1`](scripts/audit-rules.ps1) | Danh sách cặp xung đột kèm mã định danh, vị trí file:line và giải pháp |
+| **Giám định chất lượng của các script kiểm tra** | [`knowledge/anti-phantom-audit-guide.md`](knowledge/anti-phantom-audit-guide.md) | Báo cáo vạch trần các script Fake Exit 0, Dummy Regex, hoặc Mock Data Bypass |
+| **Lập kế hoạch tái cấu trúc quy tắc dự án** | [`templates/rule-refactoring-plan.template.md`](templates/rule-refactoring-plan.template.md) | Kế hoạch phân bổ 3 tầng: Hooks (An toàn) + Skills (Nghiệp vụ) + Anchors (Bất biến) |
+| **Xuất bản báo cáo nghiệm thu chất lượng quy tắc** | [`templates/rule-audit-report.template.md`](templates/rule-audit-report.template.md) + [`schemas/rule-audit-schema.json`](schemas/rule-audit-schema.json) | Báo cáo JSON và Markdown đạt chuẩn APPROVED (Exit code 0) |
 
 ---
 

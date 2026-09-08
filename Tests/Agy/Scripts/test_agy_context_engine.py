@@ -24,7 +24,7 @@ if sys.platform == "win32":
         pass
 
 # Thư mục gốc dự án và thư mục Logs
-WORKSPACE_ROOT = Path(r"c:\Users\ADMIN\Documents\workspace\Steves")
+WORKSPACE_ROOT = Path(r".")
 DEFAULT_LOGS_DIR = WORKSPACE_ROOT / "Tests" / "Agy" / "Logs"
 
 def run_cmd(cmd_list, timeout=300):

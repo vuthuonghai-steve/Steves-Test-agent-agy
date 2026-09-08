@@ -6,7 +6,7 @@
 
 [CmdletBinding()]
 param (
-    [string]$LogsDir = "c:\Users\ADMIN\Documents\workspace\Steves\Tests\Agy\Logs",
+    [string]$LogsDir = "Tests/Agy/Logs",
     [string]$Model = "",
     [int]$TimeoutMinutes = 5
 )

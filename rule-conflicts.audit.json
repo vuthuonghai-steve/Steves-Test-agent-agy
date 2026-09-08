@@ -9,7 +9,7 @@
   "rules_mapped": [
     {
       "rule_id": "R-AGEN-001",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\AGENTS.md",
+      "source_file": "AGENTS.md",
       "line_number": 6,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -18,7 +18,7 @@
     },
     {
       "rule_id": "R-AGEN-002",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\AGENTS.md",
+      "source_file": "AGENTS.md",
       "line_number": 18,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -27,7 +27,7 @@
     },
     {
       "rule_id": "R-AGEN-003",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\AGENTS.md",
+      "source_file": "AGENTS.md",
       "line_number": 25,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -36,7 +36,7 @@
     },
     {
       "rule_id": "R-AGEN-004",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\AGENTS.md",
+      "source_file": "AGENTS.md",
       "line_number": 26,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -45,7 +45,7 @@
     },
     {
       "rule_id": "R-AGEN-005",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\AGENTS.md",
+      "source_file": "AGENTS.md",
       "line_number": 29,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -54,7 +54,7 @@
     },
     {
       "rule_id": "R-AGEN-006",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\AGENTS.md",
+      "source_file": "AGENTS.md",
       "line_number": 30,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -63,7 +63,7 @@
     },
     {
       "rule_id": "R-AGEN-007",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\AGENTS.md",
+      "source_file": "AGENTS.md",
       "line_number": 34,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -72,7 +72,7 @@
     },
     {
       "rule_id": "R-AGEN-008",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\AGENTS.md",
+      "source_file": "AGENTS.md",
       "line_number": 35,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -81,7 +81,7 @@
     },
     {
       "rule_id": "R-AGEN-009",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\AGENTS.md",
+      "source_file": "AGENTS.md",
       "line_number": 42,
       "directive_type": "MUST_NOT",
       "target_scope": "verification",
@@ -90,7 +90,7 @@
     },
     {
       "rule_id": "R-AGEN-010",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\AGENTS.md",
+      "source_file": "AGENTS.md",
       "line_number": 68,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -99,7 +99,7 @@
     },
     {
       "rule_id": "R-AGEN-011",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\AGENTS.md",
+      "source_file": "AGENTS.md",
       "line_number": 78,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -108,7 +108,7 @@
     },
     {
       "rule_id": "R-AGEN-012",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\AGENTS.md",
+      "source_file": "AGENTS.md",
       "line_number": 86,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -117,7 +117,7 @@
     },
     {
       "rule_id": "R-AGEN-013",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\AGENTS.md",
+      "source_file": "AGENTS.md",
       "line_number": 115,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -126,7 +126,7 @@
     },
     {
       "rule_id": "R-AGEN-014",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\AGENTS.md",
+      "source_file": "AGENTS.md",
       "line_number": 122,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -135,7 +135,7 @@
     },
     {
       "rule_id": "R-AGEN-015",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\AGENTS.md",
+      "source_file": "AGENTS.md",
       "line_number": 123,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -144,7 +144,7 @@
     },
     {
       "rule_id": "R-AGEN-016",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\AGENTS.md",
+      "source_file": "AGENTS.md",
       "line_number": 126,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -153,7 +153,7 @@
     },
     {
       "rule_id": "R-AGEN-017",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\AGENTS.md",
+      "source_file": "AGENTS.md",
       "line_number": 127,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -162,7 +162,7 @@
     },
     {
       "rule_id": "R-AGEN-018",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\AGENTS.md",
+      "source_file": "AGENTS.md",
       "line_number": 130,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -171,7 +171,7 @@
     },
     {
       "rule_id": "R-AGEN-019",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\AGENTS.md",
+      "source_file": "AGENTS.md",
       "line_number": 134,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -180,7 +180,7 @@
     },
     {
       "rule_id": "R-AGEN-020",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\AGENTS.md",
+      "source_file": "AGENTS.md",
       "line_number": 135,
       "directive_type": "MUST",
       "target_scope": "verification",
@@ -189,7 +189,7 @@
     },
     {
       "rule_id": "R-AGEN-021",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\AGENTS.md",
+      "source_file": "AGENTS.md",
       "line_number": 138,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -198,7 +198,7 @@
     },
     {
       "rule_id": "R-AGEN-022",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\AGENTS.md",
+      "source_file": "AGENTS.md",
       "line_number": 139,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -207,7 +207,7 @@
     },
     {
       "rule_id": "R-SKIL-001",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\ba-requirements-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\ba-requirements-analyzer\\SKILL.md",
       "line_number": 3,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -216,7 +216,7 @@
     },
     {
       "rule_id": "R-SKIL-002",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\ba-requirements-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\ba-requirements-analyzer\\SKILL.md",
       "line_number": 15,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -225,7 +225,7 @@
     },
     {
       "rule_id": "R-SKIL-003",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\ba-requirements-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\ba-requirements-analyzer\\SKILL.md",
       "line_number": 16,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -234,7 +234,7 @@
     },
     {
       "rule_id": "R-SKIL-004",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\ba-requirements-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\ba-requirements-analyzer\\SKILL.md",
       "line_number": 17,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -243,7 +243,7 @@
     },
     {
       "rule_id": "R-SKIL-005",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\ba-requirements-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\ba-requirements-analyzer\\SKILL.md",
       "line_number": 18,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -252,7 +252,7 @@
     },
     {
       "rule_id": "R-SKIL-006",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\ba-requirements-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\ba-requirements-analyzer\\SKILL.md",
       "line_number": 22,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -261,7 +261,7 @@
     },
     {
       "rule_id": "R-SKIL-007",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\ba-requirements-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\ba-requirements-analyzer\\SKILL.md",
       "line_number": 30,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -270,7 +270,7 @@
     },
     {
       "rule_id": "R-SKIL-008",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\ba-requirements-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\ba-requirements-analyzer\\SKILL.md",
       "line_number": 69,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -279,7 +279,7 @@
     },
     {
       "rule_id": "R-SKIL-009",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\ba-requirements-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\ba-requirements-analyzer\\SKILL.md",
       "line_number": 71,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -288,7 +288,7 @@
     },
     {
       "rule_id": "R-SKIL-010",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\ba-requirements-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\ba-requirements-analyzer\\SKILL.md",
       "line_number": 72,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -297,7 +297,7 @@
     },
     {
       "rule_id": "R-SKIL-011",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\ba-requirements-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\ba-requirements-analyzer\\SKILL.md",
       "line_number": 109,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -306,7 +306,70 @@
     },
     {
       "rule_id": "R-SKIL-001",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\logging-best-practices\\SKILL.md",
+      "line_number": 87,
+      "directive_type": "MUST",
+      "target_scope": "context_efficiency",
+      "statement": "Log entries must carry application environment context (App Version, OS Version, .NET Runtime, Machine Name, Process ID).",
+      "precedence_tier": "L3_ACTIVE_SKILL"
+    },
+    {
+      "rule_id": "R-SKIL-001",
+      "source_file": ".agents\\skills\\path-verifier\\SKILL.md",
+      "line_number": 3,
+      "directive_type": "MUST",
+      "target_scope": "filesystem",
+      "statement": "description: \"Chuyên gia kiểm định và chuẩn hóa đường dẫn tương đối (Path Portability & Governance Verifier). Rà soát và tự động chuyển đổi các đường dẫn tuyệt đối (file:///c:/..., C:\\\\..., /home/...) về đường dẫn tương đối chuẩn xác dựa trên mốc neo .agents. Bắt buộc sử dụng skill này khi người dùng muốn kiểm tra tính khả chuyển (portability) của dự án, sửa lỗi đường dẫn tuyệt đối, chuẩn hóa liên kết Markdown, kiểm tra cấu hình hooks.json, hoặc chuẩn bị copy/tái sử dụng bộ kỹ năng .agents sang kho mã nguồn khác.\"",
+      "precedence_tier": "L3_ACTIVE_SKILL"
+    },
+    {
+      "rule_id": "R-SKIL-002",
+      "source_file": ".agents\\skills\\path-verifier\\SKILL.md",
+      "line_number": 15,
+      "directive_type": "MUST",
+      "target_scope": "general",
+      "statement": "must:",
+      "precedence_tier": "L3_ACTIVE_SKILL"
+    },
+    {
+      "rule_id": "R-SKIL-003",
+      "source_file": ".agents\\skills\\path-verifier\\SKILL.md",
+      "line_number": 16,
+      "directive_type": "MUST",
+      "target_scope": "filesystem",
+      "statement": "- anchor_on_dot_agents_directory # Luôn lấy thư mục .agents làm mốc neo trung tâm để định vị Workspace Root",
+      "precedence_tier": "L3_ACTIVE_SKILL"
+    },
+    {
+      "rule_id": "R-SKIL-004",
+      "source_file": ".agents\\skills\\path-verifier\\SKILL.md",
+      "line_number": 18,
+      "directive_type": "MUST_NOT",
+      "target_scope": "filesystem",
+      "statement": "- ban_hardcoded_absolute_paths_in_repo # Tuyệt đối cấm lưu trữ file:///c:/... hoặc C:\\... trong mã nguồn và tài liệu",
+      "precedence_tier": "L3_ACTIVE_SKILL"
+    },
+    {
+      "rule_id": "R-SKIL-005",
+      "source_file": ".agents\\skills\\path-verifier\\SKILL.md",
+      "line_number": 24,
+      "directive_type": "MUST",
+      "target_scope": "general",
+      "statement": "- output_manual_assumptions_without_scan # Không phỏng đoán thủ công; bắt buộc chạy script quét cơ học",
+      "precedence_tier": "L3_ACTIVE_SKILL"
+    },
+    {
+      "rule_id": "R-SKIL-006",
+      "source_file": ".agents\\skills\\path-verifier\\SKILL.md",
+      "line_number": 66,
+      "directive_type": "MUST",
+      "target_scope": "general",
+      "statement": "| Tình Huống Gặp Phải | Tài Liệu / Công Cụ Kích Hoạt | Đầu Ra Tiêu Chuẩn |",
+      "precedence_tier": "L3_ACTIVE_SKILL"
+    },
+    {
+      "rule_id": "R-SKIL-001",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 15,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -315,7 +378,7 @@
     },
     {
       "rule_id": "R-SKIL-002",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 16,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -324,7 +387,7 @@
     },
     {
       "rule_id": "R-SKIL-003",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 17,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -333,7 +396,7 @@
     },
     {
       "rule_id": "R-SKIL-004",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 18,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -342,7 +405,7 @@
     },
     {
       "rule_id": "R-SKIL-005",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 19,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -351,7 +414,7 @@
     },
     {
       "rule_id": "R-SKIL-006",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 22,
       "directive_type": "MUST",
       "target_scope": "verification",
@@ -360,7 +423,7 @@
     },
     {
       "rule_id": "R-SKIL-007",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 24,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -369,7 +432,7 @@
     },
     {
       "rule_id": "R-SKIL-008",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 26,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -378,7 +441,7 @@
     },
     {
       "rule_id": "R-SKIL-009",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 27,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -387,7 +450,7 @@
     },
     {
       "rule_id": "R-SKIL-010",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 28,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -396,7 +459,7 @@
     },
     {
       "rule_id": "R-SKIL-011",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 29,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -405,7 +468,7 @@
     },
     {
       "rule_id": "R-SKIL-012",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 30,
       "directive_type": "MUST_NOT",
       "target_scope": "verification",
@@ -414,7 +477,7 @@
     },
     {
       "rule_id": "R-SKIL-013",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 31,
       "directive_type": "MUST_NOT",
       "target_scope": "filesystem",
@@ -423,7 +486,7 @@
     },
     {
       "rule_id": "R-SKIL-014",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 67,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -432,7 +495,7 @@
     },
     {
       "rule_id": "R-SKIL-015",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 69,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -441,7 +504,7 @@
     },
     {
       "rule_id": "R-SKIL-016",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 95,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -450,7 +513,7 @@
     },
     {
       "rule_id": "R-SKIL-017",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 109,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -459,7 +522,7 @@
     },
     {
       "rule_id": "R-SKIL-018",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 114,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -468,7 +531,7 @@
     },
     {
       "rule_id": "R-SKIL-019",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 119,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -477,7 +540,7 @@
     },
     {
       "rule_id": "R-SKIL-020",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 126,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -486,7 +549,7 @@
     },
     {
       "rule_id": "R-SKIL-021",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 134,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -495,7 +558,7 @@
     },
     {
       "rule_id": "R-SKIL-022",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 138,
       "directive_type": "MUST_NOT",
       "target_scope": "tool_execution",
@@ -504,7 +567,7 @@
     },
     {
       "rule_id": "R-SKIL-023",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 172,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -513,7 +576,7 @@
     },
     {
       "rule_id": "R-SKIL-024",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 175,
       "directive_type": "MUST",
       "target_scope": "filesystem",
@@ -522,7 +585,7 @@
     },
     {
       "rule_id": "R-SKIL-025",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 183,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -531,7 +594,7 @@
     },
     {
       "rule_id": "R-SKIL-026",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 193,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -540,7 +603,7 @@
     },
     {
       "rule_id": "R-SKIL-027",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 194,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -549,7 +612,7 @@
     },
     {
       "rule_id": "R-SKIL-028",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 195,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -558,7 +621,7 @@
     },
     {
       "rule_id": "R-SKIL-029",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 196,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -567,7 +630,7 @@
     },
     {
       "rule_id": "R-SKIL-030",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 197,
       "directive_type": "MUST_NOT",
       "target_scope": "verification",
@@ -576,7 +639,7 @@
     },
     {
       "rule_id": "R-SKIL-031",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 198,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -585,7 +648,7 @@
     },
     {
       "rule_id": "R-SKIL-032",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
+      "source_file": ".agents\\skills\\pedagogical-knowledge-explainer\\SKILL.md",
       "line_number": 199,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -594,7 +657,7 @@
     },
     {
       "rule_id": "R-SKIL-001",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\rule-governance-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\rule-governance-analyzer\\SKILL.md",
       "line_number": 15,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -603,7 +666,7 @@
     },
     {
       "rule_id": "R-SKIL-002",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\rule-governance-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\rule-governance-analyzer\\SKILL.md",
       "line_number": 16,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -612,7 +675,7 @@
     },
     {
       "rule_id": "R-SKIL-003",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\rule-governance-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\rule-governance-analyzer\\SKILL.md",
       "line_number": 18,
       "directive_type": "MUST",
       "target_scope": "verification",
@@ -621,7 +684,7 @@
     },
     {
       "rule_id": "R-SKIL-004",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\rule-governance-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\rule-governance-analyzer\\SKILL.md",
       "line_number": 24,
       "directive_type": "MUST_NOT",
       "target_scope": "context_efficiency",
@@ -630,7 +693,7 @@
     },
     {
       "rule_id": "R-SKIL-005",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\rule-governance-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\rule-governance-analyzer\\SKILL.md",
       "line_number": 25,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -639,7 +702,7 @@
     },
     {
       "rule_id": "R-SKIL-006",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\rule-governance-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\rule-governance-analyzer\\SKILL.md",
       "line_number": 26,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -648,7 +711,7 @@
     },
     {
       "rule_id": "R-SKIL-007",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\rule-governance-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\rule-governance-analyzer\\SKILL.md",
       "line_number": 61,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -657,7 +720,7 @@
     },
     {
       "rule_id": "R-SKIL-008",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\rule-governance-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\rule-governance-analyzer\\SKILL.md",
       "line_number": 64,
       "directive_type": "MUST",
       "target_scope": "context_efficiency",
@@ -666,7 +729,7 @@
     },
     {
       "rule_id": "R-SKIL-009",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\rule-governance-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\rule-governance-analyzer\\SKILL.md",
       "line_number": 102,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -675,7 +738,7 @@
     },
     {
       "rule_id": "R-SKIL-001",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\skill-creator\\SKILL.md",
+      "source_file": ".agents\\skills\\skill-creator\\SKILL.md",
       "line_number": 12,
       "directive_type": "PREFER",
       "target_scope": "general",
@@ -684,7 +747,7 @@
     },
     {
       "rule_id": "R-SKIL-002",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\skill-creator\\SKILL.md",
+      "source_file": ".agents\\skills\\skill-creator\\SKILL.md",
       "line_number": 26,
       "directive_type": "PREFER",
       "target_scope": "general",
@@ -693,7 +756,7 @@
     },
     {
       "rule_id": "R-SKIL-003",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\skill-creator\\SKILL.md",
+      "source_file": ".agents\\skills\\skill-creator\\SKILL.md",
       "line_number": 49,
       "directive_type": "PREFER",
       "target_scope": "general",
@@ -702,7 +765,7 @@
     },
     {
       "rule_id": "R-SKIL-004",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\skill-creator\\SKILL.md",
+      "source_file": ".agents\\skills\\skill-creator\\SKILL.md",
       "line_number": 51,
       "directive_type": "PREFER",
       "target_scope": "general",
@@ -711,7 +774,7 @@
     },
     {
       "rule_id": "R-SKIL-005",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\skill-creator\\SKILL.md",
+      "source_file": ".agents\\skills\\skill-creator\\SKILL.md",
       "line_number": 52,
       "directive_type": "PREFER",
       "target_scope": "general",
@@ -720,7 +783,7 @@
     },
     {
       "rule_id": "R-SKIL-006",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\skill-creator\\SKILL.md",
+      "source_file": ".agents\\skills\\skill-creator\\SKILL.md",
       "line_number": 54,
       "directive_type": "PREFER",
       "target_scope": "filesystem",
@@ -729,7 +792,7 @@
     },
     {
       "rule_id": "R-SKIL-007",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\skill-creator\\SKILL.md",
+      "source_file": ".agents\\skills\\skill-creator\\SKILL.md",
       "line_number": 96,
       "directive_type": "PREFER",
       "target_scope": "general",
@@ -738,7 +801,7 @@
     },
     {
       "rule_id": "R-SKIL-008",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\skill-creator\\SKILL.md",
+      "source_file": ".agents\\skills\\skill-creator\\SKILL.md",
       "line_number": 113,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -747,7 +810,7 @@
     },
     {
       "rule_id": "R-SKIL-009",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\skill-creator\\SKILL.md",
+      "source_file": ".agents\\skills\\skill-creator\\SKILL.md",
       "line_number": 117,
       "directive_type": "PREFER",
       "target_scope": "general",
@@ -756,7 +819,7 @@
     },
     {
       "rule_id": "R-SKIL-010",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\skill-creator\\SKILL.md",
+      "source_file": ".agents\\skills\\skill-creator\\SKILL.md",
       "line_number": 203,
       "directive_type": "PREFER",
       "target_scope": "general",
@@ -765,7 +828,7 @@
     },
     {
       "rule_id": "R-SKIL-011",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\skill-creator\\SKILL.md",
+      "source_file": ".agents\\skills\\skill-creator\\SKILL.md",
       "line_number": 225,
       "directive_type": "MUST",
       "target_scope": "filesystem",
@@ -774,7 +837,7 @@
     },
     {
       "rule_id": "R-SKIL-012",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\skill-creator\\SKILL.md",
+      "source_file": ".agents\\skills\\skill-creator\\SKILL.md",
       "line_number": 304,
       "directive_type": "PREFER",
       "target_scope": "filesystem",
@@ -783,7 +846,7 @@
     },
     {
       "rule_id": "R-SKIL-013",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\skill-creator\\SKILL.md",
+      "source_file": ".agents\\skills\\skill-creator\\SKILL.md",
       "line_number": 339,
       "directive_type": "PREFER",
       "target_scope": "general",
@@ -792,7 +855,7 @@
     },
     {
       "rule_id": "R-SKIL-014",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\skill-creator\\SKILL.md",
+      "source_file": ".agents\\skills\\skill-creator\\SKILL.md",
       "line_number": 348,
       "directive_type": "MUST",
       "target_scope": "filesystem",
@@ -801,7 +864,7 @@
     },
     {
       "rule_id": "R-SKIL-015",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\skill-creator\\SKILL.md",
+      "source_file": ".agents\\skills\\skill-creator\\SKILL.md",
       "line_number": 354,
       "directive_type": "PREFER",
       "target_scope": "filesystem",
@@ -810,7 +873,7 @@
     },
     {
       "rule_id": "R-SKIL-016",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\skill-creator\\SKILL.md",
+      "source_file": ".agents\\skills\\skill-creator\\SKILL.md",
       "line_number": 356,
       "directive_type": "PREFER",
       "target_scope": "context_efficiency",
@@ -819,7 +882,7 @@
     },
     {
       "rule_id": "R-SKIL-017",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\skill-creator\\SKILL.md",
+      "source_file": ".agents\\skills\\skill-creator\\SKILL.md",
       "line_number": 358,
       "directive_type": "PREFER",
       "target_scope": "filesystem",
@@ -828,7 +891,7 @@
     },
     {
       "rule_id": "R-SKIL-018",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\skill-creator\\SKILL.md",
+      "source_file": ".agents\\skills\\skill-creator\\SKILL.md",
       "line_number": 370,
       "directive_type": "PREFER",
       "target_scope": "general",
@@ -837,7 +900,7 @@
     },
     {
       "rule_id": "R-SKIL-019",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\skill-creator\\SKILL.md",
+      "source_file": ".agents\\skills\\skill-creator\\SKILL.md",
       "line_number": 400,
       "directive_type": "PREFER",
       "target_scope": "filesystem",
@@ -846,7 +909,7 @@
     },
     {
       "rule_id": "R-SKIL-020",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\skill-creator\\SKILL.md",
+      "source_file": ".agents\\skills\\skill-creator\\SKILL.md",
       "line_number": 451,
       "directive_type": "PREFER",
       "target_scope": "general",
@@ -855,7 +918,7 @@
     },
     {
       "rule_id": "R-SKIL-021",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\skill-creator\\SKILL.md",
+      "source_file": ".agents\\skills\\skill-creator\\SKILL.md",
       "line_number": 454,
       "directive_type": "PREFER",
       "target_scope": "general",
@@ -864,7 +927,7 @@
     },
     {
       "rule_id": "R-SKIL-001",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
       "line_number": 15,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -873,7 +936,7 @@
     },
     {
       "rule_id": "R-SKIL-002",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
       "line_number": 74,
       "directive_type": "MUST",
       "target_scope": "filesystem",
@@ -882,7 +945,7 @@
     },
     {
       "rule_id": "R-SKIL-003",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
       "line_number": 110,
       "directive_type": "PREFER",
       "target_scope": "general",
@@ -891,7 +954,7 @@
     },
     {
       "rule_id": "R-SKIL-004",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
       "line_number": 111,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -900,7 +963,7 @@
     },
     {
       "rule_id": "R-SKIL-005",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
       "line_number": 142,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -909,7 +972,7 @@
     },
     {
       "rule_id": "R-SKIL-006",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
       "line_number": 144,
       "directive_type": "MUST_NOT",
       "target_scope": "general",
@@ -918,7 +981,7 @@
     },
     {
       "rule_id": "R-SKIL-007",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
       "line_number": 146,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -927,7 +990,7 @@
     },
     {
       "rule_id": "R-SKIL-008",
-      "source_file": "C:\\Users\\ADMIN\\Documents\\workspace\\Steves\\.agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
+      "source_file": ".agents\\skills\\technical-tradeoff-analyzer\\SKILL.md",
       "line_number": 148,
       "directive_type": "MUST",
       "target_scope": "general",
@@ -960,5 +1023,5 @@
     ],
     "violations_found": []
   },
-  "summary": "Quản trị quy tắc hoàn tất với kết quả [APPROVED]. Điểm chất lượng: 99%. Đã quét 103 rules, phát hiện 0 xung đột, 0 rule ảo."
+  "summary": "Quản trị quy tắc hoàn tất với kết quả [APPROVED]. Điểm chất lượng: 99%. Đã quét 110 rules, phát hiện 0 xung đột, 0 rule ảo."
 }

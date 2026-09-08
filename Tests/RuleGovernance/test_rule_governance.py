@@ -25,7 +25,7 @@ if sys.platform == "win32":
     except Exception:
         pass
 
-REPO_ROOT = Path(r"C:\Users\ADMIN\Documents\workspace\Steves")
+REPO_ROOT = Path(r".")
 AUDIT_SCRIPT = REPO_ROOT / ".agents/skills/rule-governance-analyzer/scripts/audit_rules.py"
 
 

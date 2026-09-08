@@ -1,7 +1,7 @@
 # 📚 Sổ Tay Tri Thức & Điểm Neo Học Tập (Knowledge Base Index)
 
 Chào mừng bạn đến với kho lưu trữ bài giảng và điểm neo kiến thức của hệ thống Steves.  
-Mọi chủ đề công nghệ được giải phẫu chuyên sâu bởi skill [`pedagogical-knowledge-explainer`](file:///c:/Users/ADMIN/Documents/workspace/Steves/.agents/skills/pedagogical-knowledge-explainer/SKILL.md) sẽ được lưu trữ cố định tại đây sau khi vượt qua chốt chặn kiểm duyệt cơ học ngầm (Headless Mechanical Gate).
+Mọi chủ đề công nghệ được giải phẫu chuyên sâu bởi skill [`pedagogical-knowledge-explainer`](.agents/skills/pedagogical-knowledge-explainer/SKILL.md) sẽ được lưu trữ cố định tại đây sau khi vượt qua chốt chặn kiểm duyệt cơ học ngầm (Headless Mechanical Gate).
 
 ---
 
@@ -11,9 +11,9 @@ Mọi chủ đề công nghệ được giải phẫu chuyên sâu bởi skill [
 
 | Ngày Tạo | Chủ Đề / Công Nghệ | Đường Dẫn Bài Học | Trạng Thái Kiểm Duyệt |
 | :--- | :--- | :--- | :--- |
-| 2026-09-08 | **Cơ Chế Vận Hành Agent Skills & Headless State Gate** | [agent-skills-and-headless-gate.md](file:///c:/Users/ADMIN/Documents/workspace/Steves/Docs/Knowleads/agent-skills-and-headless-gate.md) | ✅ PASS (Mechanical Audit Passed) |
-| 2026-09-08 | **Cơ Chế Vận Hành Subagent Trong Antigravity** | [antigravity-subagent-mechanics.md](file:///c:/Users/ADMIN/Documents/workspace/Steves/Docs/Knowleads/antigravity-subagent-mechanics.md) | ✅ PASS (Mechanical Audit Passed) |
-| 2026-09-08 | **So Sánh Chuyên Sâu: Headless Mode vs Subagents** | [headless-vs-subagents-comparative-guide.md](file:///c:/Users/ADMIN/Documents/workspace/Steves/Docs/Knowleads/headless-vs-subagents-comparative-guide.md) | ✅ PASS (Mechanical Audit Passed) |
+| 2026-09-08 | **Cơ Chế Vận Hành Agent Skills & Headless State Gate** | [agent-skills-and-headless-gate.md](Docs/Knowleads/agent-skills-and-headless-gate.md) | ✅ PASS (Mechanical Audit Passed) |
+| 2026-09-08 | **Cơ Chế Vận Hành Subagent Trong Antigravity** | [antigravity-subagent-mechanics.md](Docs/Knowleads/antigravity-subagent-mechanics.md) | ✅ PASS (Mechanical Audit Passed) |
+| 2026-09-08 | **So Sánh Chuyên Sâu: Headless Mode vs Subagents** | [headless-vs-subagents-comparative-guide.md](Docs/Knowleads/headless-vs-subagents-comparative-guide.md) | ✅ PASS (Mechanical Audit Passed) |
 
 ---
 

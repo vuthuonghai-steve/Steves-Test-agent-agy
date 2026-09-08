@@ -20,7 +20,7 @@ if sys.platform == "win32":
     except Exception:
         pass
 
-WORKSPACE_ROOT = Path(r"c:\Users\ADMIN\Documents\workspace\Steves")
+WORKSPACE_ROOT = Path(r".")
 SUBDIR = WORKSPACE_ROOT / "Tests" / "Agy"
 LOGS_BASE_DIR = WORKSPACE_ROOT / "Tests" / "Agy" / "Logs"
 

@@ -254,7 +254,7 @@ def generate_refactoring_recommendations(rules: list) -> list:
 
 def main():
     parser = argparse.ArgumentParser(description="Rule Governance & Conflict Analyzer Engine")
-    parser.add_argument("--workspace", default=r"c:\Users\ADMIN\Documents\workspace\Steves", help="Workspace root.")
+    parser.add_argument("--workspace", default=r".", help="Workspace root.")
     parser.add_argument("--scripts-dir", default="", help="Scripts directory to audit for phantom rules.")
     parser.add_argument("--output", default="", help="Path to write JSON audit report.")
     args = parser.parse_args()
