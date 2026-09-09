@@ -1,0 +1,9 @@
+# Git worktree & test isolation
+.worktrees/
+Tests/Agy/Logs/*.json
+Tests/Agy/Logs/*.ndjson
+Tests/Agy/Logs/*.log
+
+# Python cache
+__pycache__/
+*.pyc
