@@ -1,0 +1,50 @@
+{
+  "unified-agent-runner": {
+    "enabled": true,
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node scripts/hook-runner.js PreToolUse",
+            "timeout": 3
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node scripts/hook-runner.js PostToolUse",
+            "timeout": 3
+          }
+        ]
+      }
+    ],
+    "PreInvocation": [
+      {
+        "type": "command",
+        "command": "node scripts/hook-runner.js PreInvocation",
+        "timeout": 3
+      }
+    ],
+    "PostInvocation": [
+      {
+        "type": "command",
+        "command": "node scripts/hook-runner.js PostInvocation",
+        "timeout": 3
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "command": "node scripts/hook-runner.js Stop",
+        "timeout": 5
+      }
+    ]
+  }
+}
