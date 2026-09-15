@@ -7,3 +7,4 @@ Tests/Agy/Logs/*.log
 # Python cache
 __pycache__/
 *.pyc
+.obsidian

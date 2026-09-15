@@ -1,0 +1,185 @@
+<mxfile host="65bd71144e">
+    <diagram id="wsmZUaSOQQCVSZGdXb8L" name="Page-1">
+        <mxGraphModel dx="1256" dy="1162" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1340" pageHeight="1160" background="#ffffff" math="0" shadow="1">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="hdr" value="&lt;b&gt;KIẾN TRÚC MẠNG NƠ-RON AI AGENT THEO VÒNG ĐỜI SDLC (SPEC-AI-PIPELINE-001)&lt;/b&gt;&lt;br&gt;Sơ Đồ Tinh Gọn: Luồng Thực Thi Hạt Nhân &amp;amp; Bảng Chú Giải Vai Trò Từng Node" style="rounded=1;fillColor=#0f172a;strokeColor=#0f172a;fontColor=#ffffff;align=center;html=1;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="20" width="1260" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="n_input" value="&lt;b&gt;Kích Thích Đầu Vào&lt;/b&gt;&lt;br&gt;(Raw User Prompt)" style="rounded=1;arcSize=50;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#64748b;fontColor=#0f172a;" parent="1" vertex="1">
+                    <mxGeometry x="-44" y="165" width="220" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="node1" value="&lt;b&gt;NODE 1: Problem Discovery&lt;/b&gt;&lt;br&gt;(SDLC Inception)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;fontColor=#0369a1;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="160" width="240" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="gate1" value="&lt;b&gt;GATE 1&lt;/b&gt;&lt;br&gt;Scoping Gate" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontColor=#92400e;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="240" width="160" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="node2" value="&lt;b&gt;NODE 2: Business Analysis&lt;/b&gt;&lt;br&gt;(BABOK Requirements)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#7c3aed;fontColor=#5b21b6;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="320" width="240" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="gate2" value="&lt;b&gt;GATE 2&lt;/b&gt;&lt;br&gt;BABOK Gate" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontColor=#92400e;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="298.5" y="411" width="83" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="node3" target="sync_barrier">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="node3" value="&lt;b&gt;NODE 3: Architecture &amp;amp; Trade-Off&lt;/b&gt;&lt;br&gt;(SDLC Design)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e7ff;strokeColor=#4f46e5;fontColor=#3730a3;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="469" width="240" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="node4a" value="&lt;b&gt;NODE 4A: Data Contract&lt;/b&gt;&lt;br&gt;(Schema &amp;amp; Interface)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ecfdf5;strokeColor=#059669;fontColor=#065f46;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="565" width="210" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="node4b" value="&lt;b&gt;NODE 4B: Security Sandbox&lt;/b&gt;&lt;br&gt;(Boundary &amp;amp; Isolation)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ecfdf5;strokeColor=#059669;fontColor=#065f46;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="565" width="210" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="sync_barrier" value="&lt;b&gt;SYNC BARRIER 1: Pre-Build Join Barrier&lt;/b&gt;&lt;br&gt;(Hội tụ đồng bộ 2 nhánh song song)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d1fae5;strokeColor=#10b981;fontColor=#047857;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="645" width="320" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="gate3" value="&lt;b&gt;GATE 3&lt;/b&gt;&lt;br&gt;Contract Gate" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontColor=#92400e;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="715" width="160" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="node5" value="&lt;b&gt;NODE 5: Defensive Build &amp;amp; Test&lt;/b&gt;&lt;br&gt;(Zero Placeholder)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef2f2;strokeColor=#dc2626;fontColor=#991b1b;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="795" width="240" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="gate4" value="&lt;b&gt;GATE 4&lt;/b&gt;&lt;br&gt;Verification Gate" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontColor=#92400e;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="875" width="160" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="node6" value="&lt;b&gt;NODE 6: Telemetry &amp;amp; Release&lt;/b&gt;&lt;br&gt;(SDLC Operations)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;fontColor=#15803d;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="1028" width="240" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="backprop" value="&lt;b&gt;Backprop Error Loop&lt;/b&gt;&lt;br&gt;(Vòng lặp lỗi L &amp;le; 3)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fdf2f8;strokeColor=#db2777;fontColor=#9d174d;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="875" width="190" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="human_esc" value="&lt;b&gt;Human Escalation&lt;/b&gt;&lt;br&gt;(Ngắt khẩn cấp L &amp;gt; 3)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#881337;strokeColor=#4c0519;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="1028" width="190" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="obs_node" value="&lt;b&gt;Lateral: Wide Event Logging&lt;/b&gt;&lt;br&gt;(Async Telemetry)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#f59e0b;fontColor=#b45309;strokeDasharray=4 4;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="160" width="190" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_in_n1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#0284c7;strokeWidth=2;" parent="1" source="n_input" target="node1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_n1_g1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#0284c7;strokeWidth=2;" parent="1" source="node1" target="gate1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_g1_fail" value="Fail" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#ef4444;strokeWidth=1;dashed=1;exitX=0;exitY=0.5;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="gate1" target="n_input" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="66" y="268"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_g1_n2" value="Pass" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#10b981;strokeWidth=2;" parent="1" source="gate1" target="node2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_n2_g2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7c3aed;strokeWidth=2;" parent="1" source="node2" target="gate2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_g2_fail" value="Fail" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#ef4444;strokeWidth=1;dashed=1;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="gate2" target="node2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="75" y="428"/>
+                            <mxPoint x="75" y="348"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_g2_n3" value="Pass" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#10b981;strokeWidth=2;" parent="1" source="gate2" target="node3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_n3_4a" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4f46e5;strokeWidth=2;" parent="1" source="node3" target="node4a" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_n3_4b" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4f46e5;strokeWidth=2;" parent="1" source="node3" target="node4b" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_4a_sync" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#059669;strokeWidth=2;" parent="1" source="node4a" target="sync_barrier" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_4b_sync" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#059669;strokeWidth=2;" parent="1" source="node4b" target="sync_barrier" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_sync_g3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#10b981;strokeWidth=2;" parent="1" source="sync_barrier" target="gate3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_g3_fail" value="Fail" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#ef4444;strokeWidth=1;dashed=1;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="gate3" target="node3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="75" y="743"/>
+                            <mxPoint x="75" y="508"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_g3_n5" value="Pass" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#10b981;strokeWidth=2;" parent="1" source="gate3" target="node5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_n5_g4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#dc2626;strokeWidth=2;" parent="1" source="node5" target="gate4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_g4_n6" value="Pass: Exit 0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#10b981;strokeWidth=2;" parent="1" source="gate4" target="node6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_g4_bp" value="Fail" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#db2777;strokeWidth=2;" parent="1" source="gate4" target="backprop" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_bp_n3" value="Lỗi Thiết Kế" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#db2777;strokeWidth=1.5;dashed=1;exitX=0.5;exitY=0;entryX=1;entryY=0.5;" parent="1" source="backprop" target="node3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="595" y="508"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_bp_n2" value="Lỗi Yêu Cầu" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#db2777;strokeWidth=1.5;dashed=1;exitX=0.75;exitY=0;entryX=1;entryY=0.5;" parent="1" source="backprop" target="node2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="642" y="348"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_bp_esc" value="L &amp;gt; 3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#881337;strokeWidth=2;" parent="1" source="backprop" target="human_esc" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_tel_1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#f59e0b;strokeWidth=1;dashed=1;entryX=0;entryY=0.5;" parent="1" source="node1" target="obs_node" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend_box" value="&lt;b&gt;BẢNG CHÚ GIẢI CÁC NODE &amp;amp; THÀNH PHẦN (LEGEND)&lt;/b&gt;" style="swimlane;startSize=28;fillColor=#f8fafc;strokeColor=#475569;fontColor=#0f172a;fontStyle=1;html=1;rounded=1;arcSize=4;" vertex="1" parent="1">
+                    <mxGeometry x="740" y="90" width="560" height="990" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg_inp" value="&lt;b&gt;Kích Thích Đầu Vào (Raw Input)&lt;/b&gt;&lt;br&gt;• Yêu cầu thô từ người dùng hoặc hệ thống bên ngoài.&lt;br&gt;• Chưa được chuẩn hóa cú pháp hoặc làm rõ ràng buộc." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#64748b;fontColor=#0f172a;align=left;fontSize=11;" vertex="1" parent="legend_box">
+                    <mxGeometry x="15" y="38" width="530" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg_n1" value="&lt;b&gt;NODE 1 (Problem Discovery) &amp;amp; GATE 1 (Scoping Gate)&lt;/b&gt;&lt;br&gt;• &lt;b&gt;Nhiệm vụ&lt;/b&gt;: Neo đậu ngữ cảnh, kích hoạt 4 tín hiệu tư duy (S1-S4), thiết lập Negative Space.&lt;br&gt;• &lt;b&gt;Gate 1&lt;/b&gt;: Thẩm định độ hoàn thiện phạm vi. Nếu mơ hồ hoặc vi phạm điều cấm ➔ Fail quay lại Input." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;fontColor=#0369a1;align=left;fontSize=11;" vertex="1" parent="legend_box">
+                    <mxGeometry x="15" y="98" width="530" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg_n2" value="&lt;b&gt;NODE 2 (Business Analysis) &amp;amp; GATE 2 (BABOK Gate)&lt;/b&gt;&lt;br&gt;• &lt;b&gt;Nhiệm vụ&lt;/b&gt;: Bóc tách 4 tầng IIBA BABOK (BR, SR, FR/NFR, TR), lập Ma trận truy vết RTM.&lt;br&gt;• &lt;b&gt;Gate 2&lt;/b&gt;: 100% NFR phải được định lượng SMART (ms, RPS, RAM, SLA). Cấm từ mơ hồ &amp;amp; Gold-plating." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#7c3aed;fontColor=#5b21b6;align=left;fontSize=11;" vertex="1" parent="legend_box">
+                    <mxGeometry x="15" y="171" width="530" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg_n3" value="&lt;b&gt;NODE 3: Synaptic Architecture &amp;amp; Trade-Off (SDLC Design)&lt;/b&gt;&lt;br&gt;• &lt;b&gt;Nhiệm vụ&lt;/b&gt;: Đánh đổi 6 trục kỹ thuật (Perf, Comp, Rel, Cost, Scale, Sec).&lt;br&gt;• &lt;b&gt;Phân loại rủi ro&lt;/b&gt;: Risk Index = Blast Radius x (5 - Reversibility).&lt;br&gt;  - Type 1 (Risk &amp;ge; 8): Quyết định 1 chiều ➔ Lập ADR &amp;amp; Xin Human Approval.&lt;br&gt;  - Type 2 (Risk &amp;lt; 8): Quyết định 2 chiều ➔ Tự chủ và rẽ 2 nhánh song song." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e7ff;strokeColor=#4f46e5;fontColor=#3730a3;align=left;fontSize=11;" vertex="1" parent="legend_box">
+                    <mxGeometry x="15" y="244" width="530" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg_n4" value="&lt;b&gt;NODE 4A, 4B (Parallel Cluster), SYNC BARRIER 1 &amp;amp; GATE 3&lt;/b&gt;&lt;br&gt;• &lt;b&gt;Node 4A&lt;/b&gt;: Khóa Interface Boundary, JSON Schema, quy chuẩn DTO bất biến.&lt;br&gt;• &lt;b&gt;Node 4B&lt;/b&gt;: Phân tích ranh giới an ninh, cô lập sandbox, chống Prompt Injection.&lt;br&gt;• &lt;b&gt;Sync Barrier 1&lt;/b&gt;: Chốt chờ hội tụ cả 4A &amp;amp; 4B đều đạt trạng thái READY.&lt;br&gt;• &lt;b&gt;Gate 3&lt;/b&gt;: Khóa cứng hợp đồng kỹ thuật trước khi chuyển sang viết mã." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ecfdf5;strokeColor=#059669;fontColor=#065f46;align=left;fontSize=11;" vertex="1" parent="legend_box">
+                    <mxGeometry x="15" y="337" width="530" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg_n5" value="&lt;b&gt;NODE 5 (Defensive Build &amp;amp; Test) &amp;amp; GATE 4 (Verification Gate)&lt;/b&gt;&lt;br&gt;• &lt;b&gt;Nhiệm vụ&lt;/b&gt;: Thực thi mã nguồn cơ học, cấm placeholder/mock data, Clean Layering.&lt;br&gt;• &lt;b&gt;Kiểm tra&lt;/b&gt;: Semantic Gatekeeper, chạy toàn bộ bộ kiểm thử tự động.&lt;br&gt;• &lt;b&gt;Gate 4&lt;/b&gt;: Chốt chặn nhị phân tất định: Đạt 100% test pass &amp;amp; Exit code == 0." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef2f2;strokeColor=#dc2626;fontColor=#991b1b;align=left;fontSize=11;" vertex="1" parent="legend_box">
+                    <mxGeometry x="15" y="430" width="530" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg_n6" value="&lt;b&gt;NODE 6: Continuous Telemetry &amp;amp; Release (SDLC Operations)&lt;/b&gt;&lt;br&gt;• Xuất bản giải pháp / Mã nguồn đã qua kiểm chứng.&lt;br&gt;• Giám sát viễn trắc vận hành thời gian thực, đảm bảo SLA và tính toàn vẹn hệ thống." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;fontColor=#15803d;align=left;fontSize=11;" vertex="1" parent="legend_box">
+                    <mxGeometry x="15" y="513" width="530" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg_bp" value="&lt;b&gt;Backprop Error Loop (Điều Phối Vòng Lặp Phản Hồi Ngược)&lt;/b&gt;&lt;br&gt;• Kích hoạt khi Gate 4 đánh rớt (test fail hoặc vi phạm hợp đồng).&lt;br&gt;• Đóng gói Error Gradient (Callstack, nguyên nhân gốc rễ):&lt;br&gt;  - Lỗi thiết kế / thuật toán ➔ Điều hướng ngược về &lt;b&gt;Node 3&lt;/b&gt;.&lt;br&gt;  - Lỗi thiếu ca kiểm thử / sai nghiệp vụ ➔ Điều hướng ngược về &lt;b&gt;Node 2&lt;/b&gt;.&lt;br&gt;• Bộ đếm vòng lặp (Circuit Breaker): Cho phép lặp tối đa 3 lần (L &amp;le; 3)." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fdf2f8;strokeColor=#db2777;fontColor=#9d174d;align=left;fontSize=11;" vertex="1" parent="legend_box">
+                    <mxGeometry x="15" y="576" width="530" height="95" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg_esc" value="&lt;b&gt;Human Escalation (Chốt Ngắt Khẩn Cấp Con Người)&lt;/b&gt;&lt;br&gt;• Kích hoạt khi số lần phản hồi vượt ngưỡng (L &amp;gt; 3).&lt;br&gt;• Dừng toàn bộ pipeline để ngăn chặn bế tắc luồng và cạn kiệt tài nguyên (Token Exhaustion). Chuyển quyền xử lý cho kỹ sư cấp cao." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#881337;strokeColor=#4c0519;fontColor=#ffffff;align=left;fontSize=11;" vertex="1" parent="legend_box">
+                    <mxGeometry x="15" y="679" width="530" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg_lat" value="&lt;b&gt;Lateral Node: Wide Event Logging &amp;amp; Async Telemetry&lt;/b&gt;&lt;br&gt;• Lắng nghe sự kiện qua Pub/Sub bất đồng bộ, ghi nhận nhật ký mở rộng.&lt;br&gt;• Tải phụ trội &amp;le; 5ms, hoàn toàn không phong tỏa luồng suy nghĩ chính.&lt;br&gt;• Bán kính ảnh hưởng (Blast Radius) = 0 đối với các node xử lý chính." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#f59e0b;fontColor=#b45309;align=left;fontSize=11;" vertex="1" parent="legend_box">
+                    <mxGeometry x="15" y="752" width="530" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg_colors" value="&lt;b&gt;QUY ƯỚC MÀU SẮC TRỰC QUAN:&lt;/b&gt;&lt;br&gt;• &lt;font color=&quot;#0284c7&quot;&gt;&lt;b&gt;Xanh Lam / Xanh Tím&lt;/b&gt;&lt;/font&gt;: Các Node xử lý chính (Layer 1 Neural Nodes: Node 1, 2, 3)&lt;br&gt;• &lt;font color=&quot;#059669&quot;&gt;&lt;b&gt;Xanh Ngọc (Emerald)&lt;/b&gt;&lt;/font&gt;: Nhánh song song &amp;amp; Khóa hợp đồng (Node 4A, 4B, Sync Barrier 1)&lt;br&gt;• &lt;font color=&quot;#d97706&quot;&gt;&lt;b&gt;Vàng Hổ Phách (Amber)&lt;/b&gt;&lt;/font&gt;: Cổng kiểm định chất lượng nhị phân (Gates 1, 2, 3, 4)&lt;br&gt;• &lt;font color=&quot;#dc2626&quot;&gt;&lt;b&gt;Đỏ Tươi (Red)&lt;/b&gt;&lt;/font&gt;: Node thực thi &amp;amp; kiểm chứng cơ học (Node 5)&lt;br&gt;• &lt;font color=&quot;#16a34a&quot;&gt;&lt;b&gt;Xanh Lá (Green)&lt;/b&gt;&lt;/font&gt;: Phát hành &amp;amp; Vận hành thành công (Node 6)&lt;br&gt;• &lt;font color=&quot;#db2777&quot;&gt;&lt;b&gt;Hồng Đậm (Magenta)&lt;/b&gt;&lt;/font&gt;: Lan truyền ngược (Backpropagation Loop L &amp;le; 3)&lt;br&gt;• &lt;font color=&quot;#881337&quot;&gt;&lt;b&gt;Đỏ Thẫm (Rose Dark)&lt;/b&gt;&lt;/font&gt;: Chốt ngắt khẩn cấp can thiệp con người (Human Escalation L &amp;gt; 3)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;fontColor=#334155;align=left;fontSize=11;" vertex="1" parent="legend_box">
+                    <mxGeometry x="15" y="825" width="530" height="150" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
