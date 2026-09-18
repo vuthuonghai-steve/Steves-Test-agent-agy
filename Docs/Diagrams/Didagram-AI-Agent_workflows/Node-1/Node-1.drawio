@@ -1,0 +1,322 @@
+<mxfile host="65bd71144e">
+<diagram id="f1_pipeline_arch" name="1. Kiến Trúc Chuỗi Nơ-ron F1">
+        <mxGraphModel dx="1400" dy="1100" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1400" pageHeight="1100" background="#ffffff" math="0" shadow="1">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="hdr1" value="&lt;b&gt;ĐẶC TẢ KIẾN TRÚC PHÂN RÃ SUB-NODES F1 CỦA NODE 1: PROBLEM DISCOVERY &amp;amp; GATE 1 ENGINE&lt;/b&gt;&lt;br/&gt;Chuỗi Nơ-ron Nhận Thức Tự Trị Phân Rã (SPEC-NODE1-F1-001) | SLA Toàn Trình p95 ≤ 15s | Vị Trí: n_input ➔ node1 ➔ gate1" style="rounded=1;fillColor=#0f172a;strokeColor=#0f172a;fontColor=#ffffff;align=center;html=1;fontSize=13;shadow=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="20" width="1320" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="n_stimulus" value="&lt;b&gt;KÍCH THÍCH ĐẦU VÀO THÔ (Raw Stimulus)&lt;/b&gt;&lt;br/&gt;Unstructured Text / Stack Traces / Complaints&lt;br/&gt;&lt;i&gt;Nhiều entropy, lẫn lộn triệu chứng và giải pháp vá víu, thiên kiến nhận thức&lt;/i&gt;" style="rounded=1;arcSize=30;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#64748b;fontColor=#0f172a;fontSize=11;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="470" y="95" width="380" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="n_f11" value="&lt;b&gt;F1.1: Cognitive Sensory Ingestion &amp;amp; Lexical De-noiser (Tuần tự Tiền trạm)&lt;/b&gt;&lt;br/&gt;• &lt;b&gt;Thalamic Sensory Gating&lt;/b&gt;: Tách S_fact, S_noise, S_func ➔ Đo lường SNR_semantic&lt;br/&gt;• &lt;b&gt;Premature Solution Quarantine&lt;/b&gt;: Cách ly giải pháp vá Monkey-patch (is_isolated=true)&lt;br/&gt;• &lt;b&gt;Canonical Entity Normalization&lt;/b&gt;: Chuẩn hoá thuật ngữ cục bộ, tiếng lóng, Code-switching En-Vi&lt;br/&gt;&lt;i&gt;Input: RawStimulusPayload ➔ Output: NormalizedStimulusContract | SLA ≤ 2.0s&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;fontColor=#0369a1;fontSize=11;align=left;spacingLeft=15;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="420" y="185" width="480" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="n_f12" value="&lt;b&gt;F1.2: Dialectical Contradiction &amp;amp; Bias Arbiter (Tuần tự Phân xử)&lt;/b&gt;&lt;br/&gt;• &lt;b&gt;Contradiction Detection Matrix (CDM)&lt;/b&gt;: Đối chiếu mâu thuẫn (CAP, PACELC, Amdahl)&lt;br/&gt;• &lt;b&gt;Khử 5 Thiên Kiến Nhận Thức&lt;/b&gt;: Sinh 3 Dialectical Counter-Hypotheses (chống Anchoring)&lt;br/&gt;• &lt;b&gt;Cowan 4-Slot Envelope&lt;/b&gt;: Đóng gói S0 (State gốc), ΔE (Kích thích), S_expected, ΔS (Lệch)&lt;br/&gt;&lt;i&gt;Input: NormalizedStimulusContract ➔ Output: DialecticalBiasContract | SLA ≤ 2.0s&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;fontColor=#0369a1;fontSize=11;align=left;spacingLeft=15;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="420" y="295" width="480" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_parallel" value="&lt;b&gt;CỤM GIẢI PHẪU NHẬN THỨC SONG SONG (Fan-out / Fan-in Concurrent Mesh)&lt;/b&gt; — SLA Chạy Đồng Thời ≤ 3.5s" style="swimlane;startSize=28;horizontal=1;fillColor=#faf5ff;strokeColor=#7c3aed;fontColor=#5b21b6;fontSize=11;fontStyle=1;rounded=1;strokeWidth=2;pointerEvents=0;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="405" width="1240" height="185" as="geometry"/>
+                </mxCell>
+                <mxCell id="n_f13" value="&lt;b&gt;F1.3: 5-Dimensional Cognitive Layering Engine&lt;/b&gt;&lt;br/&gt;• &lt;b&gt;Domain&lt;/b&gt;: Mục tiêu kinh doanh, giá trị đo lường&lt;br/&gt;• &lt;b&gt;Platform &amp;amp; OS&lt;/b&gt;: Windows STA/P-Invoke vs Linux epoll&lt;br/&gt;• &lt;b&gt;Causality DAG&lt;/b&gt;: 5-Whys tách biệt Triệu chứng &amp;amp; Căn nguyên&lt;br/&gt;• &lt;b&gt;Data &amp;amp; State&lt;/b&gt;: Aggregate boundary, ACID vs BASE&lt;br/&gt;• &lt;b&gt;Failure Blast Radius&lt;/b&gt;: Thread ➔ Process ➔ Data Corruption" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#7c3aed;fontColor=#5b21b6;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="c_parallel">
+                    <mxGeometry x="20" y="40" width="380" height="125" as="geometry"/>
+                </mxCell>
+                <mxCell id="n_f14" value="&lt;b&gt;F1.4: First Principles &amp;amp; Blindspot Excavator&lt;/b&gt;&lt;br/&gt;• &lt;b&gt;First Principles Baseline&lt;/b&gt;: CPU cycles, IOPS, RTT, RAM&lt;br/&gt;• &lt;b&gt;Khai quật Unknown-Unknowns&lt;/b&gt;: Ma trận 8 chiều ẩn số&lt;br/&gt;  (Temporal, Concurrency, Tenant, Cloud Quota, Rollback...)&lt;br/&gt;• &lt;b&gt;Zero-Hallucination Tagging&lt;/b&gt;: Gán nhãn chặt chẽ:&lt;br/&gt;  - UNVERIFIED_ASSUMPTION (Độ tin cậy &amp;lt; 0.8)&lt;br/&gt;  - CRITICAL_CONTEXT_VOID (Ngữ cảnh sống còn BLOCKING)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#7c3aed;fontColor=#5b21b6;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="c_parallel">
+                    <mxGeometry x="430" y="40" width="380" height="125" as="geometry"/>
+                </mxCell>
+                <mxCell id="n_f15" value="&lt;b&gt;F1.5: Negative Space &amp;amp; Anti-Pattern Grounder&lt;/b&gt;&lt;br/&gt;• &lt;b&gt;Không Gian Phủ Định&lt;/b&gt;: Thiết lập tối thiểu 3-5 điều CẤM LÀM&lt;br/&gt;  (Kèm lý giải kỹ thuật &amp;amp; cảnh báo hậu quả sập nguồn)&lt;br/&gt;• &lt;b&gt;Ranh giới phạm vi&lt;/b&gt;: Phân định In-Scope vs Out-of-Scope&lt;br/&gt;• &lt;b&gt;Anti-Pattern Grounding&lt;/b&gt;: Nhận diện và loại trừ:&lt;br/&gt;  - Watchdog Kill -9 Trap, Busy Waiting, Distributed Monolith&lt;br/&gt;  - Chống Premature Solutioning lọt vào định nghĩa bài toán" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#7c3aed;fontColor=#5b21b6;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="c_parallel">
+                    <mxGeometry x="840" y="40" width="380" height="125" as="geometry"/>
+                </mxCell>
+                <mxCell id="n_f16" value="&lt;b&gt;F1.6: Problem Dossier Compiler &amp;amp; Token Optimizer (Fan-in Synchronization Barrier)&lt;/b&gt;&lt;br/&gt;• Thu thập kết quả 3 nhánh song song F1.3, F1.4, F1.5 &amp;amp; Giải quyết xung đột chéo giữa các góc nhìn&lt;br/&gt;• &lt;b&gt;Tối ưu hoá Context Density&lt;/b&gt;: Nén bản tóm tắt xuống &amp;lt; 3,500 tokens (bảo tồn Context Window cho Node 2 &amp;amp; Node 3)&lt;br/&gt;• Đóng gói hợp đồng máy đọc &lt;b&gt;ProblemDossierContract&lt;/b&gt; &amp;amp; Kiểm chứng JSON AST Schema (exit code 0) | SLA ≤ 1.5s" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d1fae5;strokeColor=#10b981;fontColor=#047857;fontSize=11;align=center;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="370" y="620" width="580" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="n_f17" value="&lt;b&gt;F1.7: GATE 1 Arbiter&lt;/b&gt;&lt;br/&gt;Scoping Score ≥ 85/100 &amp;amp;&lt;br/&gt;0 Critical Flaws?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontColor=#92400e;fontSize=11;fontStyle=1;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="550" y="725" width="220" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="n_handoff" value="&lt;b&gt;CHUYỂN GIAO SANG NODE 2 (Business Analysis)&lt;/b&gt;&lt;br/&gt;Tiếp nhận ProblemDossierContract đạt chuẩn&lt;br/&gt;&lt;i&gt;Khởi động phân tích 4 tầng BABOK v3&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ecfdf5;strokeColor=#059669;fontColor=#065f46;fontSize=11;fontStyle=1;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="855" width="270" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="n_socratic" value="&lt;b&gt;ADAPTIVE SOCRATIC DIAGNOSTIC MIRROR&lt;/b&gt;&lt;br/&gt;• Phản chiếu S0 &amp;amp; ΔS khách quan, chỉ rõ điểm mù&lt;br/&gt;• Cung cấp 3-4 lựa chọn kỹ thuật Multiple-Choice&lt;br/&gt;&lt;i&gt;Dev bấm chọn giải pháp thay vì gõ văn bản mơ hồ&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff1f2;strokeColor=#e11d48;fontColor=#be123c;fontSize=10;strokeDasharray=3 3;strokeWidth=1.5;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="732.5" width="300" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="n_provisional" value="&lt;b&gt;PROVISIONAL PASS (Chuyển giao có điều kiện)&lt;/b&gt;&lt;br/&gt;• Khóa Safe Default Assumptions để thông luồng pipeline&lt;br/&gt;• Gắn cờ cảnh báo HIGH_RISK_ASSUMPTIONS_CONTAINED&lt;br/&gt;• Bắn cảnh báo Lateral Synapse tới Tech Lead / Architect" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef9c3;strokeColor=#ca8a04;fontColor=#854d0e;fontSize=10;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="940" y="732.5" width="320" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="n_lateral" value="&lt;b&gt;LATERAL TELEMETRY SYNAPSE&lt;/b&gt;&lt;br/&gt;Wide Event Logging (Serilog / Canonical Lines)&lt;br/&gt;TraceId, SNR Score, Quarantined Flags, Token Count" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#f59e0b;fontColor=#b45309;fontSize=10;strokeDasharray=4 4;" vertex="1" parent="1">
+                    <mxGeometry x="980" y="195" width="280" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="n_backprop" value="&lt;b&gt;n_backprop: BACKPROP ERROR SYNAPSE&lt;/b&gt;&lt;br/&gt;• Tiếp nhận Domain Contradiction từ Node 2&lt;br/&gt;• Điều phối hồi tiếp (Circuit Breaker L ≤ 2)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fdf2f8;strokeColor=#db2777;fontColor=#9d174d;fontSize=10;strokeDasharray=4 4;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="770" y="855" width="280" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="n_esc" value="&lt;b&gt;Human Escalation / Circuit Breaker&lt;/b&gt;&lt;br/&gt;Ngắt khẩn cấp khi L &amp;gt; 2&lt;br/&gt;&lt;i&gt;Chuyển Tech Lead can thiệp&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#881337;strokeColor=#4c0519;fontColor=#ffffff;fontSize=9.5;fontStyle=1;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="1110" y="855" width="210" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="n_legend" value="&lt;b&gt;CHÚ GIẢI KIẾN TRÚC F1:&lt;/b&gt;  &lt;span style=&quot;color:#0284c7;&quot;&gt;■ Xử lý tuần tự (Serial)&lt;/span&gt; &amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp; &lt;span style=&quot;color:#7c3aed;&quot;&gt;■ Xử lý song song (Fan-out Cluster)&lt;/span&gt; &amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp; &lt;span style=&quot;color:#10b981;&quot;&gt;■ Hội tụ &amp;amp; Biên dịch (Fan-in Barrier)&lt;/span&gt; &amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp; &lt;span style=&quot;color:#d97706;&quot;&gt;◆ Chốt chặn nhị phân Gate 1&lt;/span&gt; &amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp; &lt;span style=&quot;color:#059669;&quot;&gt;■ Chuyển giao thành công&lt;/span&gt; &amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp; &lt;span style=&quot;color:#e11d48;&quot;&gt;■ Socratic Mirror (L ≤ 2)&lt;/span&gt; &amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp; &lt;span style=&quot;color:#ca8a04;&quot;&gt;■ Provisional Pass (L &amp;gt; 2)&lt;/span&gt; &amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp; &lt;span style=&quot;color:#db2777;&quot;&gt;■ Lan truyền ngược Backprop (L ≤ 2)&lt;/span&gt; &amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp; &lt;span style=&quot;color:#881337;&quot;&gt;■ Chốt ngắt khẩn cấp Escalation (L &amp;gt; 2)&lt;/span&gt;" style="rounded=1;fillColor=#f8fafc;strokeColor=#cbd5e1;fontColor=#334155;fontSize=9.5;align=center;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="945" width="1320" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_stim_f11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#0284c7;strokeWidth=2;" edge="1" parent="1" source="n_stimulus" target="n_f11">
+                    <mxGeometry relative="1" as="geometry"></mxGeometry>
+                </mxCell>
+                <mxCell id="e_f11_f12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#0284c7;strokeWidth=2;" edge="1" parent="1" source="n_f11" target="n_f12">
+                    <mxGeometry relative="1" as="geometry"></mxGeometry>
+                </mxCell>
+                <mxCell id="e_f12_f13" value="Fan-out" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7c3aed;strokeWidth=2;fontSize=10;fontColor=#7c3aed;" edge="1" parent="1" source="n_f12" target="n_f13">
+                    <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="500" y="385"/><mxPoint x="250" y="385"/></Array></mxGeometry>
+                </mxCell>
+                <mxCell id="e_f12_f14" value="Fan-out" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7c3aed;strokeWidth=2;fontSize=10;fontColor=#7c3aed;" edge="1" parent="1" source="n_f12" target="n_f14">
+                    <mxGeometry relative="1" as="geometry"></mxGeometry>
+                </mxCell>
+                <mxCell id="e_f12_f15" value="Fan-out" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7c3aed;strokeWidth=2;fontSize=10;fontColor=#7c3aed;" edge="1" parent="1" source="n_f12" target="n_f15">
+                    <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="820" y="385"/><mxPoint x="1070" y="385"/></Array></mxGeometry>
+                </mxCell>
+                <mxCell id="e_f13_f16" value="Fan-in" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#10b981;strokeWidth=2;fontSize=10;fontColor=#047857;" edge="1" parent="1" source="n_f13" target="n_f16">
+                    <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="250" y="605"/><mxPoint x="480" y="605"/></Array></mxGeometry>
+                </mxCell>
+                <mxCell id="e_f14_f16" value="Fan-in" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#10b981;strokeWidth=2;fontSize=10;fontColor=#047857;" edge="1" parent="1" source="n_f14" target="n_f16">
+                    <mxGeometry relative="1" as="geometry"></mxGeometry>
+                </mxCell>
+                <mxCell id="e_f15_f16" value="Fan-in" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#10b981;strokeWidth=2;fontSize=10;fontColor=#047857;" edge="1" parent="1" source="n_f15" target="n_f16">
+                    <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1070" y="605"/><mxPoint x="840" y="605"/></Array></mxGeometry>
+                </mxCell>
+                <mxCell id="e_f16_f17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#10b981;strokeWidth=2;" edge="1" parent="1" source="n_f16" target="n_f17">
+                    <mxGeometry relative="1" as="geometry"></mxGeometry>
+                </mxCell>
+                <mxCell id="e_f17_pass" value="PASS (Score ≥ 85 &amp;amp; 0 Critical)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#059669;strokeWidth=2;fontSize=10;fontColor=#065f46;" edge="1" parent="1" source="n_f17" target="n_handoff">
+                    <mxGeometry relative="1" as="geometry"></mxGeometry>
+                </mxCell>
+                <mxCell id="e_f17_socratic" value="FAIL (L ≤ 2)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#e11d48;strokeWidth=1.5;strokeDasharray=3 3;fontSize=10;fontColor=#be123c;" edge="1" parent="1" source="n_f17" target="n_socratic">
+                    <mxGeometry relative="1" as="geometry"></mxGeometry>
+                </mxCell>
+                <mxCell id="e_socratic_loop" value="Dev bổ sung dữ kiện (L = L + 1)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#e11d48;strokeWidth=1.5;strokeDasharray=3 3;fontSize=10;fontColor=#be123c;" edge="1" parent="1" source="n_socratic" target="n_stimulus">
+                    <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="230" y="125"/></Array></mxGeometry>
+                </mxCell>
+                <mxCell id="e_f17_prov" value="FAIL (L &amp;gt; 2 Bế tắc)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#ca8a04;strokeWidth=2;fontSize=10;fontColor=#854d0e;" edge="1" parent="1" source="n_f17" target="n_provisional">
+                    <mxGeometry relative="1" as="geometry"></mxGeometry>
+                </mxCell>
+                <mxCell id="e_prov_handoff" value="Chuyển giao kèm cảnh báo High-Risk" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#ca8a04;strokeWidth=1.5;strokeDasharray=3 3;fontSize=10;fontColor=#854d0e;" edge="1" parent="1" source="n_provisional" target="n_handoff">
+                    <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1100" y="840"/><mxPoint x="680" y="840"/></Array></mxGeometry>
+                </mxCell>
+                <mxCell id="e_f11_lat" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#f59e0b;strokeWidth=1.5;strokeDasharray=4 4;" edge="1" parent="1" source="n_f11" target="n_lateral">
+                    <mxGeometry relative="1" as="geometry"></mxGeometry>
+                </mxCell>
+                <mxCell id="e_n2_backprop" value="Phát hiện Domain Contradiction mới" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#db2777;strokeWidth=2;dashed=1;fontSize=9.5;fontColor=#9d174d;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="n_handoff" target="n_backprop">
+                    <mxGeometry relative="1" as="geometry"></mxGeometry>
+                </mxCell>
+                <mxCell id="e_backprop_f12" value="L ≤ 2: Hồi tiếp tái thẩm định CDM" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#db2777;strokeWidth=2;dashed=1;fontSize=10;fontColor=#9d174d;exitX=0.5;exitY=0;entryX=1;entryY=0.5;" edge="1" parent="1" source="n_backprop" target="n_f12">
+                    <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="910" y="830"/><mxPoint x="1330" y="830"/><mxPoint x="1330" y="335"/><mxPoint x="900" y="335"/></Array></mxGeometry>
+                </mxCell>
+                <mxCell id="e_bp_esc" value="L &amp;gt; 2 (Tràn chu kỳ)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#881337;strokeWidth=2;fontSize=9.5;fontColor=#881337;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="n_backprop" target="n_esc">
+                    <mxGeometry relative="1" as="geometry"></mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+<diagram id="neuro_cognitive_foundations" name="2. Cơ Chế Thần Kinh &amp; Thiên Kiến">
+        <mxGraphModel dx="1400" dy="1100" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1400" pageHeight="1100" background="#ffffff" math="0" shadow="1">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="hdr2" value="&lt;b&gt;NỀN TẢNG KHOA HỌC THẦN KINH &amp;amp; TÂM LÝ HỌC HÀNH VI CỦA NODE 1 (SPEC-NODE1-F1-001)&lt;/b&gt;&lt;br/&gt;Ánh Xạ Từ Bản Năng Nhận Thức Sang Cơ Chế Xử Lý Cơ Học | Tránh Bẫy Ngôn Từ Sinh Học Hoa Mỹ (Zero AI Slop)" style="rounded=1;fillColor=#0f172a;strokeColor=#0f172a;fontColor=#ffffff;align=center;html=1;fontSize=13;shadow=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="20" width="1320" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_neuro" value="&lt;b&gt;CƠ CHẾ THẦN KINH HỌC (Neurobiological Foundations &amp;amp; Mechanical Mapping)&lt;/b&gt;" style="swimlane;startSize=30;horizontal=1;fillColor=#f0f9ff;strokeColor=#0284c7;fontColor=#0369a1;fontSize=12;fontStyle=1;rounded=1;strokeWidth=2;pointerEvents=0;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="95" width="630" height="860" as="geometry"/>
+                </mxCell>
+                <mxCell id="n_thalamic" value="&lt;b&gt;1. Thalamic Sensory Gating (Cửa ngõ Thụ cảm Đồi thị)&lt;/b&gt;&lt;br/&gt;• &lt;b&gt;Bản chất thần kinh&lt;/b&gt;: Đồi thị (Thalamus) là trạm trung chuyển cảm giác, triệt tiêu các kích thích không liên quan trước khi tín hiệu chạm tới vỏ não.&lt;br/&gt;• &lt;b&gt;Cơ chế xử lý cơ học&lt;/b&gt;:&lt;br/&gt;  - Tách token thành 3 không gian độc lập: S_fact (logs, stack traces), S_noise (than phiền, từ ngữ sốt ruột), S_func (hư từ).&lt;br/&gt;  - Đo lường tỷ số Tín hiệu trên Nhiễu ngữ nghĩa (SNR):&lt;br/&gt;    &lt;b&gt;SNR_semantic = H(S_fact) / [H(S_noise) + ε]&lt;/b&gt;&lt;br/&gt;• &lt;b&gt;Kết quả&lt;/b&gt;: Loại bỏ sạch 100% cảm xúc chủ quan, xuất xưởng chuỗi trần thuật khách quan S_clean." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0284c7;fontColor=#0f172a;fontSize=10;align=left;spacingLeft=12;" vertex="1" parent="c_neuro">
+                    <mxGeometry x="20" y="45" width="590" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="n_pfc" value="&lt;b&gt;2. Prefrontal Inhibitory Control (Ức chế Phản xạ Vội vã)&lt;/b&gt;&lt;br/&gt;• &lt;b&gt;Bản chất thần kinh&lt;/b&gt;: Vỏ não trước trán (PFC) ức chế các xung động hành động bản năng từ Hạch hạnh nhân (Amygdala) khi lập trình viên chịu áp lực sự cố.&lt;br/&gt;• &lt;b&gt;Cơ chế xử lý cơ học&lt;/b&gt;:&lt;br/&gt;  - Áp dụng luật bất biến &lt;b&gt;INV-01 (No Premature Solutioning)&lt;/b&gt;.&lt;br/&gt;  - Semantic Role Labeling (SRL) nhận diện cú pháp vá víu:&lt;br/&gt;    &lt;i&gt;[Subject] + [Modal: cần/muốn/định] + [Action: viết script/restart/catch/kill -9]&lt;/i&gt;.&lt;br/&gt;  - Đóng băng giải pháp vào &lt;b&gt;quarantined_solutions&lt;/b&gt; (is_isolated=true).&lt;br/&gt;• &lt;b&gt;Kết quả&lt;/b&gt;: Tuyệt đối không để giải pháp Monkey-Patch trở thành định nghĩa bài toán." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0284c7;fontColor=#0f172a;fontSize=10;align=left;spacingLeft=12;" vertex="1" parent="c_neuro">
+                    <mxGeometry x="20" y="245" width="590" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="n_cowan" value="&lt;b&gt;3. Cowan 4-Slot Working Memory Envelope (Giới hạn Bộ nhớ Làm việc)&lt;/b&gt;&lt;br/&gt;• &lt;b&gt;Bản chất thần kinh&lt;/b&gt;: Giới hạn dung lượng bộ nhớ làm việc của não bộ con người đạt tối đa 4 ± 1 đơn vị thông tin độc lập (Cowan Capacity limit).&lt;br/&gt;• &lt;b&gt;Cơ chế xử lý cơ học&lt;/b&gt;: Chuẩn hoá mọi input phức tạp thành phong bì 4 khe bất biến:&lt;br/&gt;  &lt;table border=&quot;1&quot; style=&quot;border-collapse:collapse;width:100%;font-size:9.5px;margin-top:4px;&quot;&gt;    &lt;tr style=&quot;background:#e0f2fe;&quot;&gt;&lt;th&gt;Khe&lt;/th&gt;&lt;th&gt;Ký hiệu&lt;/th&gt;&lt;th&gt;Định nghĩa cơ học&lt;/th&gt;&lt;/tr&gt;    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Khe 1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;S0&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Trạng thái gốc của hệ thống trước khi xảy ra biến cố&lt;/td&gt;&lt;/tr&gt;    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Khe 2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ΔE&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Tác nhân kích hoạt (Triggering Event / Stimulus / Tải)&lt;/td&gt;&lt;/tr&gt;    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Khe 3&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;S_expected&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Trạng thái chuẩn mực hệ thống kỳ vọng phải đạt&lt;/td&gt;&lt;/tr&gt;    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Khe 4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ΔS&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Độ lệch bất thường đo được: ΔS = S_observed - S_expected&lt;/td&gt;&lt;/tr&gt;  &lt;/table&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0284c7;fontColor=#0f172a;fontSize=10;align=left;spacingLeft=12;" vertex="1" parent="c_neuro">
+                    <mxGeometry x="20" y="455" width="590" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="n_neuro_sum" value="&lt;b&gt;Ý NGHĨA HỆ THỐNG:&lt;/b&gt; Triệt tiêu hoàn toàn hiện tượng suy luận nông và ảo giác (Zero-Hallucination Baseline). Biến đổi kích thích thô thành dữ kiện thực nghiệm thuần khiết có thể tính toán logic." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;fontColor=#0369a1;fontSize=10;align=center;" vertex="1" parent="c_neuro">
+                    <mxGeometry x="20" y="685" width="590" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_biases" value="&lt;b&gt;TÂM LÝ HỌC HÀNH VI &amp;amp; ĐỐI TRỌNG CƠ HỌC (5 Cognitive Biases &amp;amp; Antidotes)&lt;/b&gt;" style="swimlane;startSize=30;horizontal=1;fillColor=#faf5ff;strokeColor=#7c3aed;fontColor=#5b21b6;fontSize=12;fontStyle=1;rounded=1;strokeWidth=2;pointerEvents=0;" vertex="1" parent="1">
+                    <mxGeometry x="730" y="95" width="630" height="860" as="geometry"/>
+                </mxCell>
+                <mxCell id="b_action" value="&lt;b&gt;1. Action Bias (Thôi thúc Code vội để khỏa lấp bất an)&lt;/b&gt;&lt;br/&gt;• &lt;i&gt;Hiện tượng&lt;/i&gt;: Dev nóng vội viết script vá víu, watchdog restart thay vì tìm nguyên nhân.&lt;br/&gt;• &lt;b&gt;Đối trọng cơ học&lt;/b&gt;: Khóa giải pháp vào Quarantined Area; kích hoạt &lt;b&gt;Causality 5-Whys DAG&lt;/b&gt; truy vấn ngược về bản chất trạng thái." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7c3aed;fontColor=#0f172a;fontSize=10;align=left;spacingLeft=12;" vertex="1" parent="c_biases">
+                    <mxGeometry x="20" y="45" width="590" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="b_anchoring" value="&lt;b&gt;2. Anchoring Bias (Neo tư duy vào giả thuyết ban đầu)&lt;/b&gt;&lt;br/&gt;• &lt;i&gt;Hiện tượng&lt;/i&gt;: Đinh ninh lỗi do một đối tượng duy nhất (*&quot;chắc chắn do SQLite / HttpClient&quot;*).&lt;br/&gt;• &lt;b&gt;Đối trọng cơ học&lt;/b&gt;: Bắt buộc sinh &lt;b&gt;3 Giả thuyết Đối kháng Độc lập (Counter-Hypotheses)&lt;/b&gt; đối chiếu chéo trước khi kết luận." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7c3aed;fontColor=#0f172a;fontSize=10;align=left;spacingLeft=12;" vertex="1" parent="c_biases">
+                    <mxGeometry x="20" y="145" width="590" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="b_confirm" value="&lt;b&gt;3. Confirmation Bias (Tìm kiếm chứng cứ thiên lệch)&lt;/b&gt;&lt;br/&gt;• &lt;i&gt;Hiện tượng&lt;/i&gt;: Đưa ra các khẳng định chủ quan thiếu số liệu (*&quot;code mình viết chuẩn, không thể rò rỉ&quot;*).&lt;br/&gt;• &lt;b&gt;Đối trọng cơ học&lt;/b&gt;: Đo &lt;b&gt;Empirical Evidence Density = LogProofCount / AssertionCount&lt;/b&gt;. Nếu &amp;lt; 0.3 ➔ Từ chối khẳng định, yêu cầu log/dump." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7c3aed;fontColor=#0f172a;fontSize=10;align=left;spacingLeft=12;" vertex="1" parent="c_biases">
+                    <mxGeometry x="20" y="245" width="590" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="b_curse" value="&lt;b&gt;4. Curse of Knowledge (Lời nguyền Tri thức &amp;amp; Ảo tưởng Tự hiểu)&lt;/b&gt;&lt;br/&gt;• &lt;i&gt;Hiện tượng&lt;/i&gt;: Dùng đại từ mơ hồ (*&quot;nó bị đơ&quot;, &quot;service đó bị treo&quot;*), bỏ quên ngữ cảnh môi trường.&lt;br/&gt;• &lt;b&gt;Đối trọng cơ học&lt;/b&gt;: Kích hoạt cờ &lt;b&gt;CRITICAL_CONTEXT_VOID&lt;/b&gt;, bắt buộc điền khuyết 4 tham số sống còn: OS Platform, Runtime, Concurrency, Data Schema." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7c3aed;fontColor=#0f172a;fontSize=10;align=left;spacingLeft=12;" vertex="1" parent="c_biases">
+                    <mxGeometry x="20" y="345" width="590" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="b_functional" value="&lt;b&gt;5. Functional Fixedness (Cố chấp công cụ quen thuộc)&lt;/b&gt;&lt;br/&gt;• &lt;i&gt;Hiện tượng&lt;/i&gt;: Ép dùng công nghệ sai mục đích (ví dụ: dùng Cron job giải bài toán Realtime).&lt;br/&gt;• &lt;b&gt;Đối trọng cơ học&lt;/b&gt;: Quy đổi về &lt;b&gt;First Principles Baseline&lt;/b&gt; (băng thông, độ trễ, chu kỳ CPU) để chỉ ra nghịch lý và đề xuất mẫu chuẩn." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7c3aed;fontColor=#0f172a;fontSize=10;align=left;spacingLeft=12;" vertex="1" parent="c_biases">
+                    <mxGeometry x="20" y="445" width="590" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="b_unknowns" value="&lt;b&gt;MA TRẬN 8 CHIỀU KÍCH ẨN SỐ (Unknown-Unknowns Mining Matrix):&lt;/b&gt;&lt;br/&gt;1. Temporal Mismatch | 2. Concurrency Blast | 3. Multi-Tenant Contamination | 4. Compute Throttling&lt;br/&gt;5. Reversibility &amp;amp; Rollback | 6. Regulatory &amp;amp; PII | 7. Dark Debt &amp;amp; Silent Loss | 8. Cognitive Anchoring" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#7c3aed;fontColor=#5b21b6;fontSize=10;align=center;" vertex="1" parent="c_biases">
+                    <mxGeometry x="20" y="550" width="590" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_neuro_bias_sync" value="Chuyển hoá đối trọng cơ học" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#6366f1;strokeWidth=2;fontSize=10;fontColor=#4f46e5;dashed=1;" edge="1" parent="1" source="n_thalamic" target="b_action">
+                    <mxGeometry relative="1" as="geometry"></mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+<diagram id="gate1_quality_anti_deadlock" name="3. Gate 1 &amp; Chống Bế Tắc">
+        <mxGraphModel dx="1400" dy="1100" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1400" pageHeight="1100" background="#ffffff" math="0" shadow="1">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="hdr3" value="&lt;b&gt;CƠ CHẾ THẨM ĐỊNH GATE 1 &amp;amp; MÁY TRẠNG THÁI CHỐNG BẾ TẮC (SPEC-NODE1-F1-001)&lt;/b&gt;&lt;br/&gt;Thang Đo 100 Điểm Cơ Học | 5 Hard Invariants | Adaptive Socratic Mirror | Provisional Pass Protocol" style="rounded=1;fillColor=#0f172a;strokeColor=#0f172a;fontColor=#ffffff;align=center;html=1;fontSize=13;shadow=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="20" width="1320" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_sm" value="&lt;b&gt;MÁY TRẠNG THÁI THẨM ĐỊNH GATE 1 (Anti-Deadlock State Machine)&lt;/b&gt;" style="swimlane;startSize=28;horizontal=1;fillColor=#fffbeb;strokeColor=#d97706;fontColor=#92400e;fontSize=11;fontStyle=1;rounded=1;strokeWidth=2;pointerEvents=0;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="95" width="710" height="380" as="geometry"/>
+                </mxCell>
+                <mxCell id="st_start" value="" style="ellipse;fillColor=#0f172a;strokeColor=#0f172a;" vertex="1" parent="c_sm">
+                    <mxGeometry x="50" y="80" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="st_eval" value="&lt;b&gt;Trạng Thái: Gate1Evaluation&lt;/b&gt;&lt;br/&gt;• Tiếp nhận ProblemDossierContract&lt;br/&gt;• Tính toán Scoping Score (100đ)&lt;br/&gt;• Thẩm định 5 Hard Invariants cơ học" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontColor=#92400e;fontSize=10;strokeWidth=2;" vertex="1" parent="c_sm">
+                    <mxGeometry x="130" y="55" width="220" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="st_pass" value="&lt;b&gt;Trạng Thái: PassNode2 (HOÀN THÀNH)&lt;/b&gt;&lt;br/&gt;• Phê duyệt bàn giao chính thức&lt;br/&gt;• Gửi ProblemDossierContract sang Node 2&lt;br/&gt;• Ghi nhận Wide Event Log thành công" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ecfdf5;strokeColor=#059669;fontColor=#065f46;fontSize=10;fontStyle=1;strokeWidth=2;" vertex="1" parent="c_sm">
+                    <mxGeometry x="450" y="55" width="230" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="st_socratic" value="&lt;b&gt;Trạng Thái: SocraticQuestioning&lt;/b&gt;&lt;br/&gt;• Kích hoạt Adaptive Socratic Mirror&lt;br/&gt;• Hiển thị câu hỏi Multiple-Choice kỹ thuật&lt;br/&gt;• Chu kỳ lặp: L = L + 1 (Giới hạn L ≤ 2)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff1f2;strokeColor=#e11d48;fontColor=#be123c;fontSize=10;strokeDasharray=3 3;strokeWidth=1.5;" vertex="1" parent="c_sm">
+                    <mxGeometry x="130" y="220" width="220" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="st_provisional" value="&lt;b&gt;Trạng Thái: ProvisionalPass&lt;/b&gt;&lt;br/&gt;• Kích hoạt khi bế tắc (L &amp;gt; 2)&lt;br/&gt;• Khóa Safe Default Assumptions&lt;br/&gt;• Cảnh báo HIGH_RISK sang Tech Lead" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef9c3;strokeColor=#ca8a04;fontColor=#854d0e;fontSize=10;strokeWidth=2;" vertex="1" parent="c_sm">
+                    <mxGeometry x="450" y="220" width="230" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_sm_start_eval" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#0f172a;strokeWidth=2;" edge="1" parent="c_sm" source="st_start" target="st_eval">
+                    <mxGeometry relative="1" as="geometry"></mxGeometry>
+                </mxCell>
+                <mxCell id="e_sm_eval_pass" value="PASS: Score ≥ 85 &amp;amp; 0 Critical" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#059669;strokeWidth=2;fontSize=9.5;fontColor=#065f46;" edge="1" parent="c_sm" source="st_eval" target="st_pass">
+                    <mxGeometry relative="1" as="geometry"></mxGeometry>
+                </mxCell>
+                <mxCell id="e_sm_eval_soc" value="FAIL: Score &amp;lt; 85 (L ≤ 2)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#e11d48;strokeWidth=1.5;strokeDasharray=3 3;fontSize=9.5;fontColor=#be123c;" edge="1" parent="c_sm" source="st_eval" target="st_socratic">
+                    <mxGeometry relative="1" as="geometry"></mxGeometry>
+                </mxCell>
+                <mxCell id="e_sm_soc_eval" value="User trả lời bổ sung dữ kiện" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#e11d48;strokeWidth=1.5;strokeDasharray=3 3;fontSize=9.5;fontColor=#be123c;" edge="1" parent="c_sm" source="st_socratic" target="st_eval">
+                    <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="90" y="260"/><mxPoint x="90" y="95"/></Array></mxGeometry>
+                </mxCell>
+                <mxCell id="e_sm_eval_prov" value="FAIL: Score &amp;lt; 85 (L &amp;gt; 2 Bế tắc)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#ca8a04;strokeWidth=2;fontSize=9.5;fontColor=#854d0e;" edge="1" parent="c_sm" source="st_eval" target="st_provisional">
+                    <mxGeometry relative="1" as="geometry"></mxGeometry>
+                </mxCell>
+                <mxCell id="e_sm_prov_pass" value="Chuyển giao có điều kiện" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#ca8a04;strokeWidth=1.5;strokeDasharray=3 3;fontSize=9.5;fontColor=#854d0e;" edge="1" parent="c_sm" source="st_provisional" target="st_pass">
+                    <mxGeometry relative="1" as="geometry"></mxGeometry>
+                </mxCell>
+                <mxCell id="c_formula" value="&lt;b&gt;THANG ĐIỂM CƠ HỌC 100 ĐIỂM &amp;amp; CHẾ TÀI PHẠT (Scoping Score Formula)&lt;/b&gt;" style="swimlane;startSize=28;horizontal=1;fillColor=#f8fafc;strokeColor=#475569;fontColor=#1e293b;fontSize=11;fontStyle=1;rounded=1;strokeWidth=2;pointerEvents=0;" vertex="1" parent="1">
+                    <mxGeometry x="780" y="95" width="580" height="380" as="geometry"/>
+                </mxCell>
+                <mxCell id="n_formula_box" value="&lt;b&gt;CÔNG THỨC CHẤM ĐIỂM TỔNG HỢP:&lt;/b&gt;&lt;br/&gt;&lt;b&gt;S_total = S_causality (25đ) + S_negative (20đ) + S_platform (20đ) + S_blindspot (20đ) + S_contradiction (15đ) - Σ Penalties&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;&lt;table border=&quot;1&quot; style=&quot;border-collapse:collapse;width:100%;font-size:9.5px;&quot;&gt;  &lt;tr style=&quot;background:#e2e8f0;&quot;&gt;&lt;th&gt;Trọng số&lt;/th&gt;&lt;th&gt;Tiêu chí đánh giá cơ học&lt;/th&gt;&lt;th&gt;Điểm Max&lt;/th&gt;&lt;/tr&gt;  &lt;tr&gt;&lt;td&gt;&lt;b&gt;S_causality&lt;/b&gt;&lt;/td&gt;&lt;td&gt;5-Whys DAG phân tách rạch ròi Triệu chứng &amp;amp; Căn nguyên&lt;/td&gt;&lt;td&gt;25 điểm&lt;/td&gt;&lt;/tr&gt;  &lt;tr&gt;&lt;td&gt;&lt;b&gt;S_negative&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Tối thiểu 3 quy tắc CẤM LÀM kèm lý do &amp;amp; hậu quả kỹ thuật&lt;/td&gt;&lt;td&gt;20 điểm&lt;/td&gt;&lt;/tr&gt;  &lt;tr&gt;&lt;td&gt;&lt;b&gt;S_platform&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Xác định rõ ràng ràng buộc OS, Concurrency, CPU/RAM limits&lt;/td&gt;&lt;td&gt;20 điểm&lt;/td&gt;&lt;/tr&gt;  &lt;tr&gt;&lt;td&gt;&lt;b&gt;S_blindspot&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Khai quật điểm mù &amp;amp; gắn nhãn Zero-Hallucination Tagging&lt;/td&gt;&lt;td&gt;20 điểm&lt;/td&gt;&lt;/tr&gt;  &lt;tr&gt;&lt;td&gt;&lt;b&gt;S_contradiction&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Giải quyết triệt để mâu thuẫn nội tại qua ma trận CDM&lt;/td&gt;&lt;td&gt;15 điểm&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;br/&gt;&lt;b&gt;CHẾ TÀI TRỪ ĐIỂM NẶNG (Penalties &amp;amp; Deductions):&lt;/b&gt;&lt;br/&gt;• &lt;b&gt;P1 (-30đ) Premature Solution Leakage&lt;/b&gt;: Để lọt giải pháp chưa kiểm chứng vào định nghĩa bài toán (miễn phạt nếu đã cách ly thành công).&lt;br/&gt;• &lt;b&gt;P2 (-25đ) Unresolved Blocking Void&lt;/b&gt;: Còn tồn tại CRITICAL_CONTEXT_VOID ở mức BLOCKING.&lt;br/&gt;• &lt;b&gt;P3 (-15đ) High Ambiguity Residual&lt;/b&gt;: Chỉ số mơ hồ còn lại ambiguity_index &amp;gt; 0.4." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cbd5e1;fontColor=#0f172a;fontSize=9.5;align=left;spacingLeft=10;" vertex="1" parent="c_formula">
+                    <mxGeometry x="15" y="40" width="550" height="325" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_inv_rules" value="&lt;b&gt;5 CHỐT CHẶN BẤT BIẾN (Hard Invariants) &amp;amp; CƠ CHẾ CHỐNG BẾ TẮC (Anti-Deadlock Governance)&lt;/b&gt;" style="swimlane;startSize=28;horizontal=1;fillColor=#f1f5f9;strokeColor=#334155;fontColor=#0f172a;fontSize=11;fontStyle=1;rounded=1;strokeWidth=2;pointerEvents=0;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="500" width="1320" height="380" as="geometry"/>
+                </mxCell>
+                <mxCell id="inv_1" value="&lt;b&gt;HARD INVARIANT 1&lt;/b&gt;&lt;br/&gt;&lt;b&gt;S_total ≥ 85 / 100&lt;/b&gt;&lt;br/&gt;Tổng điểm cơ học thẩm định hồ sơ bài toán bắt buộc đạt tối thiểu 85 điểm." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#334155;fontColor=#0f172a;fontSize=10;align=center;" vertex="1" parent="c_inv_rules">
+                    <mxGeometry x="20" y="45" width="240" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="inv_2" value="&lt;b&gt;HARD INVARIANT 2&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Zero Critical Flaws&lt;/b&gt;&lt;br/&gt;Số lỗi nghiêm trọng critical_flaws.length === 0 (không có lỗi Deadlock / Memory Leak)." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#334155;fontColor=#0f172a;fontSize=10;align=center;" vertex="1" parent="c_inv_rules">
+                    <mxGeometry x="280" y="45" width="240" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="inv_3" value="&lt;b&gt;HARD INVARIANT 3&lt;/b&gt;&lt;br/&gt;&lt;b&gt;100% Phân định Căn nguyên&lt;/b&gt;&lt;br/&gt;Triệu chứng bề mặt (symptom_observed) và Căn nguyên gốc rễ không được trùng ngữ nghĩa." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#334155;fontColor=#0f172a;fontSize=10;align=center;" vertex="1" parent="c_inv_rules">
+                    <mxGeometry x="540" y="45" width="240" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="inv_4" value="&lt;b&gt;HARD INVARIANT 4&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Negative Space Khép kín&lt;/b&gt;&lt;br/&gt;negative_space_rules.length ≥ 3 (Tối thiểu 3 điều cấm tuyệt đối kèm lý do kỹ thuật)." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#334155;fontColor=#0f172a;fontSize=10;align=center;" vertex="1" parent="c_inv_rules">
+                    <mxGeometry x="800" y="45" width="240" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="inv_5" value="&lt;b&gt;HARD INVARIANT 5&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Zero Blocking Voids&lt;/b&gt;&lt;br/&gt;Không còn khuyết thiếu CRITICAL_CONTEXT_VOID ở mức BLOCKING chưa được lập giả thuyết an toàn." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#334155;fontColor=#0f172a;fontSize=10;align=center;" vertex="1" parent="c_inv_rules">
+                    <mxGeometry x="1060" y="45" width="240" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="n_anti_deadlock_detail" value="&lt;b&gt;CƠ CHẾ CHỐNG BẾ TẮC &amp;amp; ĐIỀU PHỐI HAI VÒNG LẶP HỒI TIẾP (Dual Feedback Governance):&lt;/b&gt;&lt;br/&gt;• &lt;b&gt;1. Vòng lặp nội bộ Gate 1 (Socratic Loop L ≤ 2)&lt;/b&gt;: Kích hoạt khi điểm S_total &amp;lt; 85đ tại F1.7 trước khi bàn giao. Nếu sau 2 vòng hỏi dev vẫn không cung cấp dữ kiện sống còn ➔ Kích hoạt &lt;b&gt;Provisional Pass&lt;/b&gt;, khóa Safe Default Assumptions, gắn cờ cảnh báo HIGH_RISK, không làm nghẽn pipeline.&lt;br/&gt;• &lt;b&gt;2. Vòng lặp lan truyền ngược ngoài (Backprop Synapse n_backprop L ≤ 2)&lt;/b&gt;: Kích hoạt sau khi bàn giao sang Node 2, nếu BA phát hiện Domain Contradiction mới ➔ Hồi tiếp về F1.2 để tái phân loại CDM. Nếu vượt quá 2 chu kỳ (L &amp;gt; 2) ➔ Chốt ngắt khẩn cấp &lt;b&gt;Human Escalation / Circuit Breaker&lt;/b&gt; can thiệp thủ công (Tuân thủ triệt để Quy tắc CẤM 3)." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cbd5e1;fontColor=#0f172a;fontSize=9.5;align=left;spacingLeft=15;" vertex="1" parent="c_inv_rules">
+                    <mxGeometry x="20" y="170" width="1280" height="105" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+<diagram id="sqlite_walkthrough_seq" name="4. Kịch Bản Thực Chiến SQLite">
+        <mxGraphModel dx="1400" dy="1100" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1400" pageHeight="1100" background="#ffffff" math="0" shadow="1">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="hdr4" value="&lt;b&gt;KỊCH BẢN THỰC CHIẾN: VƯỢT BẪY SQLITE OVER SMB/NFS TRAP (SPEC-NODE1-F1-001)&lt;/b&gt;&lt;br/&gt;Mô Phỏng Toàn Vẹn Dòng Đời Xử Lý Của 7 Sub-Nodes F1 Khi Đối Diện Đề Bài Dev Có Thiên Kiến Và Giải Pháp Vá Víu" style="rounded=1;fillColor=#0f172a;strokeColor=#0f172a;fontColor=#ffffff;align=center;html=1;fontSize=13;shadow=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="20" width="1320" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_dev" value="&lt;b&gt;Lập Trình Viên&lt;/b&gt;&lt;br/&gt;(Dev Requester)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#64748b;fontColor=#0f172a;fontSize=10;align=center;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="95" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_dev_line" value="" style="shape=line;direction=south;strokeColor=#cbd5e1;strokeWidth=1;dashed=1;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="145" width="1" height="740" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_f11" value="&lt;b&gt;F1.1: Sensory Ingestion&lt;/b&gt;&lt;br/&gt;(De-noiser &amp;amp; Quarantine)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;fontColor=#0369a1;fontSize=10;align=center;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="260" y="95" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_f11_line" value="" style="shape=line;direction=south;strokeColor=#cbd5e1;strokeWidth=1;dashed=1;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="145" width="1" height="740" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_f12" value="&lt;b&gt;F1.2: Contradiction&lt;/b&gt;&lt;br/&gt;(&amp;amp; Bias Arbiter)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;fontColor=#0369a1;fontSize=10;align=center;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="480" y="95" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_f12_line" value="" style="shape=line;direction=south;strokeColor=#cbd5e1;strokeWidth=1;dashed=1;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="145" width="1" height="740" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_parallel" value="&lt;b&gt;F1.3 - F1.5: Cụm Song Song&lt;/b&gt;&lt;br/&gt;(5D, Blindspot, Negative)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#7c3aed;fontColor=#5b21b6;fontSize=10;align=center;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="700" y="95" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_parallel_line" value="" style="shape=line;direction=south;strokeColor=#cbd5e1;strokeWidth=1;dashed=1;" vertex="1" parent="1">
+                    <mxGeometry x="780" y="145" width="1" height="740" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_f16" value="&lt;b&gt;F1.6: Compiler&lt;/b&gt;&lt;br/&gt;(&amp;amp; Token Optimizer)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d1fae5;strokeColor=#10b981;fontColor=#047857;fontSize=10;align=center;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="920" y="95" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_f16_line" value="" style="shape=line;direction=south;strokeColor=#cbd5e1;strokeWidth=1;dashed=1;" vertex="1" parent="1">
+                    <mxGeometry x="1000" y="145" width="1" height="740" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_f17" value="&lt;b&gt;F1.7: Gate 1 Arbiter&lt;/b&gt;&lt;br/&gt;(&amp;amp; Node 2 Handoff)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontColor=#92400e;fontSize=10;align=center;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="1140" y="95" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_f17_line" value="" style="shape=line;direction=south;strokeColor=#cbd5e1;strokeWidth=1;dashed=1;" vertex="1" parent="1">
+                    <mxGeometry x="1220" y="145" width="1" height="740" as="geometry"/>
+                </mxCell>
+                <mxCell id="step1_msg" value="&lt;b&gt;1. Gửi Raw Stimulus&lt;/b&gt;: &quot;Lỗi database is locked và process đơ. Mình định viết script PowerShell watchdog kill -9 tiến trình rồi restart...&quot;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=1.5;fontSize=9.5;fontColor=#0f172a;align=left;spacingLeft=8;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="165" width="500" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_s1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#0284c7;strokeWidth=2;" edge="1" parent="1" source="act_dev" target="act_f11">
+                    <mxGeometry relative="1" as="geometry"></mxGeometry>
+                </mxCell>
+                <mxCell id="note_f11" value="&lt;b&gt;XỬ LÝ TẠI F1.1:&lt;/b&gt;&lt;br/&gt;• Lọc sạch cảm xúc sốt ruột của dev.&lt;br/&gt;• &lt;b&gt;Quarantine&lt;/b&gt;: Cô lập script watchdog kill -9 vào quarantined_proposals (is_isolated=true).&lt;br/&gt;• Trích xuất sự kiện: SQLite, database is locked, process hang." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;fontColor=#0369a1;fontSize=9.5;align=left;spacingLeft=8;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="220" width="220" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="step2_msg" value="&lt;b&gt;2. NormalizedStimulusContract&lt;/b&gt; (snr_score = 0.88)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=1.5;fontSize=9.5;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="315" width="220" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="note_f12" value="&lt;b&gt;XỬ LÝ TẠI F1.2:&lt;/b&gt;&lt;br/&gt;• Ghi nhận Action Bias (kill -9) &amp;amp; Anchoring Bias.&lt;br/&gt;• &lt;b&gt;Sinh 3 Giả thuyết Đối kháng Bắt buộc&lt;/b&gt;:&lt;br/&gt;  H1: SQLite đặt trên Network Share (NFS/SMB).&lt;br/&gt;  H2: Transaction EXCLUSIVE mở không commit.&lt;br/&gt;  H3: ThreadPool starvation do sync-over-async.&lt;br/&gt;• Đóng gói Cowan 4-Slots Envelope (S0 ➔ ΔS)." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;fontColor=#0369a1;fontSize=9.5;align=left;spacingLeft=8;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="355" width="220" height="105" as="geometry"/>
+                </mxCell>
+                <mxCell id="step3_msg" value="&lt;b&gt;3. Fan-out Song Song sang F1.3, F1.4, F1.5&lt;/b&gt; (DialecticalBiasContract)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fillColor=#ffffff;strokeColor=#7c3aed;strokeWidth=1.5;fontSize=9.5;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="475" width="220" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="note_parallel" value="&lt;b&gt;CỤM GIẢI PHẪU F1.3 - F1.5:&lt;/b&gt;&lt;br/&gt;• &lt;b&gt;F1.3 (5-Whys)&lt;/b&gt;: Locked do OS giữ lock file qua mạng SMB/NFS do dev mount thư mục chia sẻ 2 máy cùng đọc SQLite!&lt;br/&gt;• &lt;b&gt;F1.4 (First Principles)&lt;/b&gt;: SQLite chạy in-process direct I/O. SMB network lock vi phạm định luật byte-range lock ➔ Deadlock.&lt;br/&gt;• &lt;b&gt;F1.5 (Negative Space)&lt;/b&gt;: CẤM 1: Cấm chạy SQLite qua SMB/NFS; CẤM 2: Cấm kill -9 làm hỏng WAL; CẤM 3: Cấm loop retry vô hạn." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#7c3aed;fontColor=#5b21b6;fontSize=9.5;align=left;spacingLeft=8;" vertex="1" parent="1">
+                    <mxGeometry x="670" y="515" width="220" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="step4_msg" value="&lt;b&gt;4. Fan-in Barrier&lt;/b&gt;: Hợp nhất kết quả F1.3 + F1.4 + F1.5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fillColor=#ffffff;strokeColor=#10b981;strokeWidth=1.5;fontSize=9.5;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="780" y="640" width="220" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="note_f16" value="&lt;b&gt;BIÊN DỊCH TẠI F1.6:&lt;/b&gt;&lt;br/&gt;• Nén ngữ cảnh: Tối ưu xuống &lt;b&gt;1,850 tokens&lt;/b&gt;.&lt;br/&gt;• Đóng gói ProblemDossierContract (DOS-20260915-SQLITE01).&lt;br/&gt;• JSON Schema validation pass (exit code 0)." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d1fae5;strokeColor=#10b981;fontColor=#047857;fontSize=9.5;align=left;spacingLeft=8;" vertex="1" parent="1">
+                    <mxGeometry x="890" y="675" width="220" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="step5_msg" value="&lt;b&gt;5. Thẩm định Gate 1&lt;/b&gt;: Trình hợp đồng ProblemDossierContract" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fillColor=#ffffff;strokeColor=#d97706;strokeWidth=1.5;fontSize=9.5;fontColor=#0f172a;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="1000" y="760" width="220" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="note_f17" value="&lt;b&gt;CHẤM ĐIỂM TẠI F1.7:&lt;/b&gt;&lt;br/&gt;• Điểm đạt: &lt;b&gt;93 / 100 điểm&lt;/b&gt; (S_causality=25, S_negative=20, S_platform=20, S_blindspot=15, S_contradiction=13).&lt;br/&gt;• Phạt: P1 = 0đ (do watchdog script đã cách ly).&lt;br/&gt;• &lt;b&gt;VERDICT: PASS CHÍNH THỨC&lt;/b&gt;." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontColor=#92400e;fontSize=9.5;align=left;spacingLeft=8;" vertex="1" parent="1">
+                    <mxGeometry x="1110" y="795" width="220" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="walkthrough_result" value="&lt;b&gt;KẾT QUẢ KỲ DIỆU CỦA ĐIỀU PHỐI F1:&lt;/b&gt; Lập trình viên lập tức chuyển file SQLite về ổ đĩa cục bộ (Local SSD) hoặc đổi sang PostgreSQL Client-Server. Giải quyết triệt để lỗi locked vĩnh viễn trong 15 phút, cứu hệ thống thoát khỏi thảm hoạ hỏng cơ sở dữ liệu hàng loạt do script watchdog kill -9 gây ra!" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ecfdf5;strokeColor=#059669;fontColor=#065f46;fontSize=10.5;fontStyle=1;align=center;strokeWidth=2;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="895" width="1320" height="45" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
